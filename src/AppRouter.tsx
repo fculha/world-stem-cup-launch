@@ -7,6 +7,10 @@ import RegisterSchoolAdminPage from './pages/RegisterSchoolAdminPage';
 import RegisterTeacherPage from './pages/RegisterTeacherPage';
 import RegisterStudentPage from './pages/RegisterStudentPage';
 import DashboardPage from './pages/DashboardPage';
+import AdminSchoolsPage from './pages/admin/AdminSchoolsPage';
+import AdminUsersPage from './pages/admin/AdminUsersPage';
+import AdminSettingsPage from './pages/admin/AdminSettingsPage';
+import AdminStatsPage from './pages/admin/AdminStatsPage';
 
 export default function AppRouter() {
   return (
@@ -32,10 +36,34 @@ export default function AppRouter() {
           
           {/* Admin Routes */}
           <Route 
-            path="/admin/*" 
+            path="/admin/schools" 
             element={
               <ProtectedRoute allowedRoles={['ADMIN']}>
-                <DashboardPage />
+                <AdminSchoolsPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/admin/users" 
+            element={
+              <ProtectedRoute allowedRoles={['ADMIN']}>
+                <AdminUsersPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/admin/settings" 
+            element={
+              <ProtectedRoute allowedRoles={['ADMIN']}>
+                <AdminSettingsPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/admin/stats" 
+            element={
+              <ProtectedRoute allowedRoles={['ADMIN']}>
+                <AdminStatsPage />
               </ProtectedRoute>
             } 
           />
