@@ -1,9 +1,308 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { 
   Trophy, Globe, School, Users, Shield, Gift, ChevronRight, 
   Star, Award, Target, Zap, CheckCircle, ArrowRight, Play,
-  Medal, TrendingUp, Lock, Eye, MapPin
+  Medal, TrendingUp, Lock, Eye, MapPin, Loader2, AlertCircle
 } from 'lucide-react';
+
+// API Configuration - Set VITE_API_URL in .env file for production
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
+// Registration Form Component
+function RegistrationForm() {
+  const [formData, setFormData] = useState({
+    school_name: '',
+    country: '',
+    city: '',
+    address: '',
+    contact_name: '',
+    contact_email: '',
+    contact_phone: '',
+    contact_role: '',
+    estimated_students: '',
+    website: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
+  const [registrationId, setRegistrationId] = useState('');
+  const recaptchaRef = useRef<HTMLDivElement>(null);
+
+  const countries = [
+    'Turkey', 'United States', 'United Kingdom', 'Germany', 'France', 'Spain', 'Italy',
+    'Netherlands', 'Belgium', 'Switzerland', 'Austria', 'Poland', 'Czech Republic',
+    'Sweden', 'Norway', 'Denmark', 'Finland', 'Russia', 'Ukraine', 'Greece',
+    'Portugal', 'Ireland', 'Canada', 'Australia', 'New Zealand', 'Japan', 'South Korea',
+    'China', 'India', 'Singapore', 'Malaysia', 'Indonesia', 'Thailand', 'Vietnam',
+    'Philippines', 'Brazil', 'Argentina', 'Mexico', 'Chile', 'Colombia', 'Peru',
+    'South Africa', 'Egypt', 'Nigeria', 'Kenya', 'Morocco', 'UAE', 'Saudi Arabia',
+    'Israel', 'Pakistan', 'Bangladesh', 'Other'
+  ].sort();
+
+  const roles = [
+    'Teacher',
+    'Principal',
+    'Vice Principal',
+    'Department Head',
+    'STEM Coordinator',
+    'School Administrator',
+    'Other'
+  ];
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const response = await fetch(`${API_URL}/registration/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          estimated_students: formData.estimated_students ? parseInt(formData.estimated_students) : null,
+          captcha_token: 'test-token' // Using test token for development
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.detail || 'Registration failed');
+      }
+
+      setSubmitStatus('success');
+      setRegistrationId(data.registration_id);
+    } catch (error) {
+      setSubmitStatus('error');
+      setErrorMessage(error instanceof Error ? error.message : 'An error occurred');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (submitStatus === 'success') {
+    return (
+      <div className="bg-[#16213e] rounded-2xl p-8 border border-green-500/30 text-center">
+        <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+        <h3 className="text-2xl font-bold mb-4 text-green-400">Registration Submitted!</h3>
+        <p className="text-white/70 mb-4">
+          Thank you for registering your school. Please check your email ({formData.contact_email}) 
+          to verify your email address.
+        </p>
+        <p className="text-white/50 text-sm mb-6">
+          Registration ID: <span className="font-mono text-white/70">{registrationId}</span>
+        </p>
+        <div className="bg-white/5 rounded-lg p-4 text-left">
+          <h4 className="font-semibold mb-2">Next Steps:</h4>
+          <ol className="list-decimal list-inside text-white/60 space-y-2 text-sm">
+            <li>Check your email inbox for a verification link</li>
+            <li>Click the link to verify your email address</li>
+            <li>Our team will review your registration</li>
+            <li>You'll receive an approval notification within 48 hours</li>
+          </ol>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <form onSubmit={handleSubmit} className="bg-[#16213e] rounded-2xl p-8 border border-white/10">
+      <h3 className="text-xl font-bold mb-6 text-center">School Registration Form</h3>
+      
+      {submitStatus === 'error' && (
+        <div className="bg-red-500/20 border border-red-500/50 rounded-lg p-4 mb-6 flex items-start gap-3">
+          <AlertCircle className="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" />
+          <p className="text-red-300 text-sm">{errorMessage}</p>
+        </div>
+      )}
+
+      <div className="grid md:grid-cols-2 gap-4 mb-6">
+        {/* School Name */}
+        <div className="md:col-span-2">
+          <label className="block text-sm text-white/70 mb-2">School Name *</label>
+          <input
+            type="text"
+            name="school_name"
+            value={formData.school_name}
+            onChange={handleChange}
+            required
+            className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#4361ee] transition-colors"
+            placeholder="Enter your school name"
+          />
+        </div>
+
+        {/* Country */}
+        <div>
+          <label className="block text-sm text-white/70 mb-2">Country *</label>
+          <select
+            name="country"
+            value={formData.country}
+            onChange={handleChange}
+            required
+            className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#4361ee] transition-colors"
+          >
+            <option value="" className="bg-[#16213e]">Select country</option>
+            {countries.map(country => (
+              <option key={country} value={country} className="bg-[#16213e]">{country}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* City */}
+        <div>
+          <label className="block text-sm text-white/70 mb-2">City *</label>
+          <input
+            type="text"
+            name="city"
+            value={formData.city}
+            onChange={handleChange}
+            required
+            className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#4361ee] transition-colors"
+            placeholder="Enter city"
+          />
+        </div>
+
+        {/* Address */}
+        <div className="md:col-span-2">
+          <label className="block text-sm text-white/70 mb-2">School Address</label>
+          <input
+            type="text"
+            name="address"
+            value={formData.address}
+            onChange={handleChange}
+            className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#4361ee] transition-colors"
+            placeholder="Enter full address (optional)"
+          />
+        </div>
+
+        {/* Contact Name */}
+        <div>
+          <label className="block text-sm text-white/70 mb-2">Contact Person Name *</label>
+          <input
+            type="text"
+            name="contact_name"
+            value={formData.contact_name}
+            onChange={handleChange}
+            required
+            className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#4361ee] transition-colors"
+            placeholder="Your full name"
+          />
+        </div>
+
+        {/* Contact Role */}
+        <div>
+          <label className="block text-sm text-white/70 mb-2">Your Role *</label>
+          <select
+            name="contact_role"
+            value={formData.contact_role}
+            onChange={handleChange}
+            required
+            className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-[#4361ee] transition-colors"
+          >
+            <option value="" className="bg-[#16213e]">Select your role</option>
+            {roles.map(role => (
+              <option key={role} value={role} className="bg-[#16213e]">{role}</option>
+            ))}
+          </select>
+        </div>
+
+        {/* Contact Email */}
+        <div>
+          <label className="block text-sm text-white/70 mb-2">Email Address *</label>
+          <input
+            type="email"
+            name="contact_email"
+            value={formData.contact_email}
+            onChange={handleChange}
+            required
+            className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#4361ee] transition-colors"
+            placeholder="your.email@school.edu"
+          />
+        </div>
+
+        {/* Contact Phone */}
+        <div>
+          <label className="block text-sm text-white/70 mb-2">Phone Number</label>
+          <input
+            type="tel"
+            name="contact_phone"
+            value={formData.contact_phone}
+            onChange={handleChange}
+            className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#4361ee] transition-colors"
+            placeholder="+1 234 567 8900 (optional)"
+          />
+        </div>
+
+        {/* Estimated Students */}
+        <div>
+          <label className="block text-sm text-white/70 mb-2">Estimated Participating Students</label>
+          <input
+            type="number"
+            name="estimated_students"
+            value={formData.estimated_students}
+            onChange={handleChange}
+            min="1"
+            className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#4361ee] transition-colors"
+            placeholder="e.g., 50 (optional)"
+          />
+        </div>
+
+        {/* Website */}
+        <div>
+          <label className="block text-sm text-white/70 mb-2">School Website</label>
+          <input
+            type="url"
+            name="website"
+            value={formData.website}
+            onChange={handleChange}
+            className="w-full bg-white/5 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-[#4361ee] transition-colors"
+            placeholder="https://www.school.edu (optional)"
+          />
+        </div>
+      </div>
+
+      {/* reCAPTCHA placeholder */}
+      <div ref={recaptchaRef} className="flex justify-center mb-6">
+        <div className="bg-white/5 border border-white/20 rounded-lg p-4 text-center">
+          <Shield className="w-8 h-8 text-[#4361ee] mx-auto mb-2" />
+          <p className="text-xs text-white/50">Protected by reCAPTCHA</p>
+        </div>
+      </div>
+
+      {/* Submit Button */}
+      <button
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full bg-gradient-to-r from-[#4361ee] to-[#f72585] px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+      >
+        {isSubmitting ? (
+          <>
+            <Loader2 className="w-5 h-5 animate-spin" />
+            Submitting...
+          </>
+        ) : (
+          <>
+            Register Your School
+            <ArrowRight className="w-5 h-5" />
+          </>
+        )}
+      </button>
+
+      <p className="text-xs text-white/40 text-center mt-4">
+        By registering, you agree to our Terms of Service and Privacy Policy.
+        Your information will be reviewed by our team before approval.
+      </p>
+    </form>
+  );
+}
 
 // Countdown component
 function Countdown() {
@@ -429,40 +728,29 @@ function App() {
 
       {/* Registration Section */}
       <section id="register" className="py-24 px-6 bg-gradient-to-b from-[#1a1a3e] to-[#0a0a1a]">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 bg-[#4361ee]/20 px-4 py-2 rounded-full mb-6">
-            <Star className="w-4 h-4 text-[#4361ee]" />
-            <span className="text-sm text-[#4361ee]">Registration Opening Soon</span>
-          </div>
-          
-          <h2 className="text-4xl font-bold mb-6">Register Your School</h2>
-          <p className="text-white/60 mb-8 max-w-2xl mx-auto">
-            Be among the first schools to join the World STEM Cup Season 1. 
-            Registration will open soon. Contact us to express your interest and get early access.
-          </p>
-          
-          <div className="bg-[#16213e] rounded-2xl p-8 border border-white/10 mb-8">
-            <h3 className="text-xl font-bold mb-4">Express Your Interest</h3>
-            <p className="text-white/50 mb-6">
-              Send us an email with your school name, country, and contact details. 
-              We'll notify you as soon as registration opens.
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 bg-[#4361ee]/20 px-4 py-2 rounded-full mb-6">
+              <Star className="w-4 h-4 text-[#4361ee]" />
+              <span className="text-sm text-[#4361ee]">Registration Now Open</span>
+            </div>
+            
+            <h2 className="text-4xl font-bold mb-6">Register Your School</h2>
+            <p className="text-white/60 mb-8 max-w-2xl mx-auto">
+              Join the World STEM Cup Season 1 and compete against schools from 100+ countries. 
+              Fill out the form below to register your school.
             </p>
-            <a 
-              href="mailto:register@worldstemcup.com?subject=School%20Registration%20Interest&body=School%20Name:%0ACountry:%0AContact%20Person:%0AEmail:%0APhone:" 
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee] to-[#f72585] px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
-            >
-              Contact Us to Register
-              <ArrowRight className="w-5 h-5" />
-            </a>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <RegistrationForm />
+          
+          <div className="grid md:grid-cols-3 gap-6 mt-12">
             {[
               { title: 'Free to Participate', desc: 'No registration fees for schools', icon: Gift },
               { title: 'Global Competition', desc: 'Compete with 100+ countries', icon: Globe },
               { title: 'Win Prizes', desc: 'Scholarships and rewards', icon: Trophy },
             ].map((item, i) => (
-              <div key={i} className="bg-white/5 rounded-xl p-6 border border-white/10">
+              <div key={i} className="bg-white/5 rounded-xl p-6 border border-white/10 text-center">
                 <item.icon className="w-8 h-8 text-[#4361ee] mx-auto mb-4" />
                 <h4 className="font-bold mb-2">{item.title}</h4>
                 <p className="text-sm text-white/50">{item.desc}</p>
