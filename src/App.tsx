@@ -96,7 +96,7 @@ function App() {
             ))}
           </div>
           <a 
-            href="https://worldstemcup.com/register" 
+            href="#register" 
             className="bg-gradient-to-r from-[#4361ee] to-[#f72585] px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity"
           >
             Register Now
@@ -133,16 +133,19 @@ function App() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a 
-              href="https://worldstemcup.com/register" 
+              href="#register" 
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee] to-[#f72585] px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
             >
               Register Your School
               <ArrowRight className="w-5 h-5" />
             </a>
-            <button className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-colors">
+            <a 
+              href="#how-it-works"
+              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-colors"
+            >
               <Play className="w-5 h-5" />
               Watch Video
-            </button>
+            </a>
           </div>
           
           {/* Countdown */}
@@ -421,6 +424,51 @@ function App() {
             Apply Now
             <ArrowRight className="w-5 h-5" />
           </a>
+        </div>
+      </section>
+
+      {/* Registration Section */}
+      <section id="register" className="py-24 px-6 bg-gradient-to-b from-[#1a1a3e] to-[#0a0a1a]">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 bg-[#4361ee]/20 px-4 py-2 rounded-full mb-6">
+            <Star className="w-4 h-4 text-[#4361ee]" />
+            <span className="text-sm text-[#4361ee]">Registration Opening Soon</span>
+          </div>
+          
+          <h2 className="text-4xl font-bold mb-6">Register Your School</h2>
+          <p className="text-white/60 mb-8 max-w-2xl mx-auto">
+            Be among the first schools to join the World STEM Cup Season 1. 
+            Registration will open soon. Contact us to express your interest and get early access.
+          </p>
+          
+          <div className="bg-[#16213e] rounded-2xl p-8 border border-white/10 mb-8">
+            <h3 className="text-xl font-bold mb-4">Express Your Interest</h3>
+            <p className="text-white/50 mb-6">
+              Send us an email with your school name, country, and contact details. 
+              We'll notify you as soon as registration opens.
+            </p>
+            <a 
+              href="mailto:register@worldstemcup.com?subject=School%20Registration%20Interest&body=School%20Name:%0ACountry:%0AContact%20Person:%0AEmail:%0APhone:" 
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee] to-[#f72585] px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
+            >
+              Contact Us to Register
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { title: 'Free to Participate', desc: 'No registration fees for schools', icon: Gift },
+              { title: 'Global Competition', desc: 'Compete with 100+ countries', icon: Globe },
+              { title: 'Win Prizes', desc: 'Scholarships and rewards', icon: Trophy },
+            ].map((item, i) => (
+              <div key={i} className="bg-white/5 rounded-xl p-6 border border-white/10">
+                <item.icon className="w-8 h-8 text-[#4361ee] mx-auto mb-4" />
+                <h4 className="font-bold mb-2">{item.title}</h4>
+                <p className="text-sm text-white/50">{item.desc}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
