@@ -96,7 +96,7 @@ function App() {
             ))}
           </div>
           <a 
-            href="https://worldstemcup.org/register" 
+            href="https://worldstemcup.com/register" 
             className="bg-gradient-to-r from-[#4361ee] to-[#f72585] px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity"
           >
             Register Now
@@ -133,7 +133,7 @@ function App() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <a 
-              href="https://worldstemcup.org/register" 
+              href="https://worldstemcup.com/register" 
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee] to-[#f72585] px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
             >
               Register Your School
@@ -376,7 +376,7 @@ function App() {
           
           <div className="text-center mt-12">
             <a 
-              href="mailto:sponsors@worldstemcup.org" 
+              href="mailto:sponsors@worldstemcup.com" 
               className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee] to-[#7c3aed] px-8 py-4 rounded-full font-semibold hover:opacity-90 transition-opacity"
             >
               Become a Sponsor
@@ -415,7 +415,7 @@ function App() {
           </div>
           
           <a 
-            href="mailto:coordinators@worldstemcup.org" 
+            href="mailto:coordinators@worldstemcup.com" 
             className="inline-flex items-center gap-2 bg-gradient-to-r from-[#f72585] to-[#7c3aed] px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-opacity"
           >
             Apply Now
@@ -461,9 +461,9 @@ function App() {
             <div>
               <h4 className="font-bold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-white/50">
-                <li>support@worldstemcup.org</li>
-                <li>sponsors@worldstemcup.org</li>
-                <li>press@worldstemcup.org</li>
+                <li>support@worldstemcup.com</li>
+                <li>sponsors@worldstemcup.com</li>
+                <li>press@worldstemcup.com</li>
               </ul>
             </div>
           </div>
