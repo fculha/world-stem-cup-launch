@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   Trophy, Globe, School, Users, Shield, Gift, ChevronRight, 
   Star, Award, Target, Zap, CheckCircle, ArrowRight, Play,
-  Medal, TrendingUp, Lock, Eye, MapPin, Loader2, AlertCircle
+  Medal, TrendingUp, Lock, Eye, MapPin, Loader2, AlertCircle, LogIn
 } from 'lucide-react';
 
 // API Configuration - Set VITE_API_URL in .env file for production
@@ -393,13 +394,20 @@ function App() {
                 {item}
               </a>
             ))}
+            <Link 
+              to="/login"
+              className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1"
+            >
+              <LogIn className="w-4 h-4" />
+              Login
+            </Link>
           </div>
-          <a 
-            href="#register" 
+          <Link 
+            to="/register/school-admin" 
             className="bg-gradient-to-r from-[#4361ee] to-[#f72585] px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity"
           >
             Register Now
-          </a>
+          </Link>
         </div>
       </nav>
 
