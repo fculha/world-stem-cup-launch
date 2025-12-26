@@ -14,6 +14,8 @@ export interface User {
   role: UserRole;
   is_active: boolean;
   is_verified: boolean;
+  school_id?: number;
+  team_id?: number;
 }
 
 export interface AuthState {
