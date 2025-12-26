@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { 
   Trophy, Globe, School, Users, Shield, Gift, ChevronRight, 
   Star, Award, Target, Zap, CheckCircle, ArrowRight, Play,
-  Medal, TrendingUp, Lock, Eye, MapPin, Loader2, AlertCircle, LogIn
+  Medal, TrendingUp, Lock, Eye, MapPin, Loader2, AlertCircle, LogIn, X
 } from 'lucide-react';
 
 // API Configuration - Set VITE_API_URL in .env file for production
@@ -358,6 +358,8 @@ const stats = [
 ];
 
 function App() {
+  const [showVideoModal, setShowVideoModal] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['hero', 'how-it-works', 'rewards', 'integrity', 'leaderboards', 'sponsors', 'coordinator'];
@@ -446,13 +448,13 @@ function App() {
               Register Your School
               <ArrowRight className="w-5 h-5" />
             </a>
-            <a 
-              href="#how-it-works"
+            <button 
+              onClick={() => setShowVideoModal(true)}
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-colors"
             >
               <Play className="w-5 h-5" />
               Watch Video
-            </a>
+            </button>
           </div>
           
           {/* Countdown */}
@@ -822,6 +824,45 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Video Modal */}
+      {showVideoModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm">
+          <div className="relative w-full max-w-5xl mx-4">
+            {/* Close button */}
+            <button
+              onClick={() => setShowVideoModal(false)}
+              className="absolute -top-12 right-0 text-white/70 hover:text-white transition-colors flex items-center gap-2"
+            >
+              <span className="text-sm">Close</span>
+              <X className="w-6 h-6" />
+            </button>
+            
+            {/* Video container */}
+            <div className="bg-[#0a0a1a] rounded-2xl overflow-hidden border border-white/20 shadow-2xl">
+              <video
+                controls
+                autoPlay
+                playsInline
+                className="w-full aspect-video"
+                src="/videos/world_stem_cup_explainer.mp4"
+                poster="/videos/poster.png"
+              >
+                Your browser does not support the video tag.
+              </video>
+              
+              {/* Video info */}
+              <div className="p-6 border-t border-white/10">
+                <h3 className="text-xl font-bold mb-2">World STEM Cup - Official Introduction</h3>
+                <p className="text-white/60 text-sm">
+                  Learn how the World STEM Cup works, from school rounds to the world finals. 
+                  Created by Fatih Culha.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
