@@ -34,6 +34,8 @@ import WorldPage from './pages/WorldPage';
 import StatePage from './pages/StatePage';
 import GroupPage from './pages/GroupPage';
 import MatchPage from './pages/MatchPage';
+// About Page
+import AboutPage from './pages/AboutPage';
 
 export default function AppRouter() {
   return (
@@ -53,12 +55,14 @@ export default function AppRouter() {
                     <Route path="/schools" element={<FindSchoolsPage />} />
           <Route path="/find-schools" element={<FindSchoolsPage />} />
           
-          {/* World Cup Style Public Pages */}
-          <Route path="/world" element={<WorldPage />} />
-          <Route path="/state/:stateCode" element={<StatePage />} />
-          <Route path="/tournament/:tournamentId" element={<StateQualifierPage />} />
-          <Route path="/group/:groupId" element={<GroupPage />} />
-          <Route path="/match/:matchId" element={<MatchPage />} />
+                    {/* World Cup Style Public Pages */}
+                    <Route path="/world" element={<WorldPage />} />
+                    <Route path="/state/:stateCode" element={<StatePage />} />
+                    <Route path="/tournament/:tournamentId" element={<StateQualifierPage />} />
+                    <Route path="/group/:groupId" element={<GroupPage />} />
+                    <Route path="/match/:matchId" element={<MatchPage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/who-we-are" element={<AboutPage />} />
           
                     {/* Protected Routes */}
           <Route 
