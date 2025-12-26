@@ -222,3 +222,96 @@ export async function getUsers(params?: { role?: string; school_id?: number }) {
   const query = searchParams.toString() ? `?${searchParams.toString()}` : '';
   return apiFetch<{ users: User[]; total: number }>(`/api/users${query}`);
 }
+
+// School types
+export interface School {
+  id: number;
+  name: string;
+  country_code: string;
+  state_code?: string;
+  city?: string;
+  is_dodea: boolean;
+  dodea_region?: string;
+}
+
+// Tournament Group types
+export interface TournamentGroup {
+  id: number;
+  tournament_id: number;
+  name: string;
+  group_number: number;
+  teams: TournamentGroupTeam[];
+}
+
+export interface TournamentGroupTeam {
+  id: number;
+  group_id: number;
+  team_id: number;
+  team_name: string;
+  school_name: string;
+  seed?: number;
+  points: number;
+  wins: number;
+  losses: number;
+  draws: number;
+  total_score: number;
+}
+
+// Playoff Bracket types
+export interface PlayoffMatch {
+  id: number;
+  round_name: string;
+  match_number: number;
+  team1_name?: string;
+  team2_name?: string;
+  team1_score?: number;
+  team2_score?: number;
+  winner_name?: string;
+  status: string;
+}
+
+export interface PlayoffRound {
+  round_name: string;
+  matches: PlayoffMatch[];
+}
+
+// School Search API
+export async function searchSchools(query: string, limit: number = 20) {
+  return apiFetch<{ schools: School[]; total: number }>(`/api/schools/search?query=${encodeURIComponent(query)}&limit=${limit}`);
+}
+
+export async function getSchools(params?: { country?: string; state?: string; city?: string }) {
+  const searchParams = new URLSearchParams();
+  if (params?.country) searchParams.append('country', params.country);
+  if (params?.state) searchParams.append('state', params.state);
+  if (params?.city) searchParams.append('city', params.city);
+  const query = searchParams.toString() ? `?${searchParams.toString()}` : '';
+  return apiFetch<{ schools: School[]; total: number }>(`/api/schools${query}`);
+}
+
+export async function getSchoolCountries() {
+  return apiFetch<{ countries: string[] }>('/api/schools/countries');
+}
+
+export async function getSchoolStates(country: string) {
+  return apiFetch<{ states: string[] }>(`/api/schools/states?country=${encodeURIComponent(country)}`);
+}
+
+export async function getSchoolCities(country: string, state: string) {
+  return apiFetch<{ cities: string[] }>(`/api/schools/cities?country=${encodeURIComponent(country)}&state=${encodeURIComponent(state)}`);
+}
+
+// Tournament Groups API
+export async function getTournamentGroups(tournamentId: number) {
+  return apiFetch<{ groups: TournamentGroup[]; total_teams: number }>(`/api/tournaments/${tournamentId}/groups`);
+}
+
+// Tournament Bracket API
+export async function getTournamentBracket(tournamentId: number) {
+  return apiFetch<{ rounds: PlayoffRound[]; total_matches: number; advancing_teams: number }>(`/api/tournaments/${tournamentId}/bracket`);
+}
+
+// Tournament Leaderboard API (state-level with privacy)
+export async function getTournamentLeaderboard(tournamentId: number) {
+  return apiFetch<{ leaderboard: LeaderboardEntry[]; tournament_name: string; scope: string }>(`/api/tournaments/${tournamentId}/leaderboard`);
+}

@@ -25,6 +25,8 @@ import StudentResultsPage from './pages/student/StudentResultsPage';
 // Spectator Pages
 import WatchLivePage from './pages/WatchLivePage';
 import LiveMatchPage from './pages/LiveMatchPage';
+// State Qualifier Pages
+import StateQualifierPage from './pages/StateQualifierPage';
 
 export default function AppRouter() {
   return (
@@ -38,8 +40,9 @@ export default function AppRouter() {
           <Route path="/register/teacher" element={<RegisterTeacherPage />} />
           <Route path="/register/student" element={<RegisterStudentPage />} />
                     <Route path="/leaderboard" element={<LeaderboardPage />} />
-                    <Route path="/watch" element={<WatchLivePage />} />
-                    <Route path="/watch/:matchId" element={<LiveMatchPage />} />
+                                        <Route path="/watch" element={<WatchLivePage />} />
+                                        <Route path="/watch/:matchId" element={<LiveMatchPage />} />
+                                        <Route path="/state-qualifier/:tournamentId" element={<StateQualifierPage />} />
           
                     {/* Protected Routes */}
           <Route 
