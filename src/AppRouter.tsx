@@ -36,6 +36,9 @@ import GroupPage from './pages/GroupPage';
 import MatchPage from './pages/MatchPage';
 // About Page
 import AboutPage from './pages/AboutPage';
+// Team and Bracket Pages
+import TeamPage from './pages/TeamPage';
+import BracketPage from './pages/BracketPage';
 
 export default function AppRouter() {
   return (
@@ -61,6 +64,9 @@ export default function AppRouter() {
                     <Route path="/tournament/:tournamentId" element={<StateQualifierPage />} />
                     <Route path="/group/:groupId" element={<GroupPage />} />
                     <Route path="/match/:matchId" element={<MatchPage />} />
+                    <Route path="/team/:teamId" element={<TeamPage />} />
+                    <Route path="/bracket/:tournamentId" element={<BracketPage />} />
+                    <Route path="/bracket" element={<BracketPage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/who-we-are" element={<AboutPage />} />
           
