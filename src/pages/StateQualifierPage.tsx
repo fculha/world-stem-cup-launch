@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Trophy, ArrowLeft, Users, Target, Award, ChevronRight } from 'lucide-react';
-import { getTournamentGroups, getTournamentBracket, getTournament, TournamentGroup, PlayoffRound } from '../lib/api';
+import { Trophy, ArrowLeft, Users, Target, Award, ChevronRight, AlertTriangle, Settings, RefreshCw } from 'lucide-react';
+import { getTournamentGroups, getTournamentBracket, getTournament, TournamentGroup, PlayoffRound, generateGroups, generatePlayoffs, resetTournament } from '../lib/api';
+import { useAuth } from '../contexts/AuthContext';
 
 // Mock data for when API returns empty
 const mockGroups: TournamentGroup[] = [
@@ -53,15 +54,83 @@ const mockBracket: PlayoffRound[] = [
 
 export default function StateQualifierPage() {
   const { tournamentId } = useParams<{ tournamentId: string }>();
+  const { user } = useAuth();
   const [activeTab, setActiveTab] = useState<'groups' | 'bracket'>('groups');
   const [groups, setGroups] = useState<TournamentGroup[]>([]);
   const [bracket, setBracket] = useState<PlayoffRound[]>([]);
   const [tournamentName, setTournamentName] = useState('Maryland State Qualifier');
   const [loading, setLoading] = useState(true);
+  const [adminLoading, setAdminLoading] = useState(false);
+  const [adminMessage, setAdminMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
+  
+  // Check if user is admin or NSC
+  const isAdminOrNSC = user?.role === 'ADMIN' || user?.role === 'NSC';
+  const isDemoMode = tournamentName.toLowerCase().includes('maryland');
 
   useEffect(() => {
     loadData();
   }, [tournamentId]);
+
+  const handleGenerateGroups = async () => {
+    try {
+      setAdminLoading(true);
+      setAdminMessage(null);
+      const id = parseInt(tournamentId || '1');
+      const result = await generateGroups(id, 2, 2);
+      setAdminMessage({ 
+        type: 'success', 
+        text: result.already_existed 
+          ? 'Groups already exist (idempotent)' 
+          : `Created ${result.groups_created} groups with ${result.matches_created} matches`
+      });
+      await loadData();
+    } catch (error) {
+      setAdminMessage({ type: 'error', text: error instanceof Error ? error.message : 'Failed to generate groups' });
+    } finally {
+      setAdminLoading(false);
+    }
+  };
+
+  const handleGeneratePlayoffs = async () => {
+    try {
+      setAdminLoading(true);
+      setAdminMessage(null);
+      const id = parseInt(tournamentId || '1');
+      const result = await generatePlayoffs(id, 2);
+      setAdminMessage({ 
+        type: 'success', 
+        text: result.already_existed 
+          ? 'Playoffs already exist (idempotent)' 
+          : `Created ${result.playoff_rounds} playoff rounds with ${result.playoff_matches} matches`
+      });
+      await loadData();
+    } catch (error) {
+      setAdminMessage({ type: 'error', text: error instanceof Error ? error.message : 'Failed to generate playoffs' });
+    } finally {
+      setAdminLoading(false);
+    }
+  };
+
+  const handleResetTournament = async () => {
+    if (!confirm('Are you sure you want to reset this tournament? This will delete all groups, matches, and scores.')) {
+      return;
+    }
+    try {
+      setAdminLoading(true);
+      setAdminMessage(null);
+      const id = parseInt(tournamentId || '1');
+      const result = await resetTournament(id, true, true);
+      setAdminMessage({ 
+        type: 'success', 
+        text: `Reset complete: ${result.deleted.groups} groups, ${result.deleted.matches} matches, ${result.deleted.scores} scores deleted`
+      });
+      await loadData();
+    } catch (error) {
+      setAdminMessage({ type: 'error', text: error instanceof Error ? error.message : 'Failed to reset tournament' });
+    } finally {
+      setAdminLoading(false);
+    }
+  };
 
   const loadData = async () => {
     try {
@@ -144,6 +213,65 @@ export default function StateQualifierPage() {
 
       {/* Main Content */}
       <main className="relative z-10 max-w-7xl mx-auto px-6 py-8">
+        {/* Maryland Demo Mode Banner */}
+        {isDemoMode && (
+          <div className="mb-6 bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 flex items-center gap-3">
+            <AlertTriangle className="w-5 h-5 text-yellow-400 flex-shrink-0" />
+            <div>
+              <p className="text-yellow-400 font-medium">Maryland Pilot Demo Mode</p>
+              <p className="text-yellow-400/70 text-sm">This is a demonstration of the Maryland State Pilot Competition system with sample data.</p>
+            </div>
+          </div>
+        )}
+
+        {/* Admin Controls (ADMIN/NSC only) */}
+        {isAdminOrNSC && (
+          <div className="mb-6 bg-[#16213e] border border-white/10 rounded-xl p-4">
+            <div className="flex items-center gap-2 mb-3">
+              <Settings className="w-5 h-5 text-[#4361ee]" />
+              <span className="font-medium">Tournament Admin Controls</span>
+              <span className="text-xs text-white/40 ml-2">(ADMIN/NSC only)</span>
+            </div>
+            
+            {adminMessage && (
+              <div className={`mb-3 p-3 rounded-lg text-sm ${
+                adminMessage.type === 'success' 
+                  ? 'bg-green-500/10 text-green-400 border border-green-500/30' 
+                  : 'bg-red-500/10 text-red-400 border border-red-500/30'
+              }`}>
+                {adminMessage.text}
+              </div>
+            )}
+            
+            <div className="flex flex-wrap gap-3">
+              <button
+                onClick={handleGenerateGroups}
+                disabled={adminLoading}
+                className="px-4 py-2 bg-[#4361ee] hover:bg-[#4361ee]/80 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              >
+                {adminLoading ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Users className="w-4 h-4" />}
+                Generate Groups
+              </button>
+              <button
+                onClick={handleGeneratePlayoffs}
+                disabled={adminLoading}
+                className="px-4 py-2 bg-[#f72585] hover:bg-[#f72585]/80 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              >
+                {adminLoading ? <RefreshCw className="w-4 h-4 animate-spin" /> : <Trophy className="w-4 h-4" />}
+                Generate Playoffs
+              </button>
+              <button
+                onClick={handleResetTournament}
+                disabled={adminLoading}
+                className="px-4 py-2 bg-red-500/20 hover:bg-red-500/30 text-red-400 border border-red-500/30 rounded-lg text-sm font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2"
+              >
+                {adminLoading ? <RefreshCw className="w-4 h-4 animate-spin" /> : <RefreshCw className="w-4 h-4" />}
+                Reset Tournament
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Back Button */}
         <Link to="/" className="inline-flex items-center gap-2 text-white/60 hover:text-white mb-6 transition-colors">
           <ArrowLeft className="w-4 h-4" />

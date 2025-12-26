@@ -315,3 +315,24 @@ export async function getTournamentBracket(tournamentId: number) {
 export async function getTournamentLeaderboard(tournamentId: number) {
   return apiFetch<{ leaderboard: LeaderboardEntry[]; tournament_name: string; scope: string }>(`/api/tournaments/${tournamentId}/leaderboard`);
 }
+
+// Tournament Admin Actions (ADMIN/NSC only)
+export async function generateGroups(tournamentId: number, numGroups: number = 10, matchesPerTeam: number = 2) {
+  return apiFetch<{ message: string; groups_created: number; teams_assigned: number; matches_created: number; already_existed?: boolean }>(`/api/tournaments/${tournamentId}/generate-groups`, {
+    method: 'POST',
+    body: JSON.stringify({ num_groups: numGroups, matches_per_team: matchesPerTeam }),
+  });
+}
+
+export async function generatePlayoffs(tournamentId: number, topNPerGroup: number = 2) {
+  return apiFetch<{ message: string; teams_advancing?: number; playoff_rounds?: number; playoff_matches?: number; already_existed?: boolean }>(`/api/tournaments/${tournamentId}/generate-playoffs`, {
+    method: 'POST',
+    body: JSON.stringify({ top_n_per_group: topNPerGroup }),
+  });
+}
+
+export async function resetTournament(tournamentId: number, resetGroups: boolean = true, resetPlayoffs: boolean = true) {
+  return apiFetch<{ message: string; deleted: { scores: number; matches: number; groups: number; rounds: number } }>(`/api/tournaments/${tournamentId}/reset?reset_groups=${resetGroups}&reset_playoffs=${resetPlayoffs}`, {
+    method: 'POST',
+  });
+}
