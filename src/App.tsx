@@ -360,6 +360,15 @@ const stats = [
 function App() {
   const [showVideoModal, setShowVideoModal] = useState(false);
 
+  // Scroll to section with offset for fixed navbar
+  const scrollToSection = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const headerOffset = 80; // approximate nav height
+    const y = el.getBoundingClientRect().top + window.scrollY - headerOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['hero', 'how-it-works', 'rewards', 'integrity', 'leaderboards', 'sponsors', 'coordinator'];
@@ -386,41 +395,57 @@ function App() {
             <Trophy className="w-8 h-8 text-yellow-400" />
             <span className="text-xl font-bold">World STEM Cup</span>
           </div>
-                                        <div className="hidden md:flex items-center gap-8">
-                                          {['How It Works', 'Rewards', 'Integrity', 'Sponsors'].map((item) => (
-                                            <a 
-                                              key={item} 
-                                              href={`#${item.toLowerCase().replace(' ', '-')}`}
-                                              className="text-sm text-white/70 hover:text-white transition-colors"
-                                            >
-                                              {item}
-                                            </a>
-                                          ))}
-                                          <Link 
-                                            to="/schools"
-                                            className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-2"
-                                          >
-                                            <School className="w-4 h-4" />
-                                            Find Schools
-                                          </Link>
-                                          <Link 
-                                            to="/watch"
-                                            className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-2"
-                                          >
-                                            <div className="relative">
-                                              <Radio className="w-4 h-4 text-red-400" />
-                                              <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
-                                            </div>
-                                            Watch Live
-                                          </Link>
-                                          <Link 
-                                            to="/login"
-                                            className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1"
-                                          >
-                                            <LogIn className="w-4 h-4" />
-                                            Login
-                                          </Link>
-                                        </div>
+          <div className="hidden md:flex items-center gap-8">
+            {['How It Works', 'Rewards', 'Integrity', 'Sponsors'].map((item) => {
+              const id = item.toLowerCase().replace(' ', '-');
+              return (
+                <button 
+                  key={item}
+                  onClick={() => scrollToSection(id)}
+                  className="text-sm text-white/70 hover:text-white transition-colors"
+                >
+                  {item}
+                </button>
+              );
+            })}
+            <Link 
+              to="/world"
+              className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-2"
+            >
+              <Globe className="w-4 h-4" />
+              Competition
+            </Link>
+            <Link 
+              to="/about"
+              className="text-sm text-white/70 hover:text-white transition-colors"
+            >
+              About
+            </Link>
+            <Link 
+              to="/schools"
+              className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-2"
+            >
+              <School className="w-4 h-4" />
+              Find Schools
+            </Link>
+            <Link 
+              to="/watch"
+              className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-2"
+            >
+              <div className="relative">
+                <Radio className="w-4 h-4 text-red-400" />
+                <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-red-500 rounded-full animate-pulse"></div>
+              </div>
+              Watch Live
+            </Link>
+            <Link 
+              to="/login"
+              className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1"
+            >
+              <LogIn className="w-4 h-4" />
+              Login
+            </Link>
+          </div>
           <Link 
             to="/register/school-admin" 
             className="bg-gradient-to-r from-[#4361ee] to-[#f72585] px-6 py-2 rounded-full font-semibold hover:opacity-90 transition-opacity"
@@ -804,10 +829,10 @@ function App() {
             <div>
               <h4 className="font-bold mb-4">Competition</h4>
               <ul className="space-y-2 text-sm text-white/50">
-                <li><a href="#" className="hover:text-white">How It Works</a></li>
-                <li><a href="#" className="hover:text-white">Rules & Regulations</a></li>
-                <li><a href="#" className="hover:text-white">Practice Mode</a></li>
-                <li><a href="#" className="hover:text-white">Leaderboards</a></li>
+                <li><button onClick={() => scrollToSection('how-it-works')} className="hover:text-white">How It Works</button></li>
+                <li><Link to="/world" className="hover:text-white">World Cup</Link></li>
+                <li><Link to="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link to="/leaderboard" className="hover:text-white">Leaderboards</Link></li>
               </ul>
             </div>
             
