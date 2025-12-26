@@ -396,6 +396,12 @@ function App() {
             <span className="text-xl font-bold">World STEM Cup</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
+            <Link 
+              to="/about"
+              className="text-sm text-white/70 hover:text-white transition-colors"
+            >
+              About
+            </Link>
             {['How It Works', 'Rewards', 'Integrity', 'Sponsors'].map((item) => {
               const id = item.toLowerCase().replace(' ', '-');
               return (
@@ -414,12 +420,6 @@ function App() {
             >
               <Globe className="w-4 h-4" />
               Competition
-            </Link>
-            <Link 
-              to="/about"
-              className="text-sm text-white/70 hover:text-white transition-colors"
-            >
-              About
             </Link>
             <Link 
               to="/schools"
