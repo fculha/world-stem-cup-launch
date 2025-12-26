@@ -27,6 +27,8 @@ import WatchLivePage from './pages/WatchLivePage';
 import LiveMatchPage from './pages/LiveMatchPage';
 // State Qualifier Pages
 import StateQualifierPage from './pages/StateQualifierPage';
+// School Discovery Pages
+import FindSchoolsPage from './pages/FindSchoolsPage';
 
 export default function AppRouter() {
   return (
@@ -43,6 +45,7 @@ export default function AppRouter() {
                                         <Route path="/watch" element={<WatchLivePage />} />
                                         <Route path="/watch/:matchId" element={<LiveMatchPage />} />
                                         <Route path="/state-qualifier/:tournamentId" element={<StateQualifierPage />} />
+                    <Route path="/schools" element={<FindSchoolsPage />} />
           
                     {/* Protected Routes */}
           <Route 
