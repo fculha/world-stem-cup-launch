@@ -29,6 +29,11 @@ import LiveMatchPage from './pages/LiveMatchPage';
 import StateQualifierPage from './pages/StateQualifierPage';
 // School Discovery Pages
 import FindSchoolsPage from './pages/FindSchoolsPage';
+// World Cup Style Public Pages
+import WorldPage from './pages/WorldPage';
+import StatePage from './pages/StatePage';
+import GroupPage from './pages/GroupPage';
+import MatchPage from './pages/MatchPage';
 
 export default function AppRouter() {
   return (
@@ -46,6 +51,14 @@ export default function AppRouter() {
                                         <Route path="/watch/:matchId" element={<LiveMatchPage />} />
                                         <Route path="/state-qualifier/:tournamentId" element={<StateQualifierPage />} />
                     <Route path="/schools" element={<FindSchoolsPage />} />
+          <Route path="/find-schools" element={<FindSchoolsPage />} />
+          
+          {/* World Cup Style Public Pages */}
+          <Route path="/world" element={<WorldPage />} />
+          <Route path="/state/:stateCode" element={<StatePage />} />
+          <Route path="/tournament/:tournamentId" element={<StateQualifierPage />} />
+          <Route path="/group/:groupId" element={<GroupPage />} />
+          <Route path="/match/:matchId" element={<MatchPage />} />
           
                     {/* Protected Routes */}
           <Route 
