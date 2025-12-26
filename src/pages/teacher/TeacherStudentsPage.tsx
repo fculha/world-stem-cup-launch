@@ -22,7 +22,12 @@ export default function TeacherStudentsPage() {
   const loadStudents = async () => {
     try {
       setLoading(true);
-      const response = await getUsers({ role: 'STUDENT' });
+      // Filter students by the teacher's school
+      const params: { role: string; school_id?: number } = { role: 'STUDENT' };
+      if (user?.school_id) {
+        params.school_id = user.school_id;
+      }
+      const response = await getUsers(params);
       setStudents(response.users || []);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load students');

@@ -23,8 +23,13 @@ export default function TeacherTeamsPage() {
   const loadData = async () => {
     try {
       setLoading(true);
+      // Filter teams by the teacher's school
+      const teamParams: { school_id?: number } = {};
+      if (user?.school_id) {
+        teamParams.school_id = user.school_id;
+      }
       const [teamsResponse, seasonsResponse] = await Promise.all([
-        getTeams(),
+        getTeams(teamParams),
         getSeasons(),
       ]);
       setTeams(teamsResponse.teams || []);
@@ -46,13 +51,13 @@ export default function TeacherTeamsPage() {
   };
 
   const handleCreateTeam = async () => {
-    if (!newTeamName.trim() || !selectedSeason) return;
+    if (!newTeamName.trim() || !selectedSeason || !user?.school_id) return;
     
     try {
       setCreating(true);
       await createTeam({
         name: newTeamName,
-        school_id: 1, // This would come from the user's school in production
+        school_id: user.school_id,
         season_id: selectedSeason,
       });
       setNewTeamName('');

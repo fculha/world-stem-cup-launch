@@ -2,8 +2,9 @@ import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Trophy, LogOut, ArrowLeft, TrendingUp, Users, Globe, Search } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
+import { getLeaderboard } from '../lib/api';
 
-// Mock leaderboard data for demo
+// Fallback mock data when API returns empty
 const mockLeaderboard = [
   { rank: 1, team_name: 'Quantum Minds', school_name: 'MIT Academy', country: 'USA', total_points: 4850, matches_played: 12, wins: 10 },
   { rank: 2, team_name: 'Neural Network', school_name: 'Cambridge School', country: 'UK', total_points: 4720, matches_played: 12, wins: 9 },
@@ -36,12 +37,37 @@ export default function LeaderboardPage() {
   const [selectedCountry, setSelectedCountry] = useState<string>('all');
 
   useEffect(() => {
-    // Simulate loading
-    setTimeout(() => {
-      setLeaderboard(mockLeaderboard);
-      setLoading(false);
-    }, 500);
+    loadLeaderboard();
   }, []);
+
+  const loadLeaderboard = async () => {
+    try {
+      setLoading(true);
+      const response = await getLeaderboard();
+      // If API returns data, use it; otherwise fall back to mock data
+      if (response.leaderboard && response.leaderboard.length > 0) {
+        const entries: LeaderboardEntry[] = response.leaderboard.map((entry, index) => ({
+          rank: entry.rank || index + 1,
+          team_name: entry.team_name,
+          school_name: entry.school_name,
+          country: 'Global', // API may not have country, default to Global
+          total_points: entry.total_points,
+          matches_played: entry.matches_played,
+          wins: entry.wins,
+        }));
+        setLeaderboard(entries);
+      } else {
+        // Use mock data if no real data available
+        setLeaderboard(mockLeaderboard);
+      }
+    } catch (err) {
+      console.error('Failed to load leaderboard:', err);
+      // Fall back to mock data on error
+      setLeaderboard(mockLeaderboard);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleLogout = () => {
     logout();

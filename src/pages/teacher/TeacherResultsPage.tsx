@@ -26,7 +26,12 @@ export default function TeacherResultsPage() {
   const loadResults = async () => {
     try {
       setLoading(true);
-      const teamsResponse = await getTeams();
+      // Filter teams by the teacher's school
+      const teamParams: { school_id?: number } = {};
+      if (user?.school_id) {
+        teamParams.school_id = user.school_id;
+      }
+      const teamsResponse = await getTeams(teamParams);
       const teams = teamsResponse.teams || [];
       
       // For each team, get their matches and calculate results
