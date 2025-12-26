@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Trophy, ArrowLeft, Users, Target, Award, MapPin, Calendar, ChevronRight } from 'lucide-react';
+import { Trophy, ArrowLeft, Users, Target, Award, Calendar, ChevronRight } from 'lucide-react';
 
 // Types
 interface GroupTeam {
@@ -408,7 +408,7 @@ export default function StatePage() {
               </thead>
               <tbody className="divide-y divide-white/5">
                 {groups.flatMap((group) => 
-                  group.teams.map((team, idx) => ({
+                  group.teams.map((team) => ({
                     ...team,
                     groupName: group.name,
                     globalRank: groups.flatMap(g => g.teams).sort((a, b) => b.points - a.points).findIndex(t => t.id === team.id) + 1

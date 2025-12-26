@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Trophy, ArrowLeft, Users, Calendar, ChevronRight } from 'lucide-react';
+import { Trophy, Users, Calendar, ChevronRight } from 'lucide-react';
 
 interface GroupTeam {
   id: number;

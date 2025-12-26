@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { Trophy, ArrowLeft, Clock, Calendar, MapPin, ChevronRight, Users, Target } from 'lucide-react';
+import { Trophy, Clock, Calendar, ChevronRight, Users, Target } from 'lucide-react';
 
 interface TeamStats {
   name: string;

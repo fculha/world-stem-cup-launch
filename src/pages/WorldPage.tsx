@@ -51,13 +51,11 @@ const mockUpcomingMatches = [
 ];
 
 export default function WorldPage() {
-  const [stats, setStats] = useState<GlobalStats>(mockGlobalStats);
-  const [states, setStates] = useState<StateStats[]>(mockStateStats);
-  const [loading, setLoading] = useState(false);
+  const [stats] = useState<GlobalStats>(mockGlobalStats);
+  const [states] = useState<StateStats[]>(mockStateStats);
 
   useEffect(() => {
     // In production, fetch real data from API
-    setLoading(false);
   }, []);
 
   const getStatusBadge = (status: string) => {

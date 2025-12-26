@@ -63,8 +63,8 @@ export default function StateQualifierPage() {
   const [adminLoading, setAdminLoading] = useState(false);
   const [adminMessage, setAdminMessage] = useState<{ type: 'success' | 'error'; text: string } | null>(null);
   
-  // Check if user is admin or NSC
-  const isAdminOrNSC = user?.role === 'ADMIN' || user?.role === 'NSC';
+  // Check if user is admin
+  const isAdminOrNSC = user?.role === 'ADMIN';
   const isDemoMode = tournamentName.toLowerCase().includes('maryland');
 
   useEffect(() => {
