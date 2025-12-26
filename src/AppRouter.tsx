@@ -22,6 +22,9 @@ import StudentTeamPage from './pages/student/StudentTeamPage';
 import StudentCompetitionsPage from './pages/student/StudentCompetitionsPage';
 import StudentGameplayPage from './pages/student/StudentGameplayPage';
 import StudentResultsPage from './pages/student/StudentResultsPage';
+// Spectator Pages
+import WatchLivePage from './pages/WatchLivePage';
+import LiveMatchPage from './pages/LiveMatchPage';
 
 export default function AppRouter() {
   return (
@@ -34,9 +37,11 @@ export default function AppRouter() {
           <Route path="/register/school-admin" element={<RegisterSchoolAdminPage />} />
           <Route path="/register/teacher" element={<RegisterTeacherPage />} />
           <Route path="/register/student" element={<RegisterStudentPage />} />
-          <Route path="/leaderboard" element={<LeaderboardPage />} />
+                    <Route path="/leaderboard" element={<LeaderboardPage />} />
+                    <Route path="/watch" element={<WatchLivePage />} />
+                    <Route path="/watch/:matchId" element={<LiveMatchPage />} />
           
-          {/* Protected Routes */}
+                    {/* Protected Routes */}
           <Route 
             path="/dashboard" 
             element={
