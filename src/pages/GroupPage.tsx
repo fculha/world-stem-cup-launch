@@ -178,7 +178,8 @@ export default function GroupPage() {
                     {groupData.teams.map((team, index) => (
                       <tr 
                         key={team.id} 
-                        className={`hover:bg-white/5 transition-colors ${index < 2 ? 'bg-green-500/5' : ''}`}
+                        className={`hover:bg-white/5 transition-colors cursor-pointer ${index < 2 ? 'bg-green-500/5' : ''}`}
+                        onClick={() => window.location.href = `/team/${team.id}`}
                       >
                         <td className="px-4 py-4">
                           <div className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-bold ${
@@ -189,7 +190,7 @@ export default function GroupPage() {
                         </td>
                         <td className="px-4 py-4">
                           <div>
-                            <p className="font-medium">{team.team_name}</p>
+                            <Link to={`/team/${team.id}`} className="font-medium hover:text-[#4361ee] transition-colors">{team.team_name}</Link>
                             <p className="text-white/40 text-xs">{team.school_name}</p>
                           </div>
                         </td>

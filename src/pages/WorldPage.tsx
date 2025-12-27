@@ -37,11 +37,11 @@ const mockStateStats: StateStats[] = [
 ];
 
 const mockTopTeams = [
-  { rank: 1, name: 'Quantum Minds', school: 'Montgomery Blair HS', state: 'MD', points: 2450 },
-  { rank: 2, name: 'Neural Network', school: 'Walt Whitman HS', state: 'MD', points: 2380 },
-  { rank: 3, name: 'Binary Stars', school: 'Thomas Jefferson HS', state: 'VA', points: 2290 },
-  { rank: 4, name: 'Code Breakers', school: 'Bethesda-Chevy Chase HS', state: 'MD', points: 2180 },
-  { rank: 5, name: 'Data Dragons', school: 'Richard Montgomery HS', state: 'MD', points: 2050 },
+  { id: 1, rank: 1, name: 'Quantum Minds', school: 'Montgomery Blair HS', state: 'MD', points: 2450 },
+  { id: 5, rank: 2, name: 'Neural Network', school: 'Walt Whitman HS', state: 'MD', points: 2380 },
+  { id: 2, rank: 3, name: 'Binary Stars', school: 'Thomas Jefferson HS', state: 'VA', points: 2290 },
+  { id: 3, rank: 4, name: 'Code Breakers', school: 'Bethesda-Chevy Chase HS', state: 'MD', points: 2180 },
+  { id: 6, rank: 5, name: 'Data Dragons', school: 'Richard Montgomery HS', state: 'MD', points: 2050 },
 ];
 
 const mockUpcomingMatches = [
@@ -209,7 +209,7 @@ export default function WorldPage() {
                 </thead>
                 <tbody className="divide-y divide-white/5">
                   {mockTopTeams.map((team) => (
-                    <tr key={team.rank} className="hover:bg-white/5 transition-colors">
+                    <tr key={team.rank} className="hover:bg-white/5 transition-colors cursor-pointer" onClick={() => window.location.href = `/team/${team.id}`}>
                       <td className="px-6 py-3">
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
                           team.rank === 1 ? 'bg-yellow-500/20 text-yellow-400' :
@@ -221,12 +221,12 @@ export default function WorldPage() {
                         </div>
                       </td>
                       <td className="px-6 py-3">
-                        <p className="font-medium">{team.name}</p>
+                        <Link to={`/team/${team.id}`} className="font-medium hover:text-[#4361ee] transition-colors">{team.name}</Link>
                         <p className="text-white/40 text-xs md:hidden">{team.school}</p>
                       </td>
                       <td className="px-6 py-3 text-white/60 text-sm hidden md:table-cell">
                         {team.school}
-                        <span className="ml-2 text-[#4361ee]">{team.state}</span>
+                        <Link to={`/state/${team.state}`} className="ml-2 text-[#4361ee] hover:underline">{team.state}</Link>
                       </td>
                       <td className="px-6 py-3 text-right">
                         <span className="font-bold text-[#4361ee]">{team.points.toLocaleString()}</span>
@@ -317,6 +317,18 @@ export default function WorldPage() {
                   <div>
                     <p className="font-medium text-sm">Leaderboard</p>
                     <p className="text-white/50 text-xs">Global Rankings</p>
+                  </div>
+                </Link>
+                <Link
+                  to="/bracket"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-[#0a0a1a]/50 hover:bg-[#0a0a1a] transition-colors"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-[#f72585]/20 flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-[#f72585]" />
+                  </div>
+                  <div>
+                    <p className="font-medium text-sm">Playoff Bracket</p>
+                    <p className="text-white/50 text-xs">Tournament Playoffs</p>
                   </div>
                 </Link>
               </div>

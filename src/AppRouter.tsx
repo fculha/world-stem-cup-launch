@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import LandingPage from './App';
@@ -61,12 +61,14 @@ export default function AppRouter() {
                     {/* World Cup Style Public Pages */}
                     <Route path="/world" element={<WorldPage />} />
                     <Route path="/state/:stateCode" element={<StatePage />} />
+                    <Route path="/state/MD/current" element={<Navigate to="/state/MD" replace />} />
                     <Route path="/tournament/:tournamentId" element={<StateQualifierPage />} />
                     <Route path="/group/:groupId" element={<GroupPage />} />
                     <Route path="/match/:matchId" element={<MatchPage />} />
                     <Route path="/team/:teamId" element={<TeamPage />} />
                     <Route path="/bracket/:tournamentId" element={<BracketPage />} />
                     <Route path="/bracket" element={<BracketPage />} />
+                    <Route path="/bracket/current" element={<Navigate to="/bracket" replace />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/who-we-are" element={<AboutPage />} />
           

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Trophy, Globe, School, Users, Shield, Gift, ChevronRight, 
+  Trophy, Globe, School, Users, Shield, Gift, ChevronRight, ChevronDown,
   Star, Award, Target, Zap, CheckCircle, ArrowRight, Play,
   Medal, TrendingUp, Lock, Eye, MapPin, Loader2, AlertCircle, LogIn, X, Radio
 } from 'lucide-react';
@@ -359,6 +359,7 @@ const stats = [
 
 function App() {
   const [showVideoModal, setShowVideoModal] = useState(false);
+  const [showCompetitionDropdown, setShowCompetitionDropdown] = useState(false);
 
   // Scroll to section with offset for fixed navbar
   const scrollToSection = (id: string) => {
@@ -414,20 +415,53 @@ function App() {
                 </button>
               );
             })}
-            <Link 
-              to="/world"
-              className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-2"
+            {/* Competition Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setShowCompetitionDropdown(true)}
+              onMouseLeave={() => setShowCompetitionDropdown(false)}
             >
-              <Globe className="w-4 h-4" />
-              Competition
-            </Link>
-            <Link 
-              to="/schools"
-              className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-2"
-            >
-              <School className="w-4 h-4" />
-              Find Schools
-            </Link>
+              <button className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1">
+                <Globe className="w-4 h-4" />
+                Competition
+                <ChevronDown className={`w-3 h-3 transition-transform ${showCompetitionDropdown ? 'rotate-180' : ''}`} />
+              </button>
+              {showCompetitionDropdown && (
+                <div className="absolute top-full left-0 mt-2 w-48 bg-[#16213e] border border-white/10 rounded-lg shadow-xl py-2 z-50">
+                  <Link 
+                    to="/world"
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Overview
+                  </Link>
+                  <Link 
+                    to="/state/MD"
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Maryland Pilot
+                  </Link>
+                  <Link 
+                    to="/bracket"
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Playoff Bracket
+                  </Link>
+                  <Link 
+                    to="/leaderboard"
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Leaderboard
+                  </Link>
+                  <div className="border-t border-white/10 my-1"></div>
+                  <Link 
+                    to="/schools"
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Find Schools
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link 
               to="/watch"
               className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-2"

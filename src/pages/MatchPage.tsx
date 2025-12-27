@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { Trophy, Clock, Calendar, ChevronRight, Users, Target } from 'lucide-react';
 
 interface TeamStats {
+  id: number;
   name: string;
   school: string;
   score: number;
@@ -45,6 +46,7 @@ const mockMatchData: Record<string, MatchData> = {
     time: '2:00 PM EST',
     status: 'completed',
     team1: {
+      id: 1,
       name: 'Quantum Minds',
       school: 'Montgomery Blair HS',
       score: 420,
@@ -53,6 +55,7 @@ const mockMatchData: Record<string, MatchData> = {
       questionsAnswered: 10,
     },
     team2: {
+      id: 2,
       name: 'Binary Stars',
       school: 'Thomas Jefferson HS',
       score: 370,
@@ -82,6 +85,7 @@ const mockMatchData: Record<string, MatchData> = {
     time: '2:00 PM EST',
     status: 'scheduled',
     team1: {
+      id: 1,
       name: 'Quantum Minds',
       school: 'Montgomery Blair HS',
       score: 0,
@@ -90,6 +94,7 @@ const mockMatchData: Record<string, MatchData> = {
       questionsAnswered: 0,
     },
     team2: {
+      id: 5,
       name: 'Neural Network',
       school: 'Walt Whitman HS',
       score: 0,
@@ -196,15 +201,15 @@ export default function MatchPage() {
           <div className="p-8">
             <div className="flex items-center justify-center gap-8">
               {/* Team 1 */}
-              <div className={`flex-1 text-center ${team1Won ? '' : 'opacity-70'}`}>
+              <Link to={`/team/${matchData.team1.id}`} className={`flex-1 text-center hover:opacity-100 transition-opacity ${team1Won ? '' : 'opacity-70'}`}>
                 <div className={`w-20 h-20 rounded-xl mx-auto mb-4 flex items-center justify-center text-2xl font-bold ${
                   team1Won ? 'bg-gradient-to-br from-yellow-400 to-yellow-600' : 'bg-[#4361ee]'
                 }`}>
                   {matchData.team1.name.charAt(0)}
                 </div>
-                <h2 className="text-xl font-bold mb-1">{matchData.team1.name}</h2>
+                <h2 className="text-xl font-bold mb-1 hover:text-[#4361ee] transition-colors">{matchData.team1.name}</h2>
                 <p className="text-white/60 text-sm">{matchData.team1.school}</p>
-              </div>
+              </Link>
 
               {/* Score */}
               <div className="text-center px-8">
@@ -230,15 +235,15 @@ export default function MatchPage() {
               </div>
 
               {/* Team 2 */}
-              <div className={`flex-1 text-center ${team2Won ? '' : 'opacity-70'}`}>
+              <Link to={`/team/${matchData.team2.id}`} className={`flex-1 text-center hover:opacity-100 transition-opacity ${team2Won ? '' : 'opacity-70'}`}>
                 <div className={`w-20 h-20 rounded-xl mx-auto mb-4 flex items-center justify-center text-2xl font-bold ${
                   team2Won ? 'bg-gradient-to-br from-yellow-400 to-yellow-600' : 'bg-[#f72585]'
                 }`}>
                   {matchData.team2.name.charAt(0)}
                 </div>
-                <h2 className="text-xl font-bold mb-1">{matchData.team2.name}</h2>
+                <h2 className="text-xl font-bold mb-1 hover:text-[#f72585] transition-colors">{matchData.team2.name}</h2>
                 <p className="text-white/60 text-sm">{matchData.team2.school}</p>
-              </div>
+              </Link>
             </div>
           </div>
         </div>

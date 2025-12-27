@@ -177,6 +177,18 @@ export default function StatePage() {
               <p className="text-white/60 text-sm">Groups</p>
             </div>
           </div>
+
+          {/* Playoff Bracket Button */}
+          <div className="mt-6">
+            <Link
+              to="/bracket"
+              className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-[#f72585] to-[#4361ee] rounded-xl font-medium hover:opacity-90 transition-opacity"
+            >
+              <Trophy className="w-5 h-5" />
+              View Playoff Bracket
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
 
         {/* Tabs */}
@@ -310,7 +322,8 @@ export default function StatePage() {
                     {group.teams.map((team, index) => (
                       <tr 
                         key={team.id} 
-                        className={`hover:bg-white/5 transition-colors ${index < 2 ? 'bg-green-500/5' : ''}`}
+                        className={`hover:bg-white/5 transition-colors cursor-pointer ${index < 2 ? 'bg-green-500/5' : ''}`}
+                        onClick={() => window.location.href = `/team/${team.id}`}
                       >
                         <td className="px-4 py-3">
                           <div className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold ${
@@ -321,7 +334,7 @@ export default function StatePage() {
                         </td>
                         <td className="px-4 py-3">
                           <div>
-                            <p className="font-medium text-sm">{team.team_name}</p>
+                            <Link to={`/team/${team.id}`} className="font-medium text-sm hover:text-[#4361ee] transition-colors">{team.team_name}</Link>
                             <p className="text-white/40 text-xs">{team.school_name}</p>
                           </div>
                         </td>
@@ -414,7 +427,7 @@ export default function StatePage() {
                     globalRank: groups.flatMap(g => g.teams).sort((a, b) => b.points - a.points).findIndex(t => t.id === team.id) + 1
                   }))
                 ).sort((a, b) => b.points - a.points).map((team) => (
-                  <tr key={team.id} className="hover:bg-white/5 transition-colors">
+                  <tr key={team.id} className="hover:bg-white/5 transition-colors cursor-pointer" onClick={() => window.location.href = `/team/${team.id}`}>
                     <td className="px-6 py-4">
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
                         team.globalRank === 1 ? 'bg-yellow-500/20 text-yellow-400' :
@@ -425,10 +438,12 @@ export default function StatePage() {
                         {team.globalRank}
                       </div>
                     </td>
-                    <td className="px-6 py-4 font-medium">{team.team_name}</td>
+                    <td className="px-6 py-4">
+                      <Link to={`/team/${team.id}`} className="font-medium hover:text-[#4361ee] transition-colors">{team.team_name}</Link>
+                    </td>
                     <td className="px-6 py-4 text-white/60">{team.school_name}</td>
                     <td className="px-6 py-4 text-center">
-                      <span className="px-2 py-1 rounded bg-[#4361ee]/20 text-[#4361ee] text-xs">{team.groupName}</span>
+                      <Link to={`/group/${team.id}`} className="px-2 py-1 rounded bg-[#4361ee]/20 text-[#4361ee] text-xs hover:bg-[#4361ee]/30 transition-colors">{team.groupName}</Link>
                     </td>
                     <td className="px-6 py-4 text-center text-sm">
                       <span className="text-green-400">{team.wins}</span>
