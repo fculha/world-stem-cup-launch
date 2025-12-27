@@ -21,6 +21,7 @@ interface Question {
   ai_model: string | null;
   created_at: string | null;
   learning_objective: string | null;
+  time_limit_sec: number | null;
 }
 
 interface GenerateResponse {
@@ -72,6 +73,10 @@ export default function AdminQuestionsPage() {
   const [reviewQueue, setReviewQueue] = useState<Question[]>([]);
   const [reviewTotal, setReviewTotal] = useState(0);
   const [reviewStatus, setReviewStatus] = useState('REVIEW');
+  const [reviewCategory, setReviewCategory] = useState('');
+  const [reviewDifficulty, setReviewDifficulty] = useState('');
+  const [reviewGradeBand, setReviewGradeBand] = useState('');
+  const [reviewSourceType, setReviewSourceType] = useState('');
   const [selectedQuestion, setSelectedQuestion] = useState<Question | null>(null);
   const [reviewNotes, setReviewNotes] = useState('');
 
@@ -132,7 +137,15 @@ export default function AdminQuestionsPage() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetchWithAuth(`${API_BASE}/api/questions/review-queue?status=${reviewStatus}&limit=50`);
+      const params = new URLSearchParams();
+      params.append('status', reviewStatus);
+      params.append('limit', '50');
+      if (reviewCategory) params.append('category', reviewCategory);
+      if (reviewDifficulty) params.append('difficulty', reviewDifficulty);
+      if (reviewGradeBand) params.append('grade_band', reviewGradeBand);
+      if (reviewSourceType) params.append('source_type', reviewSourceType);
+      
+      const response = await fetchWithAuth(`${API_BASE}/api/questions/review-queue?${params.toString()}`);
       if (!response.ok) {
         const data = await response.json();
         throw new Error(data.detail || 'Failed to fetch review queue');
@@ -217,7 +230,7 @@ export default function AdminQuestionsPage() {
     } else if (activeTab === 'stats') {
       fetchStats();
     }
-  }, [activeTab, reviewStatus]);
+  }, [activeTab, reviewStatus, reviewCategory, reviewDifficulty, reviewGradeBand, reviewSourceType]);
 
   const categoryNames: Record<string, string> = {
     S: 'Science',
@@ -426,18 +439,82 @@ export default function AdminQuestionsPage() {
 
         {activeTab === 'review' && (
           <div className="bg-white rounded-lg shadow p-6">
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center justify-between mb-4">
               <h2 className="text-xl font-semibold">Review Queue ({reviewTotal} questions)</h2>
-              <select
-                value={reviewStatus}
-                onChange={(e) => setReviewStatus(e.target.value)}
-                className="border border-gray-300 rounded-md px-3 py-2"
-              >
-                <option value="REVIEW">Ready for Review</option>
-                <option value="DRAFT">Drafts (Need Fixes)</option>
-                <option value="ACTIVE">Active</option>
-                <option value="REJECTED">Rejected</option>
-              </select>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-3 mb-6 p-4 bg-gray-50 rounded-lg">
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">Status</label>
+                <select
+                  value={reviewStatus}
+                  onChange={(e) => setReviewStatus(e.target.value)}
+                  className="w-full border border-gray-300 rounded-md px-2 py-1.5 text-sm"
+                >
+                  <option value="REVIEW">Ready for Review</option>
+                  <option value="DRAFT">Drafts</option>
+                  <option value="ACTIVE">Active</option>
+                  <option value="REJECTED">Rejected</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">Category</label>
+                <select
+                  value={reviewCategory}
+                  onChange={(e) => setReviewCategory(e.target.value)}
+                  className="w-full border border-gray-300 rounded-md px-2 py-1.5 text-sm"
+                >
+                  <option value="">All Categories</option>
+                  <option value="S">Science</option>
+                  <option value="T">Technology</option>
+                  <option value="E">Engineering</option>
+                  <option value="M">Math</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">Difficulty</label>
+                <select
+                  value={reviewDifficulty}
+                  onChange={(e) => setReviewDifficulty(e.target.value)}
+                  className="w-full border border-gray-300 rounded-md px-2 py-1.5 text-sm"
+                >
+                  <option value="">All Difficulties</option>
+                  <option value="1">1 - Basic</option>
+                  <option value="2">2 - Easy</option>
+                  <option value="3">3 - Medium</option>
+                  <option value="4">4 - Hard</option>
+                  <option value="5">5 - Expert</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">Grade Band</label>
+                <select
+                  value={reviewGradeBand}
+                  onChange={(e) => setReviewGradeBand(e.target.value)}
+                  className="w-full border border-gray-300 rounded-md px-2 py-1.5 text-sm"
+                >
+                  <option value="">All Grades</option>
+                  <option value="ES">Elementary</option>
+                  <option value="MS">Middle School</option>
+                  <option value="HS">High School</option>
+                  <option value="HS9_10">HS 9-10</option>
+                  <option value="HS11_12">HS 11-12</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-medium text-gray-600 mb-1">Source</label>
+                <select
+                  value={reviewSourceType}
+                  onChange={(e) => setReviewSourceType(e.target.value)}
+                  className="w-full border border-gray-300 rounded-md px-2 py-1.5 text-sm"
+                >
+                  <option value="">All Sources</option>
+                  <option value="HUMAN">Human</option>
+                  <option value="AI_DRAFT">AI Draft</option>
+                  <option value="AI_APPROVED">AI Approved</option>
+                  <option value="IMPORTED">Imported</option>
+                </select>
+              </div>
             </div>
 
             {loading && <p className="text-gray-500">Loading...</p>}
@@ -456,21 +533,39 @@ export default function AdminQuestionsPage() {
                   onClick={() => setSelectedQuestion(q)}
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center space-x-2">
+                    <div className="flex items-center flex-wrap gap-1">
                       <span className="px-2 py-1 bg-gray-100 rounded text-xs font-medium">
                         {categoryNames[q.category] || q.category}
                       </span>
                       <span className="px-2 py-1 bg-gray-100 rounded text-xs font-medium">
-                        Difficulty: {q.difficulty}
+                        Diff: {q.difficulty}
+                      </span>
+                      {q.grade_band && (
+                        <span className="px-2 py-1 bg-indigo-100 text-indigo-800 rounded text-xs font-medium">
+                          {q.grade_band}
+                        </span>
+                      )}
+                      {q.time_limit_sec && (
+                        <span className="px-2 py-1 bg-cyan-100 text-cyan-800 rounded text-xs font-medium">
+                          {q.time_limit_sec}s
+                        </span>
+                      )}
+                      <span className="px-2 py-1 bg-orange-100 text-orange-800 rounded text-xs font-medium">
+                        {q.source_type}
                       </span>
                       <span className={`px-2 py-1 rounded text-xs font-medium ${statusColors[q.status]}`}>
                         {q.status}
                       </span>
                     </div>
                     <span className="text-sm text-gray-500">
-                      Quality: {q.quality_score ?? 'N/A'}/100
+                      QA: {q.quality_score ?? 'N/A'}/100
                     </span>
                   </div>
+                  {q.learning_objective && (
+                    <p className="text-xs text-indigo-600 mb-2">
+                      <strong>Objective:</strong> {q.learning_objective}
+                    </p>
+                  )}
                   <p className="text-gray-800 font-medium">{q.prompt}</p>
                   {q.choices && (
                     <div className="mt-2 grid grid-cols-2 gap-2">
