@@ -391,11 +391,11 @@ function App() {
     <div className="min-h-screen bg-[#0a0a1a] text-white">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a1a]/90 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center">
+          <Link to="/" className="flex items-center gap-3 mr-8">
             <img src="/wsc-logo-full.png" alt="World STEM Cup" className="h-32 object-contain -my-8" />
           </Link>
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-8 flex-1">
             <Link 
               to="/about"
               className="text-sm text-white/70 hover:text-white transition-colors"
