@@ -32,6 +32,8 @@ import FindSchoolsPage from './pages/FindSchoolsPage';
 // World Cup Style Public Pages
 import WorldPage from './pages/WorldPage';
 import StatePage from './pages/StatePage';
+import StatesPage from './pages/StatesPage';
+import DoDEAPage from './pages/DoDEAPage';
 import GroupPage from './pages/GroupPage';
 import MatchPage from './pages/MatchPage';
 // About Page
@@ -60,6 +62,8 @@ export default function AppRouter() {
           
                     {/* World Cup Style Public Pages */}
                     <Route path="/world" element={<WorldPage />} />
+                    <Route path="/states" element={<StatesPage />} />
+                    <Route path="/dodea" element={<DoDEAPage />} />
                     <Route path="/state/:stateCode" element={<StatePage />} />
                     <Route path="/state/MD/current" element={<Navigate to="/state/MD" replace />} />
                     <Route path="/tournament/:tournamentId" element={<StateQualifierPage />} />

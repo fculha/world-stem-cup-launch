@@ -435,13 +435,25 @@ function App() {
                     Overview
                   </Link>
                   <Link 
+                    to="/states"
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    All States
+                  </Link>
+                  <Link 
                     to="/state/MD"
                     className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     Maryland Pilot
                   </Link>
                   <Link 
-                    to="/bracket"
+                    to="/dodea"
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    DoDEA Schools
+                  </Link>
+                  <Link 
+                    to="/bracket/current"
                     className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     Playoff Bracket
@@ -454,7 +466,7 @@ function App() {
                   </Link>
                   <div className="border-t border-white/10 my-1"></div>
                   <Link 
-                    to="/schools"
+                    to="/find-schools"
                     className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     Find Schools
