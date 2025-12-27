@@ -11,6 +11,7 @@ import AdminSchoolsPage from './pages/admin/AdminSchoolsPage';
 import AdminUsersPage from './pages/admin/AdminUsersPage';
 import AdminSettingsPage from './pages/admin/AdminSettingsPage';
 import AdminStatsPage from './pages/admin/AdminStatsPage';
+import AdminQuestionsPage from './pages/admin/AdminQuestionsPage';
 import LeaderboardPage from './pages/LeaderboardPage';
 // Teacher Pages
 import TeacherStudentsPage from './pages/teacher/TeacherStudentsPage';
@@ -116,6 +117,14 @@ export default function AppRouter() {
             element={
               <ProtectedRoute allowedRoles={['ADMIN']}>
                 <AdminStatsPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/admin/questions" 
+            element={
+              <ProtectedRoute allowedRoles={['ADMIN']}>
+                <AdminQuestionsPage />
               </ProtectedRoute>
             } 
           />
