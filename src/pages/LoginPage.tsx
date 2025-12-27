@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Trophy, Mail, Lock, Loader2, AlertCircle, ArrowLeft } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -10,6 +10,7 @@ export default function LoginPage() {
   const [error, setError] = useState('');
   const { login } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,7 +20,13 @@ export default function LoginPage() {
     const result = await login(email, password);
     
     if (result.success) {
-      navigate('/dashboard');
+      const from = (location.state as { from?: { pathname: string; search?: string; hash?: string } })?.from;
+      if (from && typeof from === 'object' && 'pathname' in from) {
+        const path = from.pathname + (from.search || '') + (from.hash || '');
+        navigate(path, { replace: true });
+      } else {
+        navigate('/dashboard', { replace: true });
+      }
     } else {
       setError(result.error || 'Login failed');
     }

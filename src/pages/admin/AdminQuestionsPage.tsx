@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../../contexts/AuthContext';
 
 const API_BASE = import.meta.env.VITE_API_URL || 'https://world-stem-cup-backend.onrender.com';
 
@@ -54,10 +55,28 @@ interface Stats {
 
 export default function AdminQuestionsPage() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { accessToken } = useAuth();
   const [activeTab, setActiveTab] = useState<'generate' | 'review' | 'stats'>('generate');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (location.pathname.endsWith('/review')) {
+      setActiveTab('review');
+    } else if (location.pathname.endsWith('/stats')) {
+      setActiveTab('stats');
+    } else {
+      setActiveTab('generate');
+    }
+  }, [location.pathname]);
+
+  const handleTabChange = (tab: 'generate' | 'review' | 'stats') => {
+    if (tab === 'generate') navigate('/admin/questions', { replace: true });
+    if (tab === 'review') navigate('/admin/questions/review', { replace: true });
+    if (tab === 'stats') navigate('/admin/questions/stats', { replace: true });
+  };
 
   const [generateForm, setGenerateForm] = useState({
     category: 'S',
@@ -82,26 +101,21 @@ export default function AdminQuestionsPage() {
 
   const [stats, setStats] = useState<Stats | null>(null);
 
-  const getAuthToken = () => {
-    return localStorage.getItem('token');
-  };
-
   const fetchWithAuth = async (url: string, options: RequestInit = {}) => {
-    const token = getAuthToken();
-    if (!token) {
-      navigate('/login');
+    if (!accessToken) {
+      navigate('/login', { state: { from: location } });
       throw new Error('Not authenticated');
     }
     const response = await fetch(url, {
       ...options,
       headers: {
         ...options.headers,
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${accessToken}`,
         'Content-Type': 'application/json'
       }
     });
     if (response.status === 401 || response.status === 403) {
-      navigate('/login');
+      navigate('/login', { state: { from: location } });
       throw new Error('Not authorized');
     }
     return response;
@@ -271,7 +285,7 @@ export default function AdminQuestionsPage() {
           <div className="border-b border-gray-200">
             <nav className="-mb-px flex space-x-8">
               <button
-                onClick={() => setActiveTab('generate')}
+                onClick={() => handleTabChange('generate')}
                 className={`py-4 px-1 border-b-2 font-medium text-sm ${
                   activeTab === 'generate'
                     ? 'border-blue-500 text-blue-600'
@@ -281,7 +295,7 @@ export default function AdminQuestionsPage() {
                 Generate Drafts
               </button>
               <button
-                onClick={() => setActiveTab('review')}
+                onClick={() => handleTabChange('review')}
                 className={`py-4 px-1 border-b-2 font-medium text-sm ${
                   activeTab === 'review'
                     ? 'border-blue-500 text-blue-600'
@@ -291,7 +305,7 @@ export default function AdminQuestionsPage() {
                 Review Queue
               </button>
               <button
-                onClick={() => setActiveTab('stats')}
+                onClick={() => handleTabChange('stats')}
                 className={`py-4 px-1 border-b-2 font-medium text-sm ${
                   activeTab === 'stats'
                     ? 'border-blue-500 text-blue-600'

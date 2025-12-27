@@ -130,6 +130,22 @@ export default function AppRouter() {
               </ProtectedRoute>
             } 
           />
+          <Route 
+            path="/admin/questions/review" 
+            element={
+              <ProtectedRoute allowedRoles={['ADMIN']}>
+                <AdminQuestionsPage />
+              </ProtectedRoute>
+            } 
+          />
+          <Route 
+            path="/admin/questions/stats" 
+            element={
+              <ProtectedRoute allowedRoles={['ADMIN']}>
+                <AdminQuestionsPage />
+              </ProtectedRoute>
+            } 
+          />
           
           {/* Teacher Routes */}
           <Route 
