@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Trophy, LogOut, User, School, Users, Settings, BarChart3, Calendar, Award, Play, Eye } from 'lucide-react';
+import { Trophy, LogOut, User, School, Users, Settings, BarChart3, Calendar, Award, Play, Eye, FileQuestion } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function DashboardPage() {
@@ -28,14 +28,15 @@ export default function DashboardPage() {
 
   const getQuickActions = () => {
     switch (user?.role) {
-      case 'ADMIN':
-        return [
-          { icon: School, label: 'Manage Schools', description: 'Review and approve school registrations', href: '/admin/schools' },
-          { icon: Users, label: 'Manage Users', description: 'View and manage all users', href: '/admin/users' },
-          { icon: BarChart3, label: 'Statistics', description: 'View system statistics', href: '/admin/stats' },
-          { icon: Settings, label: 'Settings', description: 'System configuration', href: '/admin/settings' },
-          { icon: Play, label: 'Gameplay Preview', description: 'Preview match gameplay UI', href: '/play/match/5', highlight: true },
-        ];
+            case 'ADMIN':
+              return [
+                { icon: School, label: 'Manage Schools', description: 'Review and approve school registrations', href: '/admin/schools' },
+                { icon: Users, label: 'Manage Users', description: 'View and manage all users', href: '/admin/users' },
+                { icon: FileQuestion, label: 'Question Bank', description: 'Manage and review STEM questions', href: '/admin/questions' },
+                { icon: BarChart3, label: 'Statistics', description: 'View system statistics', href: '/admin/stats' },
+                { icon: Settings, label: 'Settings', description: 'System configuration', href: '/admin/settings' },
+                { icon: Play, label: 'Gameplay Preview', description: 'Preview match gameplay UI', href: '/play/match/5', highlight: true },
+              ];
       case 'TEACHER':
         return [
           { icon: Users, label: 'My Students', description: 'View and manage your students', href: '/teacher/students' },
