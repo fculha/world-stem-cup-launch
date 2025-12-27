@@ -409,6 +409,18 @@ function App() {
             >
               How It Works
             </Link>
+            <Link 
+              to="/parents-schools"
+              className="text-sm text-white/70 hover:text-white transition-colors"
+            >
+              Parents & Schools
+            </Link>
+            <Link 
+              to="/education-fund"
+              className="text-sm text-white/70 hover:text-white transition-colors"
+            >
+              Education Fund
+            </Link>
             {['Rewards', 'Integrity', 'Sponsors'].map((item) => {
               const id = item.toLowerCase().replace(' ', '-');
               return (
@@ -882,9 +894,9 @@ function App() {
               <h4 className="font-bold mb-4">Competition</h4>
               <ul className="space-y-2 text-sm text-white/50">
                 <li><Link to="/how-it-works" className="hover:text-white">How It Works</Link></li>
-                <li><Link to="/world" className="hover:text-white">World Cup</Link></li>
+                <li><Link to="/parents-schools" className="hover:text-white">Parents & Schools</Link></li>
+                <li><Link to="/education-fund" className="hover:text-white">Education Fund</Link></li>
                 <li><Link to="/about" className="hover:text-white">About Us</Link></li>
-                <li><Link to="/leaderboard" className="hover:text-white">Leaderboards</Link></li>
               </ul>
             </div>
             
