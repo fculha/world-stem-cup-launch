@@ -1,0 +1,388 @@
+import { Link } from 'react-router-dom';
+
+export default function ParentsSchoolsPage() {
+  return (
+    <div style={{
+      minHeight: '100vh',
+      background: 'linear-gradient(135deg, #0a0a1a 0%, #1a1a3a 50%, #0a0a1a 100%)',
+      color: 'white',
+      fontFamily: 'system-ui, -apple-system, sans-serif'
+    }}>
+      {/* Navigation */}
+      <nav style={{
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '1rem 2rem',
+        background: 'rgba(0,0,0,0.3)',
+        backdropFilter: 'blur(10px)',
+        position: 'sticky',
+        top: 0,
+        zIndex: 100
+      }}>
+        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'white' }}>
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffd700" strokeWidth="2">
+            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+            <path d="M4 22h16" />
+            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+          </svg>
+          <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>World STEM Cup</span>
+        </Link>
+        <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+          <Link to="/about" style={{ color: 'white', textDecoration: 'none', opacity: 0.8 }}>About</Link>
+          <Link to="/how-it-works" style={{ color: 'white', textDecoration: 'none', opacity: 0.8 }}>How It Works</Link>
+          <Link to="/education-fund" style={{ color: 'white', textDecoration: 'none', opacity: 0.8 }}>Education Fund</Link>
+          <Link to="/login" style={{ color: 'white', textDecoration: 'none', opacity: 0.8 }}>Login</Link>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section style={{
+        padding: '5rem 2rem',
+        textAlign: 'center',
+        background: 'linear-gradient(180deg, rgba(67, 97, 238, 0.1) 0%, transparent 100%)',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          transform: 'translate(-50%, -50%)',
+          width: '600px',
+          height: '600px',
+          background: 'radial-gradient(circle, rgba(67, 97, 238, 0.15) 0%, transparent 70%)',
+          pointerEvents: 'none'
+        }} />
+
+        <h1 style={{
+          fontSize: 'clamp(2.5rem, 5vw, 4rem)',
+          fontWeight: 'bold',
+          marginBottom: '1.5rem',
+          lineHeight: 1.2
+        }}>
+          For Parents & Schools
+        </h1>
+        
+        <p style={{
+          fontSize: '1.25rem',
+          color: 'rgba(255,255,255,0.8)',
+          maxWidth: '700px',
+          margin: '0 auto',
+          lineHeight: 1.8
+        }}>
+          Everything you need to know about World STEM Cup. Safe, fair, and focused on learning.
+        </p>
+      </section>
+
+      {/* Split Layout: Parents vs Schools */}
+      <section style={{
+        padding: '4rem 2rem',
+        maxWidth: '1200px',
+        margin: '0 auto'
+      }}>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
+          gap: '3rem'
+        }}>
+          {/* Parents Section */}
+          <div style={{
+            background: 'linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(67, 97, 238, 0.05))',
+            border: '1px solid rgba(67, 97, 238, 0.3)',
+            borderRadius: '1.5rem',
+            padding: '2.5rem',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              right: 0,
+              width: '150px',
+              height: '150px',
+              background: 'radial-gradient(circle, rgba(67, 97, 238, 0.2) 0%, transparent 70%)',
+              pointerEvents: 'none'
+            }} />
+
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              marginBottom: '2rem'
+            }}>
+              <div style={{
+                width: '60px',
+                height: '60px',
+                borderRadius: '1rem',
+                background: 'linear-gradient(135deg, #4361ee, #7c3aed)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '2rem'
+              }}>
+                👨‍👩‍👧‍👦
+              </div>
+              <h2 style={{ fontSize: '1.75rem', fontWeight: 'bold', color: '#4361ee' }}>For Parents</h2>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <div>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem', color: '#ffd700' }}>
+                  Safe Environment
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                  All competitions are supervised by teachers. No personal information is shared publicly.
+                </p>
+              </div>
+
+              <div>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem', color: '#ffd700' }}>
+                  Academic Focus
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                  Questions are designed by educators. Your child learns while competing.
+                </p>
+              </div>
+
+              <div>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem', color: '#ffd700' }}>
+                  Fair Competition
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                  Students compete within their grade level. Everyone has an equal chance.
+                </p>
+              </div>
+
+              <div>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem', color: '#ffd700' }}>
+                  No Cost to Participate
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                  World STEM Cup is free for students. No hidden fees or purchases required.
+                </p>
+              </div>
+            </div>
+
+            <div style={{
+              marginTop: '2rem',
+              padding: '1rem',
+              background: 'rgba(67, 97, 238, 0.1)',
+              borderRadius: '0.75rem',
+              textAlign: 'center'
+            }}>
+              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.95rem' }}>
+                Questions? Contact your child's teacher or school administrator.
+              </p>
+            </div>
+          </div>
+
+          {/* Schools Section */}
+          <div style={{
+            background: 'linear-gradient(135deg, rgba(247, 37, 133, 0.1), rgba(247, 37, 133, 0.05))',
+            border: '1px solid rgba(247, 37, 133, 0.3)',
+            borderRadius: '1.5rem',
+            padding: '2.5rem',
+            position: 'relative',
+            overflow: 'hidden'
+          }}>
+            <div style={{
+              position: 'absolute',
+              top: 0,
+              right: 0,
+              width: '150px',
+              height: '150px',
+              background: 'radial-gradient(circle, rgba(247, 37, 133, 0.2) 0%, transparent 70%)',
+              pointerEvents: 'none'
+            }} />
+
+            <div style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              marginBottom: '2rem'
+            }}>
+              <div style={{
+                width: '60px',
+                height: '60px',
+                borderRadius: '1rem',
+                background: 'linear-gradient(135deg, #f72585, #ff6b6b)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '2rem'
+              }}>
+                🏫
+              </div>
+              <h2 style={{ fontSize: '1.75rem', fontWeight: 'bold', color: '#f72585' }}>For Schools</h2>
+            </div>
+
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+              <div>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem', color: '#ffd700' }}>
+                  Easy Setup
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                  Register your school in minutes. We provide all the tools you need.
+                </p>
+              </div>
+
+              <div>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem', color: '#ffd700' }}>
+                  Curriculum Aligned
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                  Questions align with standard STEM curricula. Supports classroom learning.
+                </p>
+              </div>
+
+              <div>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem', color: '#ffd700' }}>
+                  Teacher Dashboard
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                  Manage teams, track progress, and view results all in one place.
+                </p>
+              </div>
+
+              <div>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.5rem', color: '#ffd700' }}>
+                  Recognition
+                </h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: 1.6 }}>
+                  Participating schools receive certificates and recognition for their students.
+                </p>
+              </div>
+            </div>
+
+            <Link 
+              to="/"
+              style={{
+                display: 'block',
+                marginTop: '2rem',
+                padding: '1rem',
+                background: 'linear-gradient(135deg, #f72585, #ff6b6b)',
+                borderRadius: '0.75rem',
+                textAlign: 'center',
+                textDecoration: 'none',
+                color: 'white',
+                fontWeight: '600'
+              }}
+            >
+              Register Your School
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Key Benefits */}
+      <section style={{
+        padding: '4rem 2rem',
+        background: 'rgba(0,0,0,0.2)'
+      }}>
+        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
+          <h2 style={{
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            textAlign: 'center',
+            marginBottom: '3rem'
+          }}>
+            Why World STEM Cup?
+          </h2>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '1.5rem'
+          }}>
+            {[
+              { icon: '🎓', title: 'Educational', desc: 'Builds real STEM skills' },
+              { icon: '🌍', title: 'Global', desc: 'Connect with students worldwide' },
+              { icon: '🤝', title: 'Teamwork', desc: 'Learn to collaborate' },
+              { icon: '🏆', title: 'Achievement', desc: 'Earn recognition and rewards' }
+            ].map((item, i) => (
+              <div key={i} style={{
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: '1rem',
+                padding: '1.5rem',
+                textAlign: 'center'
+              }}>
+                <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>{item.icon}</div>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', marginBottom: '0.5rem', color: '#ffd700' }}>{item.title}</h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section style={{
+        padding: '4rem 2rem'
+      }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 style={{
+            fontSize: '2rem',
+            fontWeight: 'bold',
+            textAlign: 'center',
+            marginBottom: '2rem'
+          }}>
+            Common Questions
+          </h2>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+            {[
+              {
+                q: 'Is it safe for my child?',
+                a: 'Yes. All competitions are supervised by teachers. We never share personal information publicly.'
+              },
+              {
+                q: 'Does it cost anything?',
+                a: 'No. World STEM Cup is completely free for students and schools.'
+              },
+              {
+                q: 'What grades can participate?',
+                a: 'Currently, we support high school students in grades 9-12.'
+              },
+              {
+                q: 'How much time does it take?',
+                a: 'Each competition round takes about 30-45 minutes. Students can participate during school hours.'
+              }
+            ].map((item, i) => (
+              <div key={i} style={{
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: '1rem',
+                padding: '1.5rem'
+              }}>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: '600', marginBottom: '0.75rem', color: '#4361ee' }}>{item.q}</h3>
+                <p style={{ color: 'rgba(255,255,255,0.8)', lineHeight: 1.6 }}>{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer style={{
+        padding: '3rem 2rem',
+        background: 'rgba(0,0,0,0.3)',
+        textAlign: 'center'
+      }}>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginBottom: '1.5rem', flexWrap: 'wrap' }}>
+          <Link to="/" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Home</Link>
+          <Link to="/about" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>About</Link>
+          <Link to="/how-it-works" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>How It Works</Link>
+          <Link to="/education-fund" style={{ color: 'rgba(255,255,255,0.6)', textDecoration: 'none' }}>Education Fund</Link>
+        </div>
+        <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem' }}>
+          World STEM Cup 2025. All rights reserved.
+        </p>
+      </footer>
+    </div>
+  );
+}

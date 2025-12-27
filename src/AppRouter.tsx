@@ -39,6 +39,10 @@ import GroupPage from './pages/GroupPage';
 import MatchPage from './pages/MatchPage';
 // About Page
 import AboutPage from './pages/AboutPage';
+// Public Info Pages
+import HowItWorksPage from './pages/HowItWorksPage';
+import ParentsSchoolsPage from './pages/ParentsSchoolsPage';
+import EducationFundPage from './pages/EducationFundPage';
 // Team and Bracket Pages
 import TeamPage from './pages/TeamPage';
 import BracketPage from './pages/BracketPage';
@@ -78,6 +82,9 @@ export default function AppRouter() {
                     <Route path="/bracket/current" element={<Navigate to="/bracket" replace />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/who-we-are" element={<AboutPage />} />
+                    <Route path="/how-it-works" element={<HowItWorksPage />} />
+                    <Route path="/parents-schools" element={<ParentsSchoolsPage />} />
+                    <Route path="/education-fund" element={<EducationFundPage />} />
           
                     {/* Protected Routes */}
           <Route 
