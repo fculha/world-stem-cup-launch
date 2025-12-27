@@ -10,33 +10,62 @@ export default function AboutPage() {
     }}>
       {/* Navigation */}
       <nav style={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        padding: '1rem 2rem',
-        background: 'rgba(0,0,0,0.3)',
-        backdropFilter: 'blur(10px)',
-        position: 'sticky',
+        position: 'fixed',
         top: 0,
-        zIndex: 100
+        left: 0,
+        right: 0,
+        zIndex: 50,
+        background: 'rgba(10, 10, 26, 0.9)',
+        backdropFilter: 'blur(12px)',
+        borderBottom: '1px solid rgba(255,255,255,0.1)'
       }}>
-        <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none', color: 'white' }}>
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffd700" strokeWidth="2">
-            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
-            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
-            <path d="M4 22h16" />
-            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
-            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
-            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
-          </svg>
-          <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>World STEM Cup</span>
-        </Link>
-        <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
-          <Link to="/world" style={{ color: 'white', textDecoration: 'none', opacity: 0.8 }}>Competition</Link>
-          <Link to="/schools" style={{ color: 'white', textDecoration: 'none', opacity: 0.8 }}>Schools</Link>
-          <Link to="/login" style={{ color: 'white', textDecoration: 'none', opacity: 0.8 }}>Login</Link>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '1rem 1.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between'
+        }}>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: 'white' }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ffd700" strokeWidth="2">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" />
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" />
+              <path d="M4 22h16" />
+              <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" />
+              <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" />
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" />
+            </svg>
+            <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>World STEM Cup</span>
+          </Link>
+          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+            <Link to="/about" style={{ color: 'white', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500' }}>About</Link>
+            <Link to="/how-it-works" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}>How It Works</Link>
+            <Link to="/parents-schools" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}>Parents & Schools</Link>
+            <Link to="/education-fund" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}>Education Fund</Link>
+            <Link to="/watch" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+              <span style={{ color: '#f72585' }}>●</span> Watch Live
+            </Link>
+            <Link to="/login" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+              Login
+            </Link>
+            <Link to="/register/school-admin" style={{ 
+              background: '#f72585', 
+              color: 'white', 
+              padding: '0.5rem 1rem', 
+              borderRadius: '9999px', 
+              textDecoration: 'none', 
+              fontSize: '0.875rem',
+              fontWeight: '500'
+            }}>
+              Register Now
+            </Link>
+          </div>
         </div>
       </nav>
+      
+      {/* Spacer for fixed nav */}
+      <div style={{ height: '72px' }} />
 
       {/* Hero Section */}
       <section style={{

@@ -147,37 +147,56 @@ export default function WatchLivePage() {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 bg-[#0a0a1a]/80 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-3">
+      <nav style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        zIndex: 50,
+        background: 'rgba(10, 10, 26, 0.9)',
+        backdropFilter: 'blur(12px)',
+        borderBottom: '1px solid rgba(255,255,255,0.1)'
+      }}>
+        <div style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          padding: '1rem 1.5rem',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between'
+        }}>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: 'white' }}>
             <Trophy className="w-8 h-8 text-yellow-400" />
-            <span className="text-xl font-bold">World STEM Cup</span>
+            <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>World STEM Cup</span>
           </Link>
-          
-          {isAuthenticated ? (
-            <div className="flex items-center gap-4">
-              <div className="text-right">
-                <p className="text-sm font-medium">{user?.first_name} {user?.last_name}</p>
-                <p className="text-xs text-white/60">{user?.email}</p>
-              </div>
-              <button
-                onClick={handleLogout}
-                className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-sm"
-              >
-                <LogOut className="w-4 h-4" />
-                Logout
-              </button>
-            </div>
-          ) : (
-            <Link
-              to="/login"
-              className="px-4 py-2 rounded-lg bg-[#4361ee] hover:bg-[#4361ee]/80 transition-colors text-sm"
-            >
+          <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+            <Link to="/about" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}>About</Link>
+            <Link to="/how-it-works" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}>How It Works</Link>
+            <Link to="/parents-schools" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}>Parents & Schools</Link>
+            <Link to="/education-fund" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}>Education Fund</Link>
+            <Link to="/watch" style={{ color: 'white', textDecoration: 'none', fontSize: '0.875rem', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
+              <span style={{ color: '#f72585' }}>●</span> Watch Live
+            </Link>
+            <Link to="/login" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', display: 'flex', alignItems: 'center', gap: '0.25rem' }}>
               Login
             </Link>
-          )}
+            <Link to="/register/school-admin" style={{ 
+              background: '#f72585', 
+              color: 'white', 
+              padding: '0.5rem 1rem', 
+              borderRadius: '9999px', 
+              textDecoration: 'none', 
+              fontSize: '0.875rem',
+              fontWeight: '500'
+            }}>
+              Register Now
+            </Link>
+          </div>
         </div>
       </nav>
+      
+      {/* Spacer for fixed nav */}
+      <div style={{ height: '72px' }} />
 
       {/* Main Content */}
       <main className="relative z-10 max-w-7xl mx-auto px-6 py-8">
