@@ -74,6 +74,10 @@ export default function PlayMatchPage() {
 
   const currentQuestion = questions[currentQuestionIndex];
 
+  const isAdmin = user?.role === 'ADMIN';
+  const isTeacher = user?.role === 'TEACHER';
+  const isPreviewMode = isAdmin || isTeacher;
+
   const fetchMatchState = useCallback(async () => {
     if (!matchId || !accessToken) return;
     
@@ -92,7 +96,12 @@ export default function PlayMatchPage() {
       const data = await response.json();
       setMatchState(data);
       
-      if (user?.team_id) {
+      if (isPreviewMode && data.teams.length > 0) {
+        const firstTeam = data.teams[0];
+        setTeamId(firstTeam.id);
+        setTeamName(`${firstTeam.name} (Preview Mode)`);
+        setIsCaptain(true);
+      } else if (user?.team_id) {
         const userTeam = data.teams.find((t: { id: number }) => t.id === user.team_id);
         if (userTeam) {
           setTeamId(user.team_id);
@@ -110,7 +119,7 @@ export default function PlayMatchPage() {
       setError(err instanceof Error ? err.message : 'Failed to load match');
       return null;
     }
-  }, [matchId, accessToken, user?.team_id]);
+  }, [matchId, accessToken, user?.team_id, isPreviewMode]);
 
   const fetchQuestions = useCallback(async () => {
     if (!matchId || !accessToken || !teamId) return;
@@ -400,9 +409,14 @@ export default function PlayMatchPage() {
                 <Zap className="w-4 h-4 text-yellow-400" />
                 <span className="font-bold text-sm">{totalScore} pts</span>
               </div>
+              {isPreviewMode && (
+                <div className="px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-400 text-xs font-medium">
+                  Preview Mode
+                </div>
+              )}
               <div className="text-right hidden sm:block">
                 <p className="text-sm font-medium">{user?.first_name} {user?.last_name}</p>
-                <p className="text-xs text-white/60">{isCaptain ? 'Team Captain' : 'Team Member'}</p>
+                <p className="text-xs text-white/60">{isPreviewMode ? user?.role : (isCaptain ? 'Team Captain' : 'Team Member')}</p>
               </div>
               <button
                 onClick={handleLogout}
