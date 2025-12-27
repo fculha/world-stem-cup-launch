@@ -31,7 +31,7 @@ export default function HowItWorksPage() {
           justifyContent: 'space-between'
         }}>
           <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: 'white' }}>
-            <img src="/wsc-trophy.png" alt="World STEM Cup" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
+            <img src="/wsc-trophy.png" alt="World STEM Cup" style={{ width: '56px', height: '56px', objectFit: 'contain' }} />
             <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>World STEM Cup</span>
           </Link>
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>

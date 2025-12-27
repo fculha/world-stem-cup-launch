@@ -393,7 +393,7 @@ function App() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a1a]/90 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src="/wsc-trophy.png" alt="World STEM Cup" className="w-10 h-10 object-contain" />
+            <img src="/wsc-trophy.png" alt="World STEM Cup" className="w-14 h-14 object-contain" />
             <span className="text-xl font-bold">World STEM Cup</span>
           </div>
           <div className="hidden md:flex items-center gap-8">
