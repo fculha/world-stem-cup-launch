@@ -42,6 +42,8 @@ import AboutPage from './pages/AboutPage';
 // Team and Bracket Pages
 import TeamPage from './pages/TeamPage';
 import BracketPage from './pages/BracketPage';
+// Play Match Page (Real Gameplay)
+import PlayMatchPage from './pages/play/PlayMatchPage';
 
 export default function AppRouter() {
   return (
@@ -212,16 +214,26 @@ export default function AppRouter() {
               </ProtectedRoute>
             } 
           />
-          <Route 
-            path="/student/profile" 
-            element={
-              <ProtectedRoute allowedRoles={['ADMIN', 'TEACHER', 'STUDENT']}>
-                <DashboardPage />
-              </ProtectedRoute>
-            } 
-          />
+                    <Route 
+                      path="/student/profile" 
+                      element={
+                        <ProtectedRoute allowedRoles={['ADMIN', 'TEACHER', 'STUDENT']}>
+                          <DashboardPage />
+                        </ProtectedRoute>
+                      } 
+                    />
           
-          {/* Catch-all redirect to home */}
+                    {/* Play Match Route (Real Gameplay with APIs) */}
+                    <Route 
+                      path="/play/match/:matchId" 
+                      element={
+                        <ProtectedRoute allowedRoles={['ADMIN', 'TEACHER', 'STUDENT']}>
+                          <PlayMatchPage />
+                        </ProtectedRoute>
+                      } 
+                    />
+          
+                    {/* Catch-all redirect to home */}
           <Route path="*" element={<LandingPage />} />
         </Routes>
       </AuthProvider>
