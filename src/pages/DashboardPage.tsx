@@ -34,7 +34,7 @@ export default function DashboardPage() {
           { icon: Users, label: 'Manage Users', description: 'View and manage all users', href: '/admin/users' },
           { icon: BarChart3, label: 'Statistics', description: 'View system statistics', href: '/admin/stats' },
           { icon: Settings, label: 'Settings', description: 'System configuration', href: '/admin/settings' },
-          { icon: Play, label: 'Gameplay Preview', description: 'Preview match gameplay UI', href: '/play/match/4', highlight: true },
+          { icon: Play, label: 'Gameplay Preview', description: 'Preview match gameplay UI', href: '/play/match/5', highlight: true },
         ];
       case 'TEACHER':
         return [
