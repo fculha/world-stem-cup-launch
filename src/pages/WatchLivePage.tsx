@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { Trophy, LogOut, ArrowLeft, Play, Clock, Globe, Radio, Eye, Tv } from 'lucide-react';
-import { useAuth } from '../contexts/AuthContext';
+import { Link } from 'react-router-dom';
+import { Trophy, ArrowLeft, Play, Clock, Globe, Radio, Eye, Tv } from 'lucide-react';
 
 // Mock live matches data - in production this would come from API
 const mockLiveMatches = [
@@ -80,10 +79,8 @@ interface LiveMatch {
 }
 
 export default function WatchLivePage() {
-  const { user, logout, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-    const [matches, setMatches] = useState<LiveMatch[]>(mockLiveMatches as LiveMatch[]);
-    const [loading] = useState(false);
+  const [matches, setMatches] = useState<LiveMatch[]>(mockLiveMatches as LiveMatch[]);
+  const [loading] = useState(false);
   const [filter, setFilter] = useState<'all' | 'live' | 'upcoming'>('all');
 
   // Simulate live updates
@@ -110,11 +107,6 @@ export default function WatchLivePage() {
 
     return () => clearInterval(interval);
   }, []);
-
-  const handleLogout = () => {
-    logout();
-    navigate('/');
-  };
 
   const getTimeDisplay = (match: LiveMatch) => {
     if (match.status === 'live' && match.started_at) {
