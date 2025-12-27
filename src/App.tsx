@@ -896,7 +896,9 @@ function App() {
                 <li><Link to="/how-it-works" className="hover:text-white">How It Works</Link></li>
                 <li><Link to="/parents-schools" className="hover:text-white">Parents & Schools</Link></li>
                 <li><Link to="/education-fund" className="hover:text-white">Education Fund</Link></li>
+                <li><Link to="/world" className="hover:text-white">World Cup</Link></li>
                 <li><Link to="/about" className="hover:text-white">About Us</Link></li>
+                <li><Link to="/leaderboard" className="hover:text-white">Leaderboards</Link></li>
               </ul>
             </div>
             
