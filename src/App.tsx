@@ -403,7 +403,13 @@ function App() {
             >
               About
             </Link>
-            {['How It Works', 'Rewards', 'Integrity', 'Sponsors'].map((item) => {
+            <Link 
+              to="/how-it-works"
+              className="text-sm text-white/70 hover:text-white transition-colors"
+            >
+              How It Works
+            </Link>
+            {['Rewards', 'Integrity', 'Sponsors'].map((item) => {
               const id = item.toLowerCase().replace(' ', '-');
               return (
                 <button 
@@ -875,7 +881,7 @@ function App() {
             <div>
               <h4 className="font-bold mb-4">Competition</h4>
               <ul className="space-y-2 text-sm text-white/50">
-                <li><button onClick={() => scrollToSection('how-it-works')} className="hover:text-white">How It Works</button></li>
+                <li><Link to="/how-it-works" className="hover:text-white">How It Works</Link></li>
                 <li><Link to="/world" className="hover:text-white">World Cup</Link></li>
                 <li><Link to="/about" className="hover:text-white">About Us</Link></li>
                 <li><Link to="/leaderboard" className="hover:text-white">Leaderboards</Link></li>
