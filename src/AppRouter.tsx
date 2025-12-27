@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './contexts/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
+import ScrollToTop from './components/ScrollToTop';
 import LandingPage from './App';
 import LoginPage from './pages/LoginPage';
 import RegisterSchoolAdminPage from './pages/RegisterSchoolAdminPage';
@@ -52,6 +53,7 @@ import PlayMatchPage from './pages/play/PlayMatchPage';
 export default function AppRouter() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <AuthProvider>
         <Routes>
           {/* Public Routes */}
