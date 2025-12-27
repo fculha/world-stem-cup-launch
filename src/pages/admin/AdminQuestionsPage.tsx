@@ -258,7 +258,7 @@ export default function AdminQuestionsPage() {
     setError(null);
     setSuccess(null);
     try {
-      const response = await fetchWithAuth(`${API_BASE}/api/questions/manual`, {
+      const response = await fetchWithAuth(`${API_BASE}/api/questions/import/manual`, {
         method: 'POST',
         body: JSON.stringify(newQuestionForm)
       });
@@ -317,7 +317,7 @@ export default function AdminQuestionsPage() {
     setError(null);
     setSuccess(null);
     try {
-      const response = await fetchWithAuth(`${API_BASE}/api/questions/import/sample`, {
+      const response = await fetchWithAuth(`${API_BASE}/api/questions/import/sample-bank`, {
         method: 'POST',
         body: JSON.stringify({})
       });
