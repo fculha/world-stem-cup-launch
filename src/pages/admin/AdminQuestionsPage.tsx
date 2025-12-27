@@ -85,6 +85,7 @@ export default function AdminQuestionsPage() {
   const [reviewCategory, setReviewCategory] = useState('');
   const [reviewDifficulty, setReviewDifficulty] = useState('');
   const [reviewGradeBand, setReviewGradeBand] = useState('');
+  const [reviewSourceType, setReviewSourceType] = useState('');
 
   const [selectedQuestion, setSelectedQuestion] = useState<Question | null>(null);
   const [reviewNotes, setReviewNotes] = useState('');
@@ -114,6 +115,15 @@ export default function AdminQuestionsPage() {
   });
 
   const [stats, setStats] = useState<Stats | null>(null);
+
+  const [csvFile, setCsvFile] = useState<File | null>(null);
+  const [csvUploading, setCsvUploading] = useState(false);
+  const [csvResult, setCsvResult] = useState<{
+    imported: number;
+    failed: number;
+    errors: Array<{ row: number; field: string; message: string }>;
+    questions: Array<{ id: number; row: number; question_text: string }>;
+  } | null>(null);
 
   const fetchWithAuth = async (url: string, options: RequestInit = {}) => {
     if (!accessToken) {
@@ -171,6 +181,7 @@ export default function AdminQuestionsPage() {
       if (reviewCategory) params.append('category', reviewCategory);
       if (reviewDifficulty) params.append('difficulty', reviewDifficulty);
       if (reviewGradeBand) params.append('grade_band', reviewGradeBand);
+      if (reviewSourceType) params.append('source_type', reviewSourceType);
 
       const response = await fetchWithAuth(`${API_BASE}/api/questions/review-queue?${params.toString()}`);
       if (!response.ok) {
@@ -334,6 +345,96 @@ export default function AdminQuestionsPage() {
     }
   };
 
+  const handleCsvUpload = async () => {
+    if (!csvFile) return;
+    
+    setCsvUploading(true);
+    setError(null);
+    setSuccess(null);
+    setCsvResult(null);
+    
+    try {
+      const formData = new FormData();
+      formData.append('file', csvFile);
+      
+      const response = await fetch(`${API_BASE}/api/questions/import/csv-file`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${accessToken}`
+        },
+        body: formData
+      });
+      
+      if (response.status === 401 || response.status === 403) {
+        navigate('/login', { state: { from: location } });
+        throw new Error('Not authorized');
+      }
+      
+      const data = await response.json();
+      
+      if (!response.ok) {
+        throw new Error(data.detail || 'Failed to upload CSV');
+      }
+      
+      setCsvResult(data);
+      
+      if (data.imported > 0) {
+        setSuccess(`Successfully imported ${data.imported} questions. ${data.failed > 0 ? `${data.failed} rows had errors.` : ''}`);
+      } else if (data.failed > 0) {
+        setError(`No questions imported. ${data.failed} rows had errors.`);
+      }
+      
+      setCsvFile(null);
+      const fileInput = document.getElementById('csv-file-input') as HTMLInputElement;
+      if (fileInput) fileInput.value = '';
+      
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to upload CSV');
+    } finally {
+      setCsvUploading(false);
+    }
+  };
+
+  const handleDownloadTemplate = async () => {
+    try {
+      const response = await fetchWithAuth(`${API_BASE}/api/questions/import/csv-template`);
+      if (!response.ok) {
+        throw new Error('Failed to get template');
+      }
+      const data = await response.json();
+      
+      const blob = new Blob([data.template], { type: 'text/csv' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'question_template.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to download template');
+    }
+  };
+
+  const handleDownloadErrorReport = () => {
+    if (!csvResult || csvResult.errors.length === 0) return;
+    
+    const headers = ['Row', 'Field', 'Error Message'];
+    const rows = csvResult.errors.map(e => [e.row.toString(), e.field, e.message]);
+    const csvContent = [headers, ...rows].map(row => row.map(cell => `"${cell.replace(/"/g, '""')}"`).join(',')).join('\n');
+    
+    const blob = new Blob([csvContent], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'import_errors.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   useEffect(() => {
     if (activeTab === 'all') {
       fetchAllQuestions();
@@ -354,7 +455,7 @@ export default function AdminQuestionsPage() {
     if (activeTab === 'review') {
       fetchReviewQueue();
     }
-  }, [reviewStatus, reviewCategory, reviewDifficulty, reviewGradeBand]);
+  }, [reviewStatus, reviewCategory, reviewDifficulty, reviewGradeBand, reviewSourceType]);
 
   const categoryNames: Record<string, string> = {
     S: 'Science',
@@ -642,7 +743,59 @@ export default function AdminQuestionsPage() {
               <h2 className="text-xl font-semibold">Review Queue ({reviewTotal} questions)</h2>
             </div>
 
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-sm font-medium text-gray-600">Quick Filters:</span>
+              <button
+                onClick={() => {
+                  setReviewStatus('REVIEW');
+                  setReviewSourceType('IMPORTED');
+                  setReviewCategory('');
+                  setReviewDifficulty('');
+                  setReviewGradeBand('');
+                }}
+                className={`px-3 py-1 text-sm rounded-md border ${
+                  reviewSourceType === 'IMPORTED' && reviewStatus === 'REVIEW'
+                    ? 'bg-blue-100 border-blue-300 text-blue-800'
+                    : 'bg-gray-50 border-gray-200 text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                Show Imported (Review)
+              </button>
+              <button
+                onClick={() => {
+                  setReviewStatus('REVIEW');
+                  setReviewSourceType('');
+                  setReviewCategory('');
+                  setReviewDifficulty('');
+                  setReviewGradeBand('');
+                }}
+                className={`px-3 py-1 text-sm rounded-md border ${
+                  reviewSourceType === '' && reviewStatus === 'REVIEW'
+                    ? 'bg-blue-100 border-blue-300 text-blue-800'
+                    : 'bg-gray-50 border-gray-200 text-gray-600 hover:bg-gray-100'
+                }`}
+              >
+                All Review
+              </button>
+            </div>
+
             {renderFilters(reviewStatus, setReviewStatus, reviewCategory, setReviewCategory, reviewDifficulty, setReviewDifficulty, reviewGradeBand, setReviewGradeBand, false)}
+
+            <div className="mb-4">
+              <label className="block text-xs font-medium text-gray-600 mb-1">Source Type</label>
+              <select
+                value={reviewSourceType}
+                onChange={(e) => setReviewSourceType(e.target.value)}
+                className="w-48 border border-gray-300 rounded-md px-2 py-1.5 text-sm"
+              >
+                <option value="">All Sources</option>
+                <option value="IMPORTED">CSV Imported</option>
+                <option value="MANUAL">Manual Entry</option>
+                <option value="HUMAN">Human Created</option>
+                <option value="AI_DRAFT">AI Draft</option>
+                <option value="AI_APPROVED">AI Approved</option>
+              </select>
+            </div>
 
             {loading && <p className="text-gray-500">Loading...</p>}
 
@@ -861,6 +1014,150 @@ export default function AdminQuestionsPage() {
 
         {activeTab === 'import' && (
           <div className="space-y-6">
+            <div className="bg-white rounded-lg shadow p-6">
+              <h2 className="text-xl font-semibold mb-4">CSV File Import</h2>
+              <p className="text-gray-600 mb-6">
+                Upload a CSV file with questions from your professional question-writing team.
+                All imported questions will have REVIEW status and require approval before use in matches.
+              </p>
+
+              <div className="flex items-center gap-4 mb-6">
+                <button
+                  onClick={handleDownloadTemplate}
+                  className="bg-gray-100 text-gray-700 px-4 py-2 rounded-md hover:bg-gray-200 border border-gray-300"
+                >
+                  Download CSV Template
+                </button>
+                <span className="text-sm text-gray-500">
+                  Download the template to see required columns and example data
+                </span>
+              </div>
+
+              <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 mb-6">
+                <div className="flex items-center gap-4">
+                  <input
+                    id="csv-file-input"
+                    type="file"
+                    accept=".csv,text/csv"
+                    onChange={(e) => {
+                      setCsvFile(e.target.files?.[0] || null);
+                      setCsvResult(null);
+                    }}
+                    className="flex-1"
+                  />
+                  <button
+                    onClick={handleCsvUpload}
+                    disabled={!csvFile || csvUploading}
+                    className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 disabled:opacity-50"
+                  >
+                    {csvUploading ? 'Uploading...' : 'Upload CSV'}
+                  </button>
+                </div>
+                {csvFile && (
+                  <p className="mt-2 text-sm text-gray-600">
+                    Selected: {csvFile.name} ({(csvFile.size / 1024).toFixed(1)} KB)
+                  </p>
+                )}
+              </div>
+
+              {csvResult && (
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className={`px-4 py-2 rounded-md ${csvResult.imported > 0 ? 'bg-green-100 text-green-800' : 'bg-gray-100 text-gray-800'}`}>
+                      {csvResult.imported} imported
+                    </div>
+                    <div className={`px-4 py-2 rounded-md ${csvResult.failed > 0 ? 'bg-red-100 text-red-800' : 'bg-gray-100 text-gray-800'}`}>
+                      {csvResult.failed} failed
+                    </div>
+                    {csvResult.imported > 0 && (
+                      <button
+                        onClick={() => {
+                          setActiveTab('review');
+                          navigate('/admin/questions/review', { replace: true });
+                        }}
+                        className="bg-blue-100 text-blue-800 px-4 py-2 rounded-md hover:bg-blue-200"
+                      >
+                        View in Review Queue
+                      </button>
+                    )}
+                  </div>
+
+                  {csvResult.errors.length > 0 && (
+                    <div className="border border-red-200 rounded-lg overflow-hidden">
+                      <div className="bg-red-50 px-4 py-2 flex items-center justify-between">
+                        <span className="font-medium text-red-800">
+                          {csvResult.errors.length} Error{csvResult.errors.length > 1 ? 's' : ''} Found
+                        </span>
+                        <button
+                          onClick={handleDownloadErrorReport}
+                          className="text-sm text-red-600 hover:text-red-800 underline"
+                        >
+                          Download Error Report
+                        </button>
+                      </div>
+                      <div className="max-h-64 overflow-y-auto">
+                        <table className="w-full text-sm">
+                          <thead className="bg-gray-50 sticky top-0">
+                            <tr>
+                              <th className="px-4 py-2 text-left font-medium text-gray-600">Row</th>
+                              <th className="px-4 py-2 text-left font-medium text-gray-600">Field</th>
+                              <th className="px-4 py-2 text-left font-medium text-gray-600">Error</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-gray-200">
+                            {csvResult.errors.slice(0, 50).map((err, idx) => (
+                              <tr key={idx} className="hover:bg-gray-50">
+                                <td className="px-4 py-2 text-gray-900">{err.row}</td>
+                                <td className="px-4 py-2 text-gray-600">{err.field}</td>
+                                <td className="px-4 py-2 text-red-600">{err.message}</td>
+                              </tr>
+                            ))}
+                            {csvResult.errors.length > 50 && (
+                              <tr>
+                                <td colSpan={3} className="px-4 py-2 text-center text-gray-500">
+                                  ... and {csvResult.errors.length - 50} more errors. Download the full report.
+                                </td>
+                              </tr>
+                            )}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  )}
+
+                  {csvResult.questions.length > 0 && (
+                    <div className="border border-green-200 rounded-lg overflow-hidden">
+                      <div className="bg-green-50 px-4 py-2">
+                        <span className="font-medium text-green-800">
+                          Successfully Imported Questions
+                        </span>
+                      </div>
+                      <div className="max-h-48 overflow-y-auto">
+                        <table className="w-full text-sm">
+                          <thead className="bg-gray-50 sticky top-0">
+                            <tr>
+                              <th className="px-4 py-2 text-left font-medium text-gray-600">ID</th>
+                              <th className="px-4 py-2 text-left font-medium text-gray-600">Row</th>
+                              <th className="px-4 py-2 text-left font-medium text-gray-600">Question</th>
+                            </tr>
+                          </thead>
+                          <tbody className="divide-y divide-gray-200">
+                            {csvResult.questions.slice(0, 20).map((q) => (
+                              <tr key={q.id} className="hover:bg-gray-50">
+                                <td className="px-4 py-2 text-gray-900">{q.id}</td>
+                                <td className="px-4 py-2 text-gray-600">{q.row}</td>
+                                <td className="px-4 py-2 text-gray-800">{q.question_text}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
             <div className="bg-white rounded-lg shadow p-6">
               <h2 className="text-xl font-semibold mb-4">Generate AI Questions</h2>
               <p className="text-gray-600 mb-6">
