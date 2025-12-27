@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Trophy, LogOut, User, School, Users, Settings, BarChart3, Calendar, Award } from 'lucide-react';
+import { Trophy, LogOut, User, School, Users, Settings, BarChart3, Calendar, Award, Play, Eye } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function DashboardPage() {
@@ -34,6 +34,7 @@ export default function DashboardPage() {
           { icon: Users, label: 'Manage Users', description: 'View and manage all users', href: '/admin/users' },
           { icon: BarChart3, label: 'Statistics', description: 'View system statistics', href: '/admin/stats' },
           { icon: Settings, label: 'Settings', description: 'System configuration', href: '/admin/settings' },
+          { icon: Play, label: 'Gameplay Preview', description: 'Preview match gameplay UI', href: '/play/match/4', highlight: true },
         ];
       case 'TEACHER':
         return [
@@ -188,11 +189,21 @@ export default function DashboardPage() {
               <Link
                 key={index}
                 to={action.href}
-                className="bg-[#16213e] rounded-xl p-6 border border-white/10 hover:border-[#4361ee]/50 transition-colors group"
+                className={`rounded-xl p-6 border transition-colors group ${
+                  action.highlight 
+                    ? 'bg-gradient-to-br from-[#4361ee]/20 to-[#f72585]/20 border-[#f72585]/50 hover:border-[#f72585]' 
+                    : 'bg-[#16213e] border-white/10 hover:border-[#4361ee]/50'
+                }`}
               >
-                <action.icon className="w-8 h-8 text-[#4361ee] mb-4 group-hover:scale-110 transition-transform" />
+                <action.icon className={`w-8 h-8 mb-4 group-hover:scale-110 transition-transform ${action.highlight ? 'text-[#f72585]' : 'text-[#4361ee]'}`} />
                 <h3 className="font-semibold mb-1">{action.label}</h3>
                 <p className="text-white/60 text-sm">{action.description}</p>
+                {action.highlight && (
+                  <div className="mt-3 flex items-center gap-1 text-xs text-[#f72585]">
+                    <Eye className="w-3 h-3" />
+                    <span>Preview Mode</span>
+                  </div>
+                )}
               </Link>
             ))}
           </div>
