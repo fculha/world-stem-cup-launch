@@ -31,7 +31,7 @@ export default function AboutPage() {
           justifyContent: 'space-between'
         }}>
           <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', textDecoration: 'none', color: 'white' }}>
-            <img src="/wsc-trophy.png" alt="World STEM Cup" style={{ width: '80px', height: '80px', objectFit: 'contain' }} />
+            <img src="/wsc-trophy.png" alt="World STEM Cup" style={{ width: '240px', height: '240px', objectFit: 'contain', marginTop: '-64px', marginBottom: '-64px' }} />
             <span style={{ fontSize: '1.25rem', fontWeight: 'bold' }}>World STEM Cup</span>
           </Link>
           <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
