@@ -3,7 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { 
   Trophy, LogOut, Clock, CheckCircle, Zap, AlertTriangle, 
   Loader2, Play, Pause, RotateCcw, Settings, Bug, Globe,
-  ChevronDown, ChevronRight, Eye, Calendar, Timer
+  ChevronDown, ChevronRight, Eye, Calendar, Timer, Search,
+  User, Users, Plus, X
 } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 
@@ -15,12 +16,62 @@ interface Tournament {
   status: string;
 }
 
+interface TournamentRound {
+  id: number;
+  tournament_id: number;
+  round_no: number;
+  name: string | null;
+}
+
 interface Match {
   id: number;
   tournament_id: number;
   status: string;
   round_number: number;
   started_at: string | null;
+}
+
+interface StudentSearchResult {
+  user_id: number;
+  email: string;
+  first_name: string | null;
+  last_name: string | null;
+  school_name: string | null;
+}
+
+interface StudentContext {
+  user_id: number;
+  email: string;
+  first_name: string | null;
+  last_name: string | null;
+  student_profile_id: number | null;
+  grade: string | null;
+  age_band: string | null;
+  school_id: number | null;
+  school_name: string | null;
+  school_country: string | null;
+  school_city: string | null;
+  country_code: string | null;
+  default_language_code: string;
+  teams: TeamInfo[];
+  primary_team_id: number | null;
+}
+
+interface TeamInfo {
+  team_id: number;
+  team_name: string;
+  status: string;
+  role: string;
+  school_id: number;
+}
+
+interface TeamSearchResult {
+  team_id: number;
+  team_name: string;
+  status: string;
+  school_id: number;
+  school_name: string | null;
+  school_country: string | null;
 }
 
 interface Question {
@@ -83,15 +134,35 @@ export default function AdminTestArenaPage() {
   const { user, accessToken, logout } = useAuth();
   const navigate = useNavigate();
   
+  // Student Simulation State (Feature A)
+  const [studentSearch, setStudentSearch] = useState('');
+  const [studentSearchResults, setStudentSearchResults] = useState<StudentSearchResult[]>([]);
+  const [selectedStudent, setSelectedStudent] = useState<StudentContext | null>(null);
+  const [useStudentDefaultLanguage, setUseStudentDefaultLanguage] = useState(true);
+  const [studentSearchLoading, setStudentSearchLoading] = useState(false);
+  const [showStudentDropdown, setShowStudentDropdown] = useState(false);
+  
   // Test Controls State
   const [tournaments, setTournaments] = useState<Tournament[]>([]);
+  const [tournamentRounds, setTournamentRounds] = useState<TournamentRound[]>([]);
   const [matches, setMatches] = useState<Match[]>([]);
   const [selectedTournamentId, setSelectedTournamentId] = useState<number | null>(null);
+  const [selectedRoundId, setSelectedRoundId] = useState<number | null>(null);
   const [selectedMatchId, setSelectedMatchId] = useState<number | null>(null);
   const [selectedLanguage, setSelectedLanguage] = useState<string>('en');
   const [forceFallback, setForceFallback] = useState(false);
   const [matchStartTime, setMatchStartTime] = useState<Date>(new Date());
   const [countdownToStart, setCountdownToStart] = useState<number | null>(null);
+  
+  // Create Test Match State (Feature C)
+  const [showCreateMatchModal, setShowCreateMatchModal] = useState(false);
+  const [teamASearch, setTeamASearch] = useState('');
+  const [teamBSearch, setTeamBSearch] = useState('');
+  const [teamSearchResults, setTeamSearchResults] = useState<TeamSearchResult[]>([]);
+  const [selectedTeamA, setSelectedTeamA] = useState<TeamSearchResult | null>(null);
+  const [selectedTeamB, setSelectedTeamB] = useState<TeamSearchResult | null>(null);
+  const [creatingMatch, setCreatingMatch] = useState(false);
+  const [activeTeamSearch, setActiveTeamSearch] = useState<'A' | 'B' | null>(null);
   
   // Simulation State
   const [simulationState, setSimulationState] = useState<SimulationState>('idle');
@@ -110,6 +181,7 @@ export default function AdminTestArenaPage() {
   const [error, setError] = useState<string | null>(null);
   
   const startTimeRef = useRef<number>(0);
+  const searchTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const currentQuestion = questions[currentQuestionIndex];
 
   // Fetch tournaments
@@ -240,6 +312,166 @@ export default function AdminTestArenaPage() {
 
     return () => clearInterval(timer);
   }, [simulationState]);
+
+  // Student search with debounce (Feature A)
+  useEffect(() => {
+    if (studentSearch.length < 2) {
+      setStudentSearchResults([]);
+      setShowStudentDropdown(false);
+      return;
+    }
+
+    if (searchTimeoutRef.current) {
+      clearTimeout(searchTimeoutRef.current);
+    }
+
+    searchTimeoutRef.current = setTimeout(async () => {
+      setStudentSearchLoading(true);
+      try {
+        const response = await fetch(
+          `${API_URL}/api/admin/test-arena/students/search?search=${encodeURIComponent(studentSearch)}&limit=10`,
+          { headers: { 'Authorization': `Bearer ${accessToken}` } }
+        );
+        if (response.ok) {
+          const data = await response.json();
+          setStudentSearchResults(data.students || []);
+          setShowStudentDropdown(true);
+        }
+      } catch (err) {
+        console.error('Failed to search students:', err);
+      } finally {
+        setStudentSearchLoading(false);
+      }
+    }, 300);
+
+    return () => {
+      if (searchTimeoutRef.current) {
+        clearTimeout(searchTimeoutRef.current);
+      }
+    };
+  }, [studentSearch, accessToken]);
+
+  // Load student context when selected (Feature A)
+  const loadStudentContext = useCallback(async (userId: number) => {
+    if (!accessToken) return;
+    
+    try {
+      const tournamentParam = selectedTournamentId ? `?tournament_id=${selectedTournamentId}` : '';
+      const response = await fetch(
+        `${API_URL}/api/admin/test-arena/students/${userId}/context${tournamentParam}`,
+        { headers: { 'Authorization': `Bearer ${accessToken}` } }
+      );
+      
+      if (response.ok) {
+        const context: StudentContext = await response.json();
+        setSelectedStudent(context);
+        
+        // Auto-populate language if toggle is on
+        if (useStudentDefaultLanguage && context.default_language_code) {
+          setSelectedLanguage(context.default_language_code);
+        }
+        
+        setStudentSearch('');
+        setShowStudentDropdown(false);
+      }
+    } catch (err) {
+      console.error('Failed to load student context:', err);
+    }
+  }, [accessToken, selectedTournamentId, useStudentDefaultLanguage]);
+
+  // Team search for Create Test Match (Feature C)
+  const searchTeams = useCallback(async (search: string) => {
+    if (!accessToken || search.length < 1) {
+      setTeamSearchResults([]);
+      return;
+    }
+    
+    try {
+      const tournamentParam = selectedTournamentId ? `&tournament_id=${selectedTournamentId}` : '';
+      const response = await fetch(
+        `${API_URL}/api/admin/test-arena/teams/search?search=${encodeURIComponent(search)}${tournamentParam}&limit=10`,
+        { headers: { 'Authorization': `Bearer ${accessToken}` } }
+      );
+      
+      if (response.ok) {
+        const data = await response.json();
+        setTeamSearchResults(data.teams || []);
+      }
+    } catch (err) {
+      console.error('Failed to search teams:', err);
+    }
+  }, [accessToken, selectedTournamentId]);
+
+  // Create test match (Feature C)
+  const createTestMatch = useCallback(async () => {
+    if (!accessToken || !selectedRoundId || !selectedTeamA || !selectedTeamB) {
+      setError('Please select a tournament round and both teams');
+      return;
+    }
+    
+    setCreatingMatch(true);
+    setError(null);
+    
+    try {
+      const response = await fetch(`${API_URL}/api/admin/test-arena/create-test-match`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${accessToken}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          tournament_round_id: selectedRoundId,
+          team_a_id: selectedTeamA.team_id,
+          team_b_id: selectedTeamB.team_id,
+          question_count: 10
+        })
+      });
+      
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.detail || 'Failed to create test match');
+      }
+      
+      const data = await response.json();
+      setSelectedMatchId(data.match_id);
+      setShowCreateMatchModal(false);
+      setSelectedTeamA(null);
+      setSelectedTeamB(null);
+      setTeamASearch('');
+      setTeamBSearch('');
+      
+      // Auto-load the match questions
+      await fetchQuestions();
+      
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to create test match');
+    } finally {
+      setCreatingMatch(false);
+    }
+  }, [accessToken, selectedRoundId, selectedTeamA, selectedTeamB, fetchQuestions]);
+
+  // Fetch tournament rounds when tournament selected
+  useEffect(() => {
+    const fetchRounds = async () => {
+      if (!accessToken || !selectedTournamentId) {
+        setTournamentRounds([]);
+        return;
+      }
+      try {
+        const response = await fetch(
+          `${API_URL}/api/competitions/tournaments/${selectedTournamentId}/rounds`,
+          { headers: { 'Authorization': `Bearer ${accessToken}` } }
+        );
+        if (response.ok) {
+          const data = await response.json();
+          setTournamentRounds(data.rounds || data || []);
+        }
+      } catch (err) {
+        console.error('Failed to fetch rounds:', err);
+      }
+    };
+    fetchRounds();
+  }, [accessToken, selectedTournamentId]);
 
   const handleTimeUp = useCallback(() => {
     if (simulationState !== 'playing' || !currentQuestion) return;
@@ -430,6 +662,104 @@ export default function AdminTestArenaPage() {
             Test Controls
           </h2>
           
+          {/* Student Search (Feature A) */}
+          <div className="mb-4">
+            <label className="block text-sm text-white/60 mb-2 flex items-center gap-2">
+              <User className="w-4 h-4" />
+              Simulate As Student
+            </label>
+            {selectedStudent ? (
+              <div className="bg-[#16213e] border border-green-500/30 rounded-lg p-3">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center">
+                      <User className="w-4 h-4 text-green-400" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium">
+                        {selectedStudent.first_name} {selectedStudent.last_name}
+                      </p>
+                      <p className="text-xs text-white/60">{selectedStudent.email}</p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={() => setSelectedStudent(null)}
+                    className="p-1 hover:bg-white/10 rounded"
+                  >
+                    <X className="w-4 h-4 text-white/60" />
+                  </button>
+                </div>
+                <div className="text-xs text-white/40 space-y-1">
+                  <p>School: {selectedStudent.school_name || 'N/A'}</p>
+                  <p>Country: {selectedStudent.school_country || 'N/A'}</p>
+                  <p>Team: {selectedStudent.teams[0]?.team_name || 'No team'}</p>
+                </div>
+              </div>
+            ) : (
+              <div className="relative">
+                <div className="relative">
+                  <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40" />
+                  <input
+                    type="text"
+                    value={studentSearch}
+                    onChange={(e) => setStudentSearch(e.target.value)}
+                    placeholder="Search by email or name..."
+                    className="w-full bg-[#16213e] border border-white/10 rounded-lg pl-9 pr-3 py-2 text-sm"
+                  />
+                  {studentSearchLoading && (
+                    <Loader2 className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 animate-spin text-white/40" />
+                  )}
+                </div>
+                {showStudentDropdown && studentSearchResults.length > 0 && (
+                  <div className="absolute z-20 w-full mt-1 bg-[#16213e] border border-white/10 rounded-lg shadow-xl max-h-48 overflow-y-auto">
+                    {studentSearchResults.map(student => (
+                      <button
+                        key={student.user_id}
+                        onClick={() => loadStudentContext(student.user_id)}
+                        className="w-full px-3 py-2 text-left hover:bg-white/10 text-sm border-b border-white/5 last:border-0"
+                      >
+                        <p className="font-medium">{student.first_name} {student.last_name}</p>
+                        <p className="text-xs text-white/60">{student.email}</p>
+                        {student.school_name && (
+                          <p className="text-xs text-white/40">{student.school_name}</p>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+          
+          {/* Use Student Default Language Toggle */}
+          {selectedStudent && (
+            <div className="mb-4">
+              <label className="flex items-center gap-3 cursor-pointer">
+                <div 
+                  className={`w-10 h-6 rounded-full transition-colors ${
+                    useStudentDefaultLanguage ? 'bg-green-500' : 'bg-white/20'
+                  }`}
+                  onClick={() => {
+                    setUseStudentDefaultLanguage(!useStudentDefaultLanguage);
+                    if (!useStudentDefaultLanguage && selectedStudent.default_language_code) {
+                      setSelectedLanguage(selectedStudent.default_language_code);
+                    }
+                  }}
+                >
+                  <div 
+                    className={`w-5 h-5 rounded-full bg-white shadow-md transform transition-transform mt-0.5 ${
+                      useStudentDefaultLanguage ? 'translate-x-4 ml-0.5' : 'translate-x-0.5'
+                    }`}
+                  />
+                </div>
+                <span className="text-sm">Use student default language</span>
+              </label>
+              <p className="text-xs text-white/40 mt-1 ml-13">
+                Default: {selectedStudent.default_language_code?.toUpperCase() || 'EN'}
+              </p>
+            </div>
+          )}
+          
           {/* Tournament Selector */}
           <div className="mb-4">
             <label className="block text-sm text-white/60 mb-2">Tournament</label>
@@ -438,6 +768,7 @@ export default function AdminTestArenaPage() {
               onChange={(e) => {
                 setSelectedTournamentId(e.target.value ? Number(e.target.value) : null);
                 setSelectedMatchId(null);
+                setSelectedRoundId(null);
               }}
               className="w-full bg-[#16213e] border border-white/10 rounded-lg px-3 py-2 text-sm"
             >
@@ -448,9 +779,19 @@ export default function AdminTestArenaPage() {
             </select>
           </div>
           
-          {/* Match Selector */}
+          {/* Match Selector with Create Test Match Button */}
           <div className="mb-4">
-            <label className="block text-sm text-white/60 mb-2">Match</label>
+            <div className="flex items-center justify-between mb-2">
+              <label className="block text-sm text-white/60">Match</label>
+              <button
+                onClick={() => setShowCreateMatchModal(true)}
+                disabled={!selectedTournamentId}
+                className="flex items-center gap-1 text-xs text-[#4361ee] hover:text-[#4361ee]/80 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <Plus className="w-3 h-3" />
+                Create Test Match
+              </button>
+            </div>
             <select
               value={selectedMatchId || ''}
               onChange={(e) => setSelectedMatchId(e.target.value ? Number(e.target.value) : null)}
@@ -509,7 +850,8 @@ export default function AdminTestArenaPage() {
             <select
               value={selectedLanguage}
               onChange={(e) => setSelectedLanguage(e.target.value)}
-              className="w-full bg-[#16213e] border border-white/10 rounded-lg px-3 py-2 text-sm"
+              disabled={!!selectedStudent && useStudentDefaultLanguage}
+              className="w-full bg-[#16213e] border border-white/10 rounded-lg px-3 py-2 text-sm disabled:opacity-50"
             >
               {SUPPORTED_LANGUAGES.map(lang => (
                 <option key={lang.code} value={lang.code}>{lang.name} ({lang.code})</option>
@@ -789,9 +1131,150 @@ export default function AdminTestArenaPage() {
           )}
         </div>
         
-        {/* Right Panel - Debug Info */}
+        {/* Right Panel - Context Summary + Debug Info */}
         {showDebugPanel && (
           <div className="w-96 bg-[#0a0a1a]/80 border-l border-white/10 p-4 overflow-y-auto">
+            
+            {/* Context Summary Panel (Feature B) */}
+            <div className="mb-6">
+              <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
+                <Users className="w-5 h-5 text-green-400" />
+                Context Summary
+              </h2>
+              
+              <div className="space-y-3">
+                {/* Student Info */}
+                <div className="bg-[#16213e] rounded-lg p-3 border border-white/10">
+                  <h3 className="text-xs font-semibold text-white/40 mb-2 uppercase tracking-wide">Student</h3>
+                  {selectedStudent ? (
+                    <div className="space-y-1 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-white/60">Name</span>
+                        <span className="font-medium">{selectedStudent.first_name} {selectedStudent.last_name}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-white/60">User ID</span>
+                        <span className="font-mono text-[#4361ee]">{selectedStudent.user_id}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-white/60">Grade</span>
+                        <span>{selectedStudent.grade || 'N/A'}</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="text-white/40 text-sm italic">No student selected</p>
+                  )}
+                </div>
+                
+                {/* School & Country Info */}
+                <div className="bg-[#16213e] rounded-lg p-3 border border-white/10">
+                  <h3 className="text-xs font-semibold text-white/40 mb-2 uppercase tracking-wide">School & Location</h3>
+                  {selectedStudent ? (
+                    <div className="space-y-1 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-white/60">School</span>
+                        <span className="text-right max-w-[150px] truncate">{selectedStudent.school_name || 'N/A'}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-white/60">Country</span>
+                        <span>{selectedStudent.school_country || 'N/A'}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-white/60">City</span>
+                        <span>{selectedStudent.school_city || 'N/A'}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-white/60">Country Code</span>
+                        <span className="font-mono">{selectedStudent.country_code || 'N/A'}</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="text-white/40 text-sm italic">Select a student to see location</p>
+                  )}
+                </div>
+                
+                {/* Team Info */}
+                <div className="bg-[#16213e] rounded-lg p-3 border border-white/10">
+                  <h3 className="text-xs font-semibold text-white/40 mb-2 uppercase tracking-wide">Team</h3>
+                  {selectedStudent && selectedStudent.teams.length > 0 ? (
+                    <div className="space-y-1 text-sm">
+                      <div className="flex justify-between">
+                        <span className="text-white/60">Team Name</span>
+                        <span>{selectedStudent.teams[0].team_name}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-white/60">Team ID</span>
+                        <span className="font-mono text-[#4361ee]">{selectedStudent.teams[0].team_id}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-white/60">Status</span>
+                        <span className={`${selectedStudent.teams[0].status === 'APPROVED' ? 'text-green-400' : 'text-yellow-400'}`}>
+                          {selectedStudent.teams[0].status}
+                        </span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-white/60">Role</span>
+                        <span>{selectedStudent.teams[0].role}</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <p className="text-white/40 text-sm italic">No team assigned</p>
+                  )}
+                </div>
+                
+                {/* Tournament & Match Info */}
+                <div className="bg-[#16213e] rounded-lg p-3 border border-white/10">
+                  <h3 className="text-xs font-semibold text-white/40 mb-2 uppercase tracking-wide">Tournament & Match</h3>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-white/60">Tournament ID</span>
+                      <span className="font-mono">{selectedTournamentId || 'N/A'}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-white/60">Match ID</span>
+                      <span className="font-mono text-[#4361ee]">{selectedMatchId || 'N/A'}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-white/60">Start Time</span>
+                      <span className="text-xs">{matchStartTime.toLocaleString()}</span>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Language Info */}
+                <div className="bg-[#16213e] rounded-lg p-3 border border-white/10">
+                  <h3 className="text-xs font-semibold text-white/40 mb-2 uppercase tracking-wide">Language</h3>
+                  <div className="space-y-1 text-sm">
+                    <div className="flex justify-between">
+                      <span className="text-white/60">Requested</span>
+                      <span className="font-mono text-yellow-400">{selectedLanguage.toUpperCase()}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-white/60">Student Default</span>
+                      <span className="font-mono">{selectedStudent?.default_language_code?.toUpperCase() || 'EN'}</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-white/60">Using Default</span>
+                      <span className={useStudentDefaultLanguage ? 'text-green-400' : 'text-white/60'}>
+                        {useStudentDefaultLanguage ? 'Yes' : 'No (Override)'}
+                      </span>
+                    </div>
+                    {apiResponse && (
+                      <>
+                        <div className="flex justify-between">
+                          <span className="text-white/60">Fallbacks</span>
+                          <span className={`font-mono ${(apiResponse.fallback_to_english_count || 0) > 0 ? 'text-red-400' : 'text-green-400'}`}>
+                            {apiResponse.fallback_to_english_count || 0}
+                          </span>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Debug Panel */}
             <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
               <Bug className="w-5 h-5 text-purple-400" />
               Debug Panel
@@ -902,6 +1385,199 @@ export default function AdminTestArenaPage() {
           </div>
         )}
       </main>
+      
+      {/* Create Test Match Modal (Feature C) */}
+      {showCreateMatchModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-sm">
+          <div className="bg-[#16213e] rounded-2xl border border-white/10 w-full max-w-lg mx-4 shadow-2xl">
+            <div className="flex items-center justify-between p-4 border-b border-white/10">
+              <h3 className="text-lg font-bold flex items-center gap-2">
+                <Plus className="w-5 h-5 text-[#4361ee]" />
+                Create Test Match
+              </h3>
+              <button
+                onClick={() => {
+                  setShowCreateMatchModal(false);
+                  setSelectedTeamA(null);
+                  setSelectedTeamB(null);
+                  setTeamASearch('');
+                  setTeamBSearch('');
+                  setTeamSearchResults([]);
+                }}
+                className="p-1 hover:bg-white/10 rounded"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            
+            <div className="p-4 space-y-4">
+              {/* Tournament Round Selector */}
+              <div>
+                <label className="block text-sm text-white/60 mb-2">Tournament Round</label>
+                <select
+                  value={selectedRoundId || ''}
+                  onChange={(e) => setSelectedRoundId(e.target.value ? Number(e.target.value) : null)}
+                  className="w-full bg-[#0a0a1a] border border-white/10 rounded-lg px-3 py-2 text-sm"
+                >
+                  <option value="">Select round...</option>
+                  {tournamentRounds.map(r => (
+                    <option key={r.id} value={r.id}>Round {r.round_no}{r.name ? ` - ${r.name}` : ''}</option>
+                  ))}
+                </select>
+              </div>
+              
+              {/* Team A Selector */}
+              <div>
+                <label className="block text-sm text-white/60 mb-2">Team A</label>
+                {selectedTeamA ? (
+                  <div className="bg-[#0a0a1a] border border-green-500/30 rounded-lg p-3 flex items-center justify-between">
+                    <div>
+                      <p className="font-medium">{selectedTeamA.team_name}</p>
+                      <p className="text-xs text-white/60">{selectedTeamA.school_name || 'No school'}</p>
+                    </div>
+                    <button
+                      onClick={() => setSelectedTeamA(null)}
+                      className="p-1 hover:bg-white/10 rounded"
+                    >
+                      <X className="w-4 h-4 text-white/60" />
+                    </button>
+                  </div>
+                ) : (
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40" />
+                    <input
+                      type="text"
+                      value={teamASearch}
+                      onChange={(e) => {
+                        setTeamASearch(e.target.value);
+                        setActiveTeamSearch('A');
+                        searchTeams(e.target.value);
+                      }}
+                      placeholder="Search team..."
+                      className="w-full bg-[#0a0a1a] border border-white/10 rounded-lg pl-9 pr-3 py-2 text-sm"
+                    />
+                    {activeTeamSearch === 'A' && teamSearchResults.length > 0 && (
+                      <div className="absolute z-10 w-full mt-1 bg-[#0a0a1a] border border-white/10 rounded-lg shadow-xl max-h-40 overflow-y-auto">
+                        {teamSearchResults.map(team => (
+                          <button
+                            key={team.team_id}
+                            onClick={() => {
+                              setSelectedTeamA(team);
+                              setTeamASearch('');
+                              setTeamSearchResults([]);
+                              setActiveTeamSearch(null);
+                            }}
+                            className="w-full px-3 py-2 text-left hover:bg-white/10 text-sm border-b border-white/5 last:border-0"
+                          >
+                            <p className="font-medium">{team.team_name}</p>
+                            <p className="text-xs text-white/60">{team.school_name || 'No school'}</p>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+              
+              {/* Team B Selector */}
+              <div>
+                <label className="block text-sm text-white/60 mb-2">Team B</label>
+                {selectedTeamB ? (
+                  <div className="bg-[#0a0a1a] border border-blue-500/30 rounded-lg p-3 flex items-center justify-between">
+                    <div>
+                      <p className="font-medium">{selectedTeamB.team_name}</p>
+                      <p className="text-xs text-white/60">{selectedTeamB.school_name || 'No school'}</p>
+                    </div>
+                    <button
+                      onClick={() => setSelectedTeamB(null)}
+                      className="p-1 hover:bg-white/10 rounded"
+                    >
+                      <X className="w-4 h-4 text-white/60" />
+                    </button>
+                  </div>
+                ) : (
+                  <div className="relative">
+                    <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40" />
+                    <input
+                      type="text"
+                      value={teamBSearch}
+                      onChange={(e) => {
+                        setTeamBSearch(e.target.value);
+                        setActiveTeamSearch('B');
+                        searchTeams(e.target.value);
+                      }}
+                      placeholder="Search team..."
+                      className="w-full bg-[#0a0a1a] border border-white/10 rounded-lg pl-9 pr-3 py-2 text-sm"
+                    />
+                    {activeTeamSearch === 'B' && teamSearchResults.length > 0 && (
+                      <div className="absolute z-10 w-full mt-1 bg-[#0a0a1a] border border-white/10 rounded-lg shadow-xl max-h-40 overflow-y-auto">
+                        {teamSearchResults.map(team => (
+                          <button
+                            key={team.team_id}
+                            onClick={() => {
+                              setSelectedTeamB(team);
+                              setTeamBSearch('');
+                              setTeamSearchResults([]);
+                              setActiveTeamSearch(null);
+                            }}
+                            className="w-full px-3 py-2 text-left hover:bg-white/10 text-sm border-b border-white/5 last:border-0"
+                          >
+                            <p className="font-medium">{team.team_name}</p>
+                            <p className="text-xs text-white/60">{team.school_name || 'No school'}</p>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+              
+              {/* Info */}
+              <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-3 text-sm text-blue-300">
+                <p>This will create a new match with 10 auto-assigned questions based on the tournament settings.</p>
+              </div>
+              
+              {error && (
+                <div className="bg-red-500/10 border border-red-500/20 rounded-lg p-3 text-sm text-red-400">
+                  {error}
+                </div>
+              )}
+            </div>
+            
+            <div className="flex gap-3 p-4 border-t border-white/10">
+              <button
+                onClick={() => {
+                  setShowCreateMatchModal(false);
+                  setSelectedTeamA(null);
+                  setSelectedTeamB(null);
+                  setTeamASearch('');
+                  setTeamBSearch('');
+                }}
+                className="flex-1 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition-colors text-sm font-medium"
+              >
+                Cancel
+              </button>
+              <button
+                onClick={createTestMatch}
+                disabled={!selectedRoundId || !selectedTeamA || !selectedTeamB || creatingMatch}
+                className="flex-1 py-2 rounded-lg bg-[#4361ee] hover:bg-[#4361ee]/80 transition-colors text-sm font-medium disabled:opacity-50 flex items-center justify-center gap-2"
+              >
+                {creatingMatch ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    Creating...
+                  </>
+                ) : (
+                  <>
+                    <Plus className="w-4 h-4" />
+                    Create Match
+                  </>
+                )}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
