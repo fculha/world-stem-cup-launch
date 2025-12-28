@@ -420,18 +420,24 @@ function App() {
             >
               Education Fund
             </Link>
-            {['Rewards', 'Integrity', 'Sponsors'].map((item) => {
-              const id = item.toLowerCase().replace(' ', '-');
-              return (
-                <button 
-                  key={item}
-                  onClick={() => scrollToSection(id)}
-                  className="text-sm text-white/70 hover:text-white transition-colors"
-                >
-                  {item}
-                </button>
-              );
-            })}
+                        {['Rewards', 'Integrity'].map((item) => {
+                          const id = item.toLowerCase().replace(' ', '-');
+                          return (
+                            <button 
+                              key={item}
+                              onClick={() => scrollToSection(id)}
+                              className="text-sm text-white/70 hover:text-white transition-colors"
+                            >
+                              {item}
+                            </button>
+                          );
+                        })}
+                        <Link 
+                          to="/sponsors"
+                          className="text-sm text-white/70 hover:text-white transition-colors"
+                        >
+                          Sponsors
+                        </Link>
             {/* Competition Dropdown */}
             <div 
               className="relative"
