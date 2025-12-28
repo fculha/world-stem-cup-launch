@@ -582,6 +582,20 @@ export default function AdminTestArenaPage() {
     return colors[category] || 'bg-white/10 text-white/60 border-white/10';
   };
 
+  const getMatchTimeStatus = (): { status: 'UPCOMING' | 'LIVE' | 'ENDED'; color: string; icon: string } => {
+    const now = new Date();
+    const startTime = matchStartTime;
+    const endTime = new Date(startTime.getTime() + 60 * 60 * 1000); // Assume 1 hour match duration
+    
+    if (now < startTime) {
+      return { status: 'UPCOMING', color: 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30', icon: 'clock' };
+    } else if (now >= startTime && now <= endTime) {
+      return { status: 'LIVE', color: 'bg-green-500/20 text-green-400 border-green-500/30', icon: 'play' };
+    } else {
+      return { status: 'ENDED', color: 'bg-gray-500/20 text-gray-400 border-gray-500/30', icon: 'check' };
+    }
+  };
+
   // Check if user is admin
   if (user?.role !== 'ADMIN') {
     return (
@@ -829,6 +843,20 @@ export default function AdminTestArenaPage() {
               onChange={(e) => setMatchStartTime(new Date(e.target.value))}
               className="w-full bg-[#16213e] border border-white/10 rounded-lg px-3 py-2 text-sm"
             />
+            {/* Match Status Badge */}
+            <div className="mt-2">
+              {(() => {
+                const matchStatus = getMatchTimeStatus();
+                return (
+                  <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border ${matchStatus.color}`}>
+                    {matchStatus.status === 'UPCOMING' && <Clock className="w-3 h-3" />}
+                    {matchStatus.status === 'LIVE' && <Play className="w-3 h-3" />}
+                    {matchStatus.status === 'ENDED' && <CheckCircle className="w-3 h-3" />}
+                    {matchStatus.status}
+                  </span>
+                );
+              })()}
+            </div>
           </div>
           
           {/* Countdown Display */}
@@ -942,6 +970,21 @@ export default function AdminTestArenaPage() {
           {simulationState === 'idle' && questions.length > 0 && (
             <div className="h-full flex items-center justify-center">
               <div className="text-center max-w-md">
+                {/* Language Fallback Banner */}
+                {apiResponse && apiResponse.fallback_to_english_count > 0 && (
+                  <div className="mb-6 p-4 bg-orange-500/20 border border-orange-500/30 rounded-xl text-left">
+                    <div className="flex items-start gap-3">
+                      <AlertTriangle className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                      <div>
+                        <p className="font-semibold text-orange-400 mb-1">Language Fallback Active</p>
+                        <p className="text-sm text-white/70">
+                          {apiResponse.fallback_to_english_count} of {questions.length} questions fell back to English 
+                          because {selectedLanguage.toUpperCase()} translations are not available.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
                 <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#4361ee] to-[#f72585] flex items-center justify-center mx-auto mb-6">
                   <Trophy className="w-12 h-12" />
                 </div>
@@ -1275,10 +1318,26 @@ export default function AdminTestArenaPage() {
             </div>
             
             {/* Debug Panel */}
-            <h2 className="text-lg font-bold mb-4 flex items-center gap-2">
-              <Bug className="w-5 h-5 text-purple-400" />
-              Debug Panel
-            </h2>
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-lg font-bold flex items-center gap-2">
+                <Bug className="w-5 h-5 text-purple-400" />
+                Debug Panel
+              </h2>
+              <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-purple-500/20 text-purple-400 border border-purple-500/30">
+                TEST MODE
+              </span>
+            </div>
+            
+            {/* Mode Indicator */}
+            <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-3 mb-4">
+              <div className="flex items-center gap-2 text-sm">
+                <div className="w-2 h-2 rounded-full bg-purple-400 animate-pulse" />
+                <span className="text-purple-300 font-medium">Admin Test Arena Simulation</span>
+              </div>
+              <p className="text-xs text-white/50 mt-1">
+                Test matches are marked with is_test=true and excluded from leaderboards
+              </p>
+            </div>
             
             {currentQuestion && (
               <div className="space-y-4">
