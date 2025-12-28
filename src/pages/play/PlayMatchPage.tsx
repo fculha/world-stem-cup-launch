@@ -1,9 +1,21 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
-import { Trophy, LogOut, Clock, CheckCircle, XCircle, Zap, AlertTriangle, Loader2, Users, Eye, ChevronRight } from 'lucide-react';
+import { Trophy, LogOut, Clock, CheckCircle, XCircle, Zap, AlertTriangle, Loader2, Users, Eye, ChevronRight, Globe, Lock } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+
+interface MatchTimeStatus {
+  match_id: number;
+  status: 'UPCOMING' | 'LIVE' | 'ENDED';
+  remaining_seconds: number;
+  scheduled_at: string | null;
+  started_at: string | null;
+  ended_at: string | null;
+  can_view_questions: boolean;
+  can_submit: boolean;
+  is_test: boolean;
+}
 
 interface MatchState {
   match_id: number;
@@ -28,7 +40,22 @@ interface Question {
   image_url?: string;
   time_limit_ms: number;
   answered: boolean;
+  used_language_code?: string;
+  is_fallback_to_english?: boolean;
 }
+
+const SUPPORTED_LANGUAGES = [
+  { code: 'en', name: 'English' },
+  { code: 'es', name: 'Spanish' },
+  { code: 'fr', name: 'French' },
+  { code: 'pt', name: 'Portuguese' },
+  { code: 'ar', name: 'Arabic' },
+  { code: 'sw', name: 'Swahili' },
+  { code: 'ha', name: 'Hausa' },
+  { code: 'am', name: 'Amharic' },
+  { code: 'yo', name: 'Yoruba' },
+  { code: 'zu', name: 'Zulu' },
+];
 
 interface AnswerResult {
   is_correct: boolean;
@@ -56,10 +83,12 @@ export default function PlayMatchPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [matchState, setMatchState] = useState<MatchState | null>(null);
+  const [matchTimeStatus, setMatchTimeStatus] = useState<MatchTimeStatus | null>(null);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [gameState, setGameState] = useState<GameState>('loading');
   const [timeLeft, setTimeLeft] = useState(0);
+  const [matchCountdown, setMatchCountdown] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [results, setResults] = useState<SubmissionResult[]>([]);
   const [totalScore, setTotalScore] = useState(0);
@@ -69,6 +98,9 @@ export default function PlayMatchPage() {
   const [teamName, setTeamName] = useState<string>('');
   const [isCaptain, setIsCaptain] = useState(false);
   const [transitionCountdown, setTransitionCountdown] = useState(3);
+  const [selectedLanguage, setSelectedLanguage] = useState('en');
+  const [fallbackCount, setFallbackCount] = useState(0);
+  const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
   
   const startTimeRef = useRef<number>(0);
 
@@ -121,11 +153,34 @@ export default function PlayMatchPage() {
     }
   }, [matchId, accessToken, user?.team_id, isPreviewMode]);
 
+  const fetchMatchTimeStatus = useCallback(async () => {
+    if (!matchId) return null;
+    
+    try {
+      const response = await fetch(`${API_URL}/api/gameplay/match/${matchId}/status`);
+      
+      if (!response.ok) {
+        const data = await response.json();
+        throw new Error(data.detail || 'Failed to fetch match status');
+      }
+      
+      const data: MatchTimeStatus = await response.json();
+      setMatchTimeStatus(data);
+      setMatchCountdown(data.remaining_seconds);
+      
+      return data;
+    } catch (err) {
+      console.error('Failed to fetch match time status:', err);
+      return null;
+    }
+  }, [matchId]);
+
   const fetchQuestions = useCallback(async () => {
     if (!matchId || !accessToken || !teamId) return;
     
     try {
-      const response = await fetch(`${API_URL}/api/gameplay/match/${matchId}/questions?team_id=${teamId}`, {
+      const langParam = selectedLanguage !== 'en' ? `&lang=${selectedLanguage}` : '';
+      const response = await fetch(`${API_URL}/api/gameplay/match/${matchId}/questions?team_id=${teamId}${langParam}`, {
         headers: {
           'Authorization': `Bearer ${accessToken}`,
         },
@@ -139,6 +194,10 @@ export default function PlayMatchPage() {
       const data = await response.json();
       setQuestions(data.questions);
       
+      if (data.fallback_to_english_count !== undefined) {
+        setFallbackCount(data.fallback_to_english_count);
+      }
+      
       const firstUnanswered = data.questions.findIndex((q: Question) => !q.answered);
       if (firstUnanswered >= 0) {
         setCurrentQuestionIndex(firstUnanswered);
@@ -151,20 +210,35 @@ export default function PlayMatchPage() {
       setError(err instanceof Error ? err.message : 'Failed to load questions');
       return null;
     }
-  }, [matchId, accessToken, teamId]);
+  }, [matchId, accessToken, teamId, selectedLanguage]);
 
   useEffect(() => {
     const initMatch = async () => {
       setLoading(true);
-      const state = await fetchMatchState();
       
-      if (state) {
-        if (state.status === 'IN_PROGRESS') {
-          setGameState('waiting');
-        } else if (state.status === 'COMPLETED') {
+      const timeStatus = await fetchMatchTimeStatus();
+      
+      if (timeStatus) {
+        if (timeStatus.status === 'UPCOMING') {
+          setGameState('loading');
+        } else if (timeStatus.status === 'ENDED') {
           setGameState('finished');
-        } else if (state.status === 'SCHEDULED') {
-          setError('This match has not started yet');
+        } else if (timeStatus.status === 'LIVE') {
+          const state = await fetchMatchState();
+          if (state) {
+            setGameState('waiting');
+          }
+        }
+      } else {
+        const state = await fetchMatchState();
+        if (state) {
+          if (state.status === 'IN_PROGRESS') {
+            setGameState('waiting');
+          } else if (state.status === 'COMPLETED') {
+            setGameState('finished');
+          } else if (state.status === 'SCHEDULED') {
+            setGameState('loading');
+          }
         }
       }
       
@@ -172,13 +246,34 @@ export default function PlayMatchPage() {
     };
     
     initMatch();
-  }, [fetchMatchState]);
+  }, [fetchMatchState, fetchMatchTimeStatus]);
 
   useEffect(() => {
-    if (teamId && matchState?.status === 'IN_PROGRESS') {
+    if (!matchTimeStatus || matchTimeStatus.status !== 'UPCOMING') return;
+    
+    const pollInterval = setInterval(async () => {
+      const status = await fetchMatchTimeStatus();
+      if (status && status.status === 'LIVE') {
+        await fetchMatchState();
+        setGameState('waiting');
+      }
+    }, 2000);
+    
+    const countdownInterval = setInterval(() => {
+      setMatchCountdown((prev) => Math.max(0, prev - 1));
+    }, 1000);
+    
+    return () => {
+      clearInterval(pollInterval);
+      clearInterval(countdownInterval);
+    };
+  }, [matchTimeStatus?.status, fetchMatchTimeStatus, fetchMatchState]);
+
+  useEffect(() => {
+    if (teamId && (matchState?.status === 'IN_PROGRESS' || matchTimeStatus?.status === 'LIVE')) {
       fetchQuestions();
     }
-  }, [teamId, matchState?.status, fetchQuestions]);
+  }, [teamId, matchState?.status, matchTimeStatus?.status, fetchQuestions]);
 
   useEffect(() => {
     if (gameState !== 'playing' || timeLeft <= 0) return;
@@ -359,12 +454,99 @@ export default function PlayMatchPage() {
     return labels[type] || type;
   };
 
-  if (loading) {
+  const formatCountdown = (seconds: number) => {
+    const hours = Math.floor(seconds / 3600);
+    const minutes = Math.floor((seconds % 3600) / 60);
+    const secs = seconds % 60;
+    if (hours > 0) {
+      return `${hours}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    }
+    return `${minutes}:${secs.toString().padStart(2, '0')}`;
+  };
+
+  const getSelectedLanguageName = () => {
+    const lang = SUPPORTED_LANGUAGES.find(l => l.code === selectedLanguage);
+    return lang?.name || 'English';
+  };
+
+  if (loading && !matchTimeStatus) {
     return (
       <div className="min-h-screen bg-[#0a0a1a] flex items-center justify-center">
         <div className="text-center">
           <Loader2 className="w-12 h-12 text-[#4361ee] animate-spin mx-auto mb-4" />
           <p className="text-white/60">Loading match...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (matchTimeStatus?.status === 'UPCOMING') {
+    return (
+      <div className="min-h-screen bg-[#0a0a1a] flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a3e] via-[#0a0a1a] to-[#1a0a2e]"></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-20 left-20 w-72 h-72 bg-[#4361ee] rounded-full filter blur-[128px]"></div>
+          <div className="absolute bottom-20 right-20 w-72 h-72 bg-[#f72585] rounded-full filter blur-[128px]"></div>
+        </div>
+        
+        <div className="relative z-10 text-center max-w-md px-6">
+          <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#4361ee]/20 to-[#f72585]/20 border-2 border-white/20 flex items-center justify-center mx-auto mb-6">
+            <Lock className="w-12 h-12 text-white/60" />
+          </div>
+          
+          <h1 className="text-3xl font-bold text-white mb-2">Match Starting Soon</h1>
+          <p className="text-white/60 mb-8">The competition will begin in:</p>
+          
+          <div className="bg-[#16213e] rounded-2xl p-8 border border-white/10 mb-6">
+            <div className="text-5xl font-mono font-bold text-[#4361ee] mb-2">
+              {formatCountdown(matchCountdown)}
+            </div>
+            <p className="text-white/40 text-sm">until match starts</p>
+          </div>
+          
+          <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 mb-6">
+            <div className="flex items-center gap-2 text-yellow-400 justify-center">
+              <Clock className="w-5 h-5" />
+              <span className="font-medium">Questions are locked</span>
+            </div>
+            <p className="text-sm text-white/60 mt-1">
+              Questions will be available once the match starts
+            </p>
+          </div>
+          
+          <div className="relative">
+            <button
+              onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
+              className="flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 transition-colors mx-auto"
+            >
+              <Globe className="w-4 h-4 text-white/60" />
+              <span className="text-sm">{getSelectedLanguageName()}</span>
+              <ChevronRight className={`w-4 h-4 text-white/40 transition-transform ${showLanguageDropdown ? 'rotate-90' : ''}`} />
+            </button>
+            
+            {showLanguageDropdown && (
+              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 bg-[#16213e] border border-white/10 rounded-lg shadow-xl z-20 min-w-[160px]">
+                {SUPPORTED_LANGUAGES.map((lang) => (
+                  <button
+                    key={lang.code}
+                    onClick={() => {
+                      setSelectedLanguage(lang.code);
+                      setShowLanguageDropdown(false);
+                    }}
+                    className={`w-full px-4 py-2 text-left text-sm hover:bg-white/5 transition-colors first:rounded-t-lg last:rounded-b-lg ${
+                      selectedLanguage === lang.code ? 'text-[#4361ee]' : 'text-white/80'
+                    }`}
+                  >
+                    {lang.name}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+          
+          <p className="text-white/40 text-xs mt-6">
+            Select your preferred language before the match starts
+          </p>
         </div>
       </div>
     );
@@ -409,6 +591,37 @@ export default function PlayMatchPage() {
                 <Zap className="w-4 h-4 text-yellow-400" />
                 <span className="font-bold text-sm">{totalScore} pts</span>
               </div>
+              
+              <div className="relative">
+                <button
+                  onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
+                  className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/10 transition-colors text-sm"
+                >
+                  <Globe className="w-4 h-4 text-white/60" />
+                  <span className="hidden sm:inline">{getSelectedLanguageName()}</span>
+                  <ChevronRight className={`w-3 h-3 text-white/40 transition-transform ${showLanguageDropdown ? 'rotate-90' : ''}`} />
+                </button>
+                
+                {showLanguageDropdown && (
+                  <div className="absolute top-full right-0 mt-2 bg-[#16213e] border border-white/10 rounded-lg shadow-xl z-50 min-w-[140px]">
+                    {SUPPORTED_LANGUAGES.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          setSelectedLanguage(lang.code);
+                          setShowLanguageDropdown(false);
+                        }}
+                        className={`w-full px-4 py-2 text-left text-sm hover:bg-white/5 transition-colors first:rounded-t-lg last:rounded-b-lg ${
+                          selectedLanguage === lang.code ? 'text-[#4361ee]' : 'text-white/80'
+                        }`}
+                      >
+                        {lang.name}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
               {isPreviewMode && (
                 <div className="px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-400 text-xs font-medium">
                   Preview Mode
@@ -455,6 +668,20 @@ export default function PlayMatchPage() {
           )}
         </div>
       </header>
+
+      {fallbackCount > 0 && selectedLanguage !== 'en' && (
+        <div className="relative z-10 bg-orange-500/10 border-b border-orange-500/30">
+          <div className="max-w-7xl mx-auto px-6 py-2">
+            <div className="flex items-center gap-2 text-orange-400 text-sm">
+              <AlertTriangle className="w-4 h-4 flex-shrink-0" />
+              <span>
+                {fallbackCount} question{fallbackCount > 1 ? 's' : ''} not available in {getSelectedLanguageName()}. 
+                Showing English version instead.
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
 
       <main className="relative z-10 max-w-4xl mx-auto px-6 py-8">
         {gameState === 'waiting' && (
