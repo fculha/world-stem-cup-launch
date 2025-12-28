@@ -14,6 +14,7 @@ import AdminSettingsPage from './pages/admin/AdminSettingsPage';
 import AdminStatsPage from './pages/admin/AdminStatsPage';
 import AdminQuestionsPage from './pages/admin/AdminQuestionsPage';
 import AdminTestArenaPage from './pages/admin/AdminTestArenaPage';
+import AdminSponsorsPage from './pages/admin/AdminSponsorsPage';
 import LeaderboardPage from './pages/LeaderboardPage';
 // Teacher Pages
 import TeacherStudentsPage from './pages/teacher/TeacherStudentsPage';
@@ -45,6 +46,7 @@ import AboutPage from './pages/AboutPage';
 import HowItWorksPage from './pages/HowItWorksPage';
 import ParentsSchoolsPage from './pages/ParentsSchoolsPage';
 import EducationFundPage from './pages/EducationFundPage';
+import SponsorsPage from './pages/SponsorsPage';
 // Team and Bracket Pages
 import TeamPage from './pages/TeamPage';
 import BracketPage from './pages/BracketPage';
@@ -87,9 +89,10 @@ export default function AppRouter() {
                     <Route path="/who-we-are" element={<AboutPage />} />
                     <Route path="/how-it-works" element={<HowItWorksPage />} />
                     <Route path="/parents-schools" element={<ParentsSchoolsPage />} />
-                    <Route path="/education-fund" element={<EducationFundPage />} />
+                                        <Route path="/education-fund" element={<EducationFundPage />} />
+                                        <Route path="/sponsors" element={<SponsorsPage />} />
           
-                    {/* Protected Routes */}
+                                        {/* Protected Routes */}
           <Route 
             path="/dashboard" 
             element={
@@ -172,16 +175,24 @@ export default function AppRouter() {
                         </ProtectedRoute>
                       } 
                     />
-                    <Route 
-                      path="/admin/test-arena" 
-                      element={
-                        <ProtectedRoute allowedRoles={['ADMIN']}>
-                          <AdminTestArenaPage />
-                        </ProtectedRoute>
-                      } 
-                    />
+                                        <Route 
+                                          path="/admin/test-arena" 
+                                          element={
+                                            <ProtectedRoute allowedRoles={['ADMIN']}>
+                                              <AdminTestArenaPage />
+                                            </ProtectedRoute>
+                                          } 
+                                        />
+                                        <Route 
+                                          path="/admin/sponsors" 
+                                          element={
+                                            <ProtectedRoute allowedRoles={['ADMIN']}>
+                                              <AdminSponsorsPage />
+                                            </ProtectedRoute>
+                                          } 
+                                        />
           
-                    {/* Teacher Routes */}
+                                        {/* Teacher Routes */}
           <Route 
             path="/teacher/students" 
             element={
