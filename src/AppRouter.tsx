@@ -13,6 +13,7 @@ import AdminUsersPage from './pages/admin/AdminUsersPage';
 import AdminSettingsPage from './pages/admin/AdminSettingsPage';
 import AdminStatsPage from './pages/admin/AdminStatsPage';
 import AdminQuestionsPage from './pages/admin/AdminQuestionsPage';
+import AdminTestArenaPage from './pages/admin/AdminTestArenaPage';
 import LeaderboardPage from './pages/LeaderboardPage';
 // Teacher Pages
 import TeacherStudentsPage from './pages/teacher/TeacherStudentsPage';
@@ -163,16 +164,24 @@ export default function AppRouter() {
               </ProtectedRoute>
             } 
           />
-          <Route 
-            path="/admin/questions/import" 
-            element={
-              <ProtectedRoute allowedRoles={['ADMIN']}>
-                <AdminQuestionsPage />
-              </ProtectedRoute>
-            } 
-          />
+                    <Route 
+                      path="/admin/questions/import" 
+                      element={
+                        <ProtectedRoute allowedRoles={['ADMIN']}>
+                          <AdminQuestionsPage />
+                        </ProtectedRoute>
+                      } 
+                    />
+                    <Route 
+                      path="/admin/test-arena" 
+                      element={
+                        <ProtectedRoute allowedRoles={['ADMIN']}>
+                          <AdminTestArenaPage />
+                        </ProtectedRoute>
+                      } 
+                    />
           
-          {/* Teacher Routes */}
+                    {/* Teacher Routes */}
           <Route 
             path="/teacher/students" 
             element={
