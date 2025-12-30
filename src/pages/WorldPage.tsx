@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Trophy, Globe, Users, Target, Calendar, ChevronRight, MapPin, Award, TrendingUp } from 'lucide-react';
+import { getPublicOverview, getPublicCompetitions, getPublicLeaderboard, type CompetitionListItem, type PublicLeaderboardEntry } from '../lib/api';
 
 // Types
 interface StateStats {
@@ -19,8 +20,26 @@ interface GlobalStats {
   upcomingMatches: number;
 }
 
-// Mock data for World Cup style overview
-const mockGlobalStats: GlobalStats = {
+interface TopTeam {
+  id: number;
+  rank: number;
+  name: string;
+  school: string;
+  state: string;
+  points: number;
+}
+
+interface UpcomingMatch {
+  id: number;
+  team1: string;
+  team2: string;
+  round: string;
+  time: string;
+  date: string;
+}
+
+// Fallback mock data (used when API is unavailable)
+const fallbackGlobalStats: GlobalStats = {
   totalTeams: 156,
   totalSchools: 89,
   totalStudents: 624,
@@ -28,7 +47,7 @@ const mockGlobalStats: GlobalStats = {
   upcomingMatches: 12,
 };
 
-const mockStateStats: StateStats[] = [
+const fallbackStateStats: StateStats[] = [
   { code: 'MD', name: 'Maryland', teams: 24, schools: 18, status: 'active' },
   { code: 'VA', name: 'Virginia', teams: 18, schools: 12, status: 'upcoming' },
   { code: 'CA', name: 'California', teams: 32, schools: 22, status: 'upcoming' },
@@ -36,7 +55,7 @@ const mockStateStats: StateStats[] = [
   { code: 'NY', name: 'New York', teams: 22, schools: 15, status: 'upcoming' },
 ];
 
-const mockTopTeams = [
+const fallbackTopTeams: TopTeam[] = [
   { id: 1, rank: 1, name: 'Quantum Minds', school: 'Montgomery Blair HS', state: 'MD', points: 2450 },
   { id: 5, rank: 2, name: 'Neural Network', school: 'Walt Whitman HS', state: 'MD', points: 2380 },
   { id: 2, rank: 3, name: 'Binary Stars', school: 'Thomas Jefferson HS', state: 'VA', points: 2290 },
@@ -44,18 +63,63 @@ const mockTopTeams = [
   { id: 6, rank: 5, name: 'Data Dragons', school: 'Richard Montgomery HS', state: 'MD', points: 2050 },
 ];
 
-const mockUpcomingMatches = [
+const fallbackUpcomingMatches: UpcomingMatch[] = [
   { id: 1, team1: 'Quantum Minds', team2: 'Binary Stars', round: 'Semifinals', time: '2:00 PM EST', date: 'Jan 15' },
   { id: 2, team1: 'Neural Network', team2: 'Code Breakers', round: 'Semifinals', time: '4:00 PM EST', date: 'Jan 15' },
   { id: 3, team1: 'Data Dragons', team2: 'Logic Lords', round: 'Quarterfinals', time: '10:00 AM EST', date: 'Jan 14' },
 ];
 
 export default function WorldPage() {
-  const [stats] = useState<GlobalStats>(mockGlobalStats);
-  const [states] = useState<StateStats[]>(mockStateStats);
+  const [stats, setStats] = useState<GlobalStats>(fallbackGlobalStats);
+  const [states, setStates] = useState<StateStats[]>(fallbackStateStats);
+  const [topTeams, setTopTeams] = useState<TopTeam[]>(fallbackTopTeams);
+  const [upcomingMatches] = useState<UpcomingMatch[]>(fallbackUpcomingMatches);
 
   useEffect(() => {
-    // In production, fetch real data from API
+    async function fetchData() {
+      try {
+        // Fetch overview stats
+        const overviewData = await getPublicOverview();
+        setStats({
+          totalTeams: overviewData.teams_count,
+          totalSchools: overviewData.schools_count,
+          totalStudents: overviewData.students_count,
+          activeStates: overviewData.states_count,
+          upcomingMatches: overviewData.matches_count,
+        });
+
+        // Fetch competitions to build state stats
+        const competitionsData = await getPublicCompetitions({ type: 'STATE' });
+        if (competitionsData.competitions.length > 0) {
+          const stateStats: StateStats[] = competitionsData.competitions.map((comp: CompetitionListItem) => ({
+            code: comp.scope_code || 'XX',
+            name: comp.name.replace(' Competition', '').replace(' State', ''),
+            teams: comp.teams_count,
+            schools: comp.schools_count,
+            status: comp.status === 'LIVE' ? 'active' : comp.status === 'COMPLETED' ? 'completed' : 'upcoming',
+          }));
+          setStates(stateStats.slice(0, 5));
+        }
+
+        // Fetch leaderboard for top teams
+        const leaderboardData = await getPublicLeaderboard({ limit: 5 });
+        if (leaderboardData.leaderboard.length > 0) {
+          const teams: TopTeam[] = leaderboardData.leaderboard.map((entry: PublicLeaderboardEntry) => ({
+            id: entry.team_id,
+            rank: entry.rank,
+            name: entry.team_name,
+            school: entry.school_name,
+            state: entry.state_region || entry.country,
+            points: entry.total_points,
+          }));
+          setTopTeams(teams);
+        }
+      } catch (error) {
+        console.error('Failed to fetch data from API, using fallback data:', error);
+      }
+    }
+
+    fetchData();
   }, []);
 
   const getStatusBadge = (status: string) => {
@@ -208,7 +272,7 @@ export default function WorldPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/5">
-                  {mockTopTeams.map((team) => (
+                  {topTeams.map((team) => (
                     <tr key={team.rank} className="hover:bg-white/5 transition-colors cursor-pointer" onClick={() => window.location.href = `/team/${team.id}`}>
                       <td className="px-6 py-3">
                         <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
@@ -249,7 +313,7 @@ export default function WorldPage() {
                 </h2>
               </div>
               <div className="divide-y divide-white/5">
-                {mockUpcomingMatches.map((match) => (
+                {upcomingMatches.map((match) => (
                   <Link
                     key={match.id}
                     to={`/match/${match.id}`}

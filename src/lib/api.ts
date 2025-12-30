@@ -336,3 +336,179 @@ export async function resetTournament(tournamentId: number, resetGroups: boolean
     method: 'POST',
   });
 }
+
+// ============================================================================
+// PUBLIC COMPETITION API (Launch Site)
+// ============================================================================
+
+// Overview types
+export interface OverviewStats {
+  teams_count: number;
+  schools_count: number;
+  students_count: number;
+  states_count: number;
+  matches_count: number;
+  season_id: number | null;
+  season_year: number | null;
+}
+
+// Competition types
+export interface CompetitionListItem {
+  id: number;
+  name: string;
+  competition_type: string | null;
+  scope_code: string | null;
+  status: string;
+  teams_count: number;
+  schools_count: number;
+  start_date: string | null;
+  end_date: string | null;
+}
+
+export interface GroupStanding {
+  team_id: number;
+  team_name: string;
+  school_name: string;
+  points: number;
+  wins: number;
+  losses: number;
+  draws: number;
+  total_score: number;
+}
+
+export interface GroupDetail {
+  id: number;
+  name: string;
+  standings: GroupStanding[];
+}
+
+export interface MatchSummary {
+  id: number;
+  team1_name: string;
+  team2_name: string;
+  team1_score: number | null;
+  team2_score: number | null;
+  status: string;
+  scheduled_at: string | null;
+}
+
+export interface CompetitionDetail {
+  id: number;
+  name: string;
+  description: string | null;
+  competition_type: string | null;
+  scope_code: string | null;
+  status: string;
+  start_date: string | null;
+  end_date: string | null;
+  teams_count: number;
+  groups: GroupDetail[];
+  recent_matches: MatchSummary[];
+  upcoming_matches: MatchSummary[];
+}
+
+// DoDEA types
+export interface DoDEASchool {
+  id: number;
+  name: string;
+  country: string;
+  state_region: string | null;
+  city: string;
+  teams_count: number;
+}
+
+export interface DoDEAInfo {
+  schools: DoDEASchool[];
+  total_schools: number;
+  total_teams: number;
+  total_students: number;
+  competition_id: number | null;
+  competition_name: string | null;
+  season_id: number | null;
+}
+
+// Public Leaderboard types
+export interface PublicLeaderboardEntry {
+  rank: number;
+  team_id: number;
+  team_name: string;
+  school_name: string;
+  country: string;
+  state_region: string | null;
+  total_points: number;
+  matches_played: number;
+  wins: number;
+}
+
+// School Search types
+export interface SchoolSearchResult {
+  id: number;
+  name: string;
+  slug: string | null;
+  country: string;
+  state_region: string | null;
+  city: string;
+  school_type: string | null;
+  is_dodea: boolean;
+  teams_count: number;
+}
+
+// Public API Functions
+
+export async function getPublicOverview(seasonYear?: number) {
+  const query = seasonYear ? `?season=${seasonYear}` : '';
+  return apiFetch<OverviewStats>(`/api/public/overview${query}`);
+}
+
+export async function getPublicCompetitions(params?: { season?: number; type?: string }) {
+  const searchParams = new URLSearchParams();
+  if (params?.season) searchParams.append('season', params.season.toString());
+  if (params?.type) searchParams.append('type', params.type);
+  const query = searchParams.toString() ? `?${searchParams.toString()}` : '';
+  return apiFetch<{ competitions: CompetitionListItem[]; total: number; season_id: number | null }>(`/api/public/competitions${query}`);
+}
+
+export async function getPublicCompetitionDetail(competitionId: number) {
+  return apiFetch<CompetitionDetail>(`/api/public/competitions/${competitionId}`);
+}
+
+export async function getPublicDoDEA(seasonYear?: number) {
+  const query = seasonYear ? `?season=${seasonYear}` : '';
+  return apiFetch<DoDEAInfo>(`/api/public/dodea${query}`);
+}
+
+export async function getPublicLeaderboard(params?: { 
+  season?: number; 
+  scope?: 'global' | 'state' | 'dodea'; 
+  state_code?: string;
+  limit?: number;
+  offset?: number;
+}) {
+  const searchParams = new URLSearchParams();
+  if (params?.season) searchParams.append('season', params.season.toString());
+  if (params?.scope) searchParams.append('scope', params.scope);
+  if (params?.state_code) searchParams.append('state_code', params.state_code);
+  if (params?.limit) searchParams.append('limit', params.limit.toString());
+  if (params?.offset) searchParams.append('offset', params.offset.toString());
+  const query = searchParams.toString() ? `?${searchParams.toString()}` : '';
+  return apiFetch<{ leaderboard: PublicLeaderboardEntry[]; total: number; scope: string; season_id: number | null }>(`/api/public/leaderboard${query}`);
+}
+
+export async function searchPublicSchools(params?: {
+  q?: string;
+  country?: string;
+  admin_area?: string;
+  is_dodea?: boolean;
+  limit?: number;
+  offset?: number;
+}) {
+  const searchParams = new URLSearchParams();
+  if (params?.q) searchParams.append('q', params.q);
+  if (params?.country) searchParams.append('country', params.country);
+  if (params?.admin_area) searchParams.append('admin_area', params.admin_area);
+  if (params?.is_dodea !== undefined) searchParams.append('is_dodea', params.is_dodea.toString());
+  if (params?.limit) searchParams.append('limit', params.limit.toString());
+  if (params?.offset) searchParams.append('offset', params.offset.toString());
+  const query = searchParams.toString() ? `?${searchParams.toString()}` : '';
+  return apiFetch<{ schools: SchoolSearchResult[]; total: number; limit: number; offset: number }>(`/api/public/schools/search${query}`);
+}
