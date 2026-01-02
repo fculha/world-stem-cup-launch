@@ -612,24 +612,52 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <Link to="/register/school-admin" style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            background: 'linear-gradient(135deg, #f72585, #4361ee)',
-            color: 'white',
-            padding: '1rem 2rem',
-            borderRadius: '0.5rem',
-            textDecoration: 'none',
-            fontWeight: '600',
-            fontSize: '1.1rem',
-            transition: 'transform 0.2s'
-          }}>
-            Join the Movement
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </Link>
+          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link to="/register/school-admin" style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              background: 'linear-gradient(135deg, #f72585, #4361ee)',
+              color: 'white',
+              padding: '1rem 2rem',
+              borderRadius: '0.5rem',
+              textDecoration: 'none',
+              fontWeight: '600',
+              fontSize: '1.1rem',
+              transition: 'transform 0.2s'
+            }}>
+              Join the Movement
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
+
+            <a 
+              href="/docs/WSC_Institutional_Catalog.pdf" 
+              download
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                background: 'rgba(255,255,255,0.1)',
+                border: '1px solid rgba(255,255,255,0.3)',
+                color: 'white',
+                padding: '1rem 2rem',
+                borderRadius: '0.5rem',
+                textDecoration: 'none',
+                fontWeight: '600',
+                fontSize: '1.1rem',
+                transition: 'all 0.2s'
+              }}
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Download Institutional Catalog (PDF)
+            </a>
+          </div>
         </div>
       </section>
 
