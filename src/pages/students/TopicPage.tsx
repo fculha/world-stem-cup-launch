@@ -163,8 +163,8 @@ const defaultContent = {
   title: 'Topic',
   titleEn: 'Topic',
   concept: {
-    native: 'Bu konu için içerik yakında eklenecektir. Lütfen daha sonra tekrar kontrol edin.',
-    english: 'Content for this topic will be added soon. Please check back later.'
+    native: 'Bu konu için içerik yakında eklenecektir. Daha fazla konu aşamalı olarak eklenecektir.',
+    english: 'Content for this topic will be added soon. More topics will be added progressively.'
   },
   examples: [],
   practiceQuestions: []
@@ -583,12 +583,21 @@ export default function TopicPage() {
         </div>
       </section>
 
+      {/* Competition Alignment Notice */}
+      <section className="py-6 px-6 bg-gradient-to-r from-[#4361ee]/10 to-[#f72585]/10 border-y border-white/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-sm text-white/70">
+            Practice content is aligned with World STEM Cup reasoning style and difficulty level, but practice scores do not affect competition results.
+          </p>
+        </div>
+      </section>
+
       {/* AI Usage Notice */}
       <section className="py-8 px-6 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm text-white/50">
-            <strong className="text-white/70">AI Usage Policy:</strong> AI is used only for guided tutoring and content delivery. 
-            AI is not used during live competitions. All learning content aligns with predefined academic standards.
+            <strong className="text-white/70">AI Usage Policy:</strong> AI is for learning only. 
+            AI is never used during competitions. No student data is used for model training.
           </p>
         </div>
       </section>
