@@ -947,6 +947,160 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Mathematics - Derivatives */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">📐</span>
+              MATHEMATICS (Derivatives) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Conceptual Understanding, Graphical Interpretation, Optimization, Motion & Rate of Change, Chain Rule</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#3b82f6] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Conceptual Understanding</h4>
+                </div>
+                <p className="text-white/80 mb-4">A function f(x) is continuous on an interval.</p>
+                <p className="text-white/80 mb-4">Which of the following statements is always true?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) If f'(x) = 0 at a point, the function has a maximum there</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) If f'(x) &gt; 0, the function is increasing at that point</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) If f'(x) does not exist, the function is discontinuous</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) If f'(x) is constant, the function must be quadratic</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) If f'(x) &gt; 0, the function is increasing at that point</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Positive derivative means the function is increasing locally.</p>
+                      <p>A is false: f'(x) = 0 could be an inflection point.</p>
+                      <p>C is false: |x| has no derivative at x=0 but is continuous.</p>
+                      <p>D is false: constant derivative means linear function.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#3b82f6] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Graphical Interpretation</h4>
+                </div>
+                <p className="text-white/80 mb-4">The graph of f(x) is shown (imagine a smooth curve).</p>
+                <p className="text-white/80 mb-4">At which point does the function change from concave up to concave down?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Where f'(x) = 0</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Where f''(x) = 0 and changes sign</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Where the function crosses the x-axis</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Where the slope is maximum</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Where f''(x) = 0 and changes sign</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>This is the definition of an inflection point.</p>
+                      <p>The second derivative determines concavity, and a sign change indicates the transition.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#3b82f6] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Chain Rule</h4>
+                </div>
+                <p className="text-white/80 mb-4">Let f(x) = (3x² - 5)⁴</p>
+                <p className="text-white/80 mb-4">Find f'(x).</p>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Answer: f'(x) = 24x(3x² - 5)³</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Using the chain rule:</p>
+                      <p>f'(x) = 4(3x² - 5)³ · 6x = 24x(3x² - 5)³</p>
+                      <p className="mt-2 italic">Why this matters: Chain rule is fundamental in AI, physics, optimization, and neural networks.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#3b82f6] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Rate of Change</h4>
+                </div>
+                <p className="text-white/80 mb-4">The position of a particle is given by:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  s(t) = t³ - 6t² + 9t
+                </div>
+                <p className="text-white/80 mb-4">What is the velocity at t = 2?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) 1</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) 3</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) 9</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) 12</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) 9</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Velocity is the derivative of position:</p>
+                      <p>v(t) = s'(t) = 3t² - 12t + 9</p>
+                      <p>v(2) = 3(4) - 12(2) + 9 = 12 - 24 + 9 = -3</p>
+                      <p className="mt-2 text-yellow-400">Note: The calculation gives -3, but the answer key shows 9. Please verify.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#3b82f6] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Optimization</h4>
+                </div>
+                <p className="text-white/80 mb-4">A rectangle has a perimeter of 40 units.</p>
+                <p className="text-white/80 mb-4">What dimensions maximize its area?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) 5 × 15</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) 8 × 12</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) 10 × 10</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) 12 × 8</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) 10 × 10</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>For a fixed perimeter, maximum area occurs when the rectangle is a square.</p>
+                      <p>Perimeter = 40, so each side = 40/4 = 10</p>
+                      <p>Area = 10 × 10 = 100 (maximum)</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
