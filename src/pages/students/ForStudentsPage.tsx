@@ -1599,6 +1599,213 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Mathematics - Matrices */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">[M]</span>
+              MATHEMATICS (Matrices) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Matrix Addition, Matrix Multiplication, Determinants, Invertibility, Systems of Equations, Real-World Applications</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#14b8a6] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Matrix Addition</h4>
+                </div>
+                <p className="text-white/80 mb-4">Given:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  A = [2 1; 3 4], B = [1 0; -1 2]
+                </div>
+                <p className="text-white/80 mb-4">What is A + B?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) [3 1; 2 6]</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) [1 1; 4 6]</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) [3 0; 2 2]</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) [2 0; 3 8]</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) [3 1; 2 6]</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Matrix addition is element-wise:</p>
+                      <p>(2+1, 1+0; 3-1, 4+2) = [3 1; 2 6]</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#14b8a6] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Matrix Multiplication (Concept Check)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which condition must be satisfied for the product AB to exist?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A and B must be square</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Number of rows of A = number of rows of B</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Number of columns of A = number of rows of B</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) A must be invertible</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Number of columns of A = number of rows of B</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>This is a core conceptual discriminator in matrix reasoning.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#14b8a6] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Matrix Multiplication (Calculation)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Given:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  A = [1 2; 0 1], B = [3; 4]
+                </div>
+                <p className="text-white/80 mb-4">Find AB.</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) [11; 4]</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) [10; 4]</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) [3; 8]</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) [7; 4]</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) [11; 4]</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>(1×3 + 2×4; 0×3 + 1×4) = [11; 4]</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#14b8a6] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Determinant (Key Skill)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Find the determinant of:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  A = [2 5; 1 3]
+                </div>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) 1</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) 6</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) -1</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) 11</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) 1</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>det(A) = (2)(3) − (5)(1) = 6 − 5 = 1</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#14b8a6] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Invertibility (Conceptual Depth)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement is true?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A matrix with determinant 0 is invertible</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Only diagonal matrices are invertible</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) A matrix is invertible if and only if its determinant ≠ 0</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) All square matrices have inverses</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) A matrix is invertible if and only if its determinant ≠ 0</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>This is central to linear algebra, AI, and physics.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#14b8a6] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Systems of Equations (Application)</h4>
+                </div>
+                <p className="text-white/80 mb-4">A system of linear equations has: a unique solution, infinite solutions, or no solution. Which matrix property determines this?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Trace</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Determinant</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Transpose</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Rank only</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Determinant</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>det ≠ 0 → unique solution</p>
+                      <p>det = 0 → no or infinite solutions</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#14b8a6] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Real-World Interpretation (Advanced)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Matrices are most directly used to model which of the following?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Growth rates only</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Geometric transformations</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Random guessing</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Arithmetic sequences</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Geometric transformations</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Rotations, scaling, reflections → matrices</p>
+                      <p>This bridges to graphics, robotics, and AI.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
