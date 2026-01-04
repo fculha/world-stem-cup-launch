@@ -1413,6 +1413,192 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Mathematics - Vectors */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">→</span>
+              MATHEMATICS (Vectors) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Vector Representation, Vector Addition, Dot Product, Angle Between Vectors, Vector Projection, Physics Applications</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ec4899] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Basic Vector Representation</h4>
+                </div>
+                <p className="text-white/80 mb-4">Given the vector:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  v⃗ = 3i − 4j
+                </div>
+                <p className="text-white/80 mb-4">What is its magnitude?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) 5</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) 7</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) 1</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) √7</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) 5</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>|v⃗| = √(3² + (-4)²) = √(9 + 16) = √25 = 5</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ec4899] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Vector Addition</h4>
+                </div>
+                <p className="text-white/80 mb-4">Let:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  a⃗ = (2, 1), b⃗ = (−1, 3)
+                </div>
+                <p className="text-white/80 mb-4">What is a⃗ + b⃗?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) (1, 4)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) (3, 2)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) (1, 2)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) (-1, 4)</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) (1, 4)</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>(2 − 1, 1 + 3) = (1, 4)</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ec4899] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Dot Product (Conceptual + Calculation)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Given:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  u⃗ = (1, 2), v⃗ = (2, −1)
+                </div>
+                <p className="text-white/80 mb-4">Find u⃗ · v⃗.</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) 0</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) 4</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) -2</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) 1</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) 0</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>(1)(2) + (2)(−1) = 2 − 2 = 0</p>
+                      <p className="mt-2 italic">Dot product = 0 means vectors are perpendicular</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ec4899] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Angle Between Vectors</h4>
+                </div>
+                <p className="text-white/80 mb-4">Two vectors have dot product 0. What is the angle between them?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) 0°</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) 45°</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) 90°</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) 180°</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) 90°</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A zero dot product means vectors are orthogonal (right angle).</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ec4899] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Vector Projection (Advanced)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Let:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  a⃗ = (3, 4), b⃗ = (1, 0)
+                </div>
+                <p className="text-white/80 mb-4">What is the projection of a⃗ onto b⃗?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) (3, 0)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) (4, 0)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) (0, 4)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) (1, 0)</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) (3, 0)</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>proj_b⃗ a⃗ = (a⃗ · b⃗ / |b⃗|²) b⃗</p>
+                      <p>= (3/1)(1, 0) = (3, 0)</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ec4899] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Physics Interpretation</h4>
+                </div>
+                <p className="text-white/80 mb-4">A force vector F⃗ acts at an angle to the direction of motion. Which vector operation determines the work done?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Vector magnitude</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Cross product</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Dot product</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Vector subtraction</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Dot product</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Work = F⃗ · d⃗</p>
+                      <p>This directly connects vectors to physics and engineering.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
