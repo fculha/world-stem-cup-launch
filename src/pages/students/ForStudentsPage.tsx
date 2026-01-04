@@ -1059,12 +1059,11 @@ export default function ForStudentsPage() {
                     Show Answer & Explanation
                   </summary>
                   <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
-                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) 9</p>
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: -3</p>
                     <div className="text-white/70 space-y-2 text-sm">
                       <p>Velocity is the derivative of position:</p>
                       <p>v(t) = s'(t) = 3t² - 12t + 9</p>
                       <p>v(2) = 3(4) - 12(2) + 9 = 12 - 24 + 9 = -3</p>
-                      <p className="mt-2 text-yellow-400">Note: The calculation gives -3, but the answer key shows 9. Please verify.</p>
                     </div>
                   </div>
                 </details>
