@@ -360,6 +360,7 @@ const stats = [
 function App() {
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [showCompetitionDropdown, setShowCompetitionDropdown] = useState(false);
+  const [showGovernanceDropdown, setShowGovernanceDropdown] = useState(false);
 
   // Scroll to section with offset for fixed navbar
   const scrollToSection = (id: string) => {
@@ -438,13 +439,62 @@ function App() {
                         >
                           Sponsors
                         </Link>
+            {/* Governance Dropdown */}
+            <div className="relative">
+              <button 
+                onClick={() => { setShowGovernanceDropdown(v => !v); setShowCompetitionDropdown(false); }}
+                className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1"
+              >
+                <Shield className="w-4 h-4" />
+                Governance
+                <ChevronDown className={`w-3 h-3 transition-transform ${showGovernanceDropdown ? 'rotate-180' : ''}`} />
+              </button>
+              {showGovernanceDropdown && (
+                <div className="absolute top-full left-0 mt-2 w-56 bg-[#16213e] border border-white/10 rounded-lg shadow-xl py-2 z-50">
+                  <Link 
+                    to="/governance"
+                    onClick={() => setShowGovernanceDropdown(false)}
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Overview
+                  </Link>
+                  <Link 
+                    to="/governance/academic-independence"
+                    onClick={() => setShowGovernanceDropdown(false)}
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Academic Independence
+                  </Link>
+                  <Link 
+                    to="/governance/conflict-of-interest"
+                    onClick={() => setShowGovernanceDropdown(false)}
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Conflict of Interest
+                  </Link>
+                  <Link 
+                    to="/governance/data-protection-child-safety"
+                    onClick={() => setShowGovernanceDropdown(false)}
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Data Protection & Child Safety
+                  </Link>
+                  <Link 
+                    to="/governance/organizational-structure"
+                    onClick={() => setShowGovernanceDropdown(false)}
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Organizational Structure
+                  </Link>
+                </div>
+              )}
+            </div>
             {/* Competition Dropdown */}
-            <div 
-              className="relative"
-              onMouseEnter={() => setShowCompetitionDropdown(true)}
-              onMouseLeave={() => setShowCompetitionDropdown(false)}
-            >
-              <button className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1">
+            <div className="relative">
+              <button 
+                onClick={() => { setShowCompetitionDropdown(v => !v); setShowGovernanceDropdown(false); }}
+                className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1"
+              >
                 <Globe className="w-4 h-4" />
                 Competition
                 <ChevronDown className={`w-3 h-3 transition-transform ${showCompetitionDropdown ? 'rotate-180' : ''}`} />
@@ -453,36 +503,42 @@ function App() {
                 <div className="absolute top-full left-0 mt-2 w-48 bg-[#16213e] border border-white/10 rounded-lg shadow-xl py-2 z-50">
                   <Link 
                     to="/world"
+                    onClick={() => setShowCompetitionDropdown(false)}
                     className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     Overview
                   </Link>
                   <Link 
                     to="/states"
+                    onClick={() => setShowCompetitionDropdown(false)}
                     className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     All States
                   </Link>
                   <Link 
                     to="/state/MD"
+                    onClick={() => setShowCompetitionDropdown(false)}
                     className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     Maryland Pilot
                   </Link>
                   <Link 
                     to="/dodea"
+                    onClick={() => setShowCompetitionDropdown(false)}
                     className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     DoDEA Schools
                   </Link>
                   <Link 
                     to="/bracket/current"
+                    onClick={() => setShowCompetitionDropdown(false)}
                     className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     Playoff Bracket
                   </Link>
                   <Link 
                     to="/leaderboard"
+                    onClick={() => setShowCompetitionDropdown(false)}
                     className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     Leaderboard
@@ -490,6 +546,7 @@ function App() {
                   <div className="border-t border-white/10 my-1"></div>
                   <Link 
                     to="/find-schools"
+                    onClick={() => setShowCompetitionDropdown(false)}
                     className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     Find Schools

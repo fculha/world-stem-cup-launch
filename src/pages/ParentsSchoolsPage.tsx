@@ -40,22 +40,20 @@ export default function ParentsSchoolsPage() {
             <Link to="/education-fund" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}>Education Fund</Link>
                         <Link to="/sponsors" style={{ color: 'rgba(255,255,255,0.7)', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}>Sponsors</Link>
                         {/* Governance Dropdown */}
-                        <div 
-                          style={{ position: 'relative' }}
-                          onMouseEnter={() => setShowGovernanceDropdown(true)}
-                          onMouseLeave={() => setShowGovernanceDropdown(false)}
-                        >
-                          <button style={{ 
-                            background: 'none', 
-                            border: 'none', 
-                            color: 'rgba(255,255,255,0.7)', 
-                            fontSize: '0.875rem', 
-                            cursor: 'pointer',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.25rem',
-                            padding: 0
-                          }}>
+                        <div style={{ position: 'relative' }}>
+                          <button 
+                            onClick={() => { setShowGovernanceDropdown(v => !v); setShowCompetitionDropdown(false); }}
+                            style={{ 
+                              background: 'none', 
+                              border: 'none', 
+                              color: 'rgba(255,255,255,0.7)', 
+                              fontSize: '0.875rem', 
+                              cursor: 'pointer',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '0.25rem',
+                              padding: 0
+                            }}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                             </svg>
@@ -78,31 +76,29 @@ export default function ParentsSchoolsPage() {
                               padding: '0.5rem 0',
                               zIndex: 50
                             }}>
-                              <Link to="/governance" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Overview</Link>
-                              <Link to="/governance/academic-independence" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Academic Independence</Link>
-                              <Link to="/governance/conflict-of-interest" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Conflict of Interest</Link>
-                              <Link to="/governance/data-protection-child-safety" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Data Protection & Child Safety</Link>
-                              <Link to="/governance/organizational-structure" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Organizational Structure</Link>
+                              <Link to="/governance" onClick={() => setShowGovernanceDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Overview</Link>
+                              <Link to="/governance/academic-independence" onClick={() => setShowGovernanceDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Academic Independence</Link>
+                              <Link to="/governance/conflict-of-interest" onClick={() => setShowGovernanceDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Conflict of Interest</Link>
+                              <Link to="/governance/data-protection-child-safety" onClick={() => setShowGovernanceDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Data Protection & Child Safety</Link>
+                              <Link to="/governance/organizational-structure" onClick={() => setShowGovernanceDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Organizational Structure</Link>
                             </div>
                           )}
                         </div>
                         {/* Competition Dropdown */}
-                        <div 
-                          style={{ position: 'relative' }}
-                          onMouseEnter={() => setShowCompetitionDropdown(true)}
-                          onMouseLeave={() => setShowCompetitionDropdown(false)}
-                        >
-                          <button style={{ 
-                            background: 'none', 
-                            border: 'none', 
-                            color: 'rgba(255,255,255,0.7)', 
-                            fontSize: '0.875rem', 
-                            cursor: 'pointer',
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.25rem',
-                            padding: 0
-                          }}>
+                        <div style={{ position: 'relative' }}>
+                          <button 
+                            onClick={() => { setShowCompetitionDropdown(v => !v); setShowGovernanceDropdown(false); }}
+                            style={{ 
+                              background: 'none', 
+                              border: 'none', 
+                              color: 'rgba(255,255,255,0.7)', 
+                              fontSize: '0.875rem', 
+                              cursor: 'pointer',
+                              display: 'flex',
+                              alignItems: 'center',
+                              gap: '0.25rem',
+                              padding: 0
+                            }}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                               <circle cx="12" cy="12" r="10" />
                               <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
@@ -127,14 +123,14 @@ export default function ParentsSchoolsPage() {
                               padding: '0.5rem 0',
                               zIndex: 50
                             }}>
-                              <Link to="/world" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Overview</Link>
-                              <Link to="/states" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>All States</Link>
-                              <Link to="/state/MD" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Maryland Pilot</Link>
-                              <Link to="/dodea" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>DoDEA Schools</Link>
-                              <Link to="/bracket/current" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Playoff Bracket</Link>
-                              <Link to="/leaderboard" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Leaderboard</Link>
+                              <Link to="/world" onClick={() => setShowCompetitionDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Overview</Link>
+                              <Link to="/states" onClick={() => setShowCompetitionDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>All States</Link>
+                              <Link to="/state/MD" onClick={() => setShowCompetitionDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Maryland Pilot</Link>
+                              <Link to="/dodea" onClick={() => setShowCompetitionDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>DoDEA Schools</Link>
+                              <Link to="/bracket/current" onClick={() => setShowCompetitionDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Playoff Bracket</Link>
+                              <Link to="/leaderboard" onClick={() => setShowCompetitionDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Leaderboard</Link>
                               <div style={{ borderTop: '1px solid rgba(255,255,255,0.1)', margin: '0.25rem 0' }}></div>
-                              <Link to="/find-schools" style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Find Schools</Link>
+                              <Link to="/find-schools" onClick={() => setShowCompetitionDropdown(false)} style={{ display: 'block', padding: '0.5rem 1rem', fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)', textDecoration: 'none' }}>Find Schools</Link>
                             </div>
                           )}
                         </div>
