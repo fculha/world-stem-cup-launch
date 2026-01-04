@@ -774,6 +774,179 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Data Interpretation Questions */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">📊</span>
+              DATA INTERPRETATION - Grade 9
+            </h3>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Table Interpretation</h4>
+                </div>
+                <p className="text-white/80 mb-4">A table shows the number of books read by students in one month:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 overflow-x-auto">
+                  <table className="w-full text-white/80 text-sm">
+                    <thead>
+                      <tr className="border-b border-white/20">
+                        <th className="text-left py-2 px-3">Student</th>
+                        <th className="text-left py-2 px-3">Books Read</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-b border-white/10"><td className="py-2 px-3">A</td><td className="py-2 px-3">2</td></tr>
+                      <tr className="border-b border-white/10"><td className="py-2 px-3">B</td><td className="py-2 px-3">5</td></tr>
+                      <tr className="border-b border-white/10"><td className="py-2 px-3">C</td><td className="py-2 px-3">3</td></tr>
+                      <tr><td className="py-2 px-3">D</td><td className="py-2 px-3">10</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="text-white/80 mb-4">Which statement is correct?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Student B read the most books</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Student D read more than the average</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Student A read more than Student C</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The average number of books is 10</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Student D read more than the average</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Total books = 2 + 5 + 3 + 10 = 20</p>
+                      <p>Average = 20 / 4 = 5</p>
+                      <p>Student D read 10, which is more than the average (5).</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Graph Reasoning (Conceptual)</h4>
+                </div>
+                <p className="text-white/80 mb-4">
+                  A line graph shows that the temperature increases steadily from morning to noon, then decreases in the afternoon.
+                </p>
+                <p className="text-white/80 mb-4">What is the best interpretation?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Temperature is random</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Temperature only increases</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Temperature reaches a peak around noon</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Temperature is highest in the morning</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Temperature reaches a peak around noon</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A steady increase followed by a decrease indicates a maximum point around noon.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Percentage Change</h4>
+                </div>
+                <p className="text-white/80 mb-4">A class has 40 students. 10 students are absent one day.</p>
+                <p className="text-white/80 mb-4">What percentage of students are present?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) 20%</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) 25%</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) 75%</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) 80%</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) 75%</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Present students = 40 - 10 = 30</p>
+                      <p>Percentage = 30 / 40 = 0.75 = 75%</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Comparing Data Sets</h4>
+                </div>
+                <p className="text-white/80 mb-4">Two classes take the same test.</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 text-sm">
+                  <p>Class A average score: 70</p>
+                  <p>Class B average score: 70</p>
+                </div>
+                <p className="text-white/80 mb-4">Which conclusion is correct?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Both classes performed identically</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Class A had no low scores</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Class B had no high scores</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) More information is needed</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: D) More information is needed</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Same average does not mean same distribution.</p>
+                      <p>We need information about score spread (variance, range, etc.).</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Real-Life Data Reasoning</h4>
+                </div>
+                <p className="text-white/80 mb-4">
+                  A survey shows that students who exercise regularly report higher concentration levels.
+                </p>
+                <p className="text-white/80 mb-4">Which conclusion is most reasonable?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Exercise guarantees academic success</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Concentration causes exercise</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Exercise may be associated with concentration</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Students should stop studying</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Exercise may be associated with concentration</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>The data suggests a relationship (correlation), not absolute causation.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
