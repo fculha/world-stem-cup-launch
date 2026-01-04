@@ -47,6 +47,13 @@ import HowItWorksPage from './pages/HowItWorksPage';
 import ParentsSchoolsPage from './pages/ParentsSchoolsPage';
 import EducationFundPage from './pages/EducationFundPage';
 import SponsorsPage from './pages/SponsorsPage';
+// Governance Pages
+import GovernancePage from './pages/governance/GovernancePage';
+import AcademicIndependencePage from './pages/governance/AcademicIndependencePage';
+import ConflictOfInterestPage from './pages/governance/ConflictOfInterestPage';
+import DataProtectionChildSafetyPage from './pages/governance/DataProtectionChildSafetyPage';
+import OrganizationalStructurePage from './pages/governance/OrganizationalStructurePage';
+import WhyFundWorldStemCupPage from './pages/WhyFundWorldStemCupPage';
 // Team and Bracket Pages
 import TeamPage from './pages/TeamPage';
 import BracketPage from './pages/BracketPage';
@@ -89,8 +96,15 @@ export default function AppRouter() {
                     <Route path="/who-we-are" element={<AboutPage />} />
                     <Route path="/how-it-works" element={<HowItWorksPage />} />
                     <Route path="/parents-schools" element={<ParentsSchoolsPage />} />
-                                        <Route path="/education-fund" element={<EducationFundPage />} />
-                                        <Route path="/sponsors" element={<SponsorsPage />} />
+                                                                                <Route path="/education-fund" element={<EducationFundPage />} />
+                                                                                <Route path="/education-fund/why-fund-world-stem-cup" element={<WhyFundWorldStemCupPage />} />
+                                                                                <Route path="/sponsors" element={<SponsorsPage />} />
+                                                                                {/* Governance Routes */}
+                                                                                <Route path="/governance" element={<GovernancePage />} />
+                                                                                <Route path="/governance/academic-independence" element={<AcademicIndependencePage />} />
+                                                                                <Route path="/governance/conflict-of-interest" element={<ConflictOfInterestPage />} />
+                                                                                <Route path="/governance/data-protection-child-safety" element={<DataProtectionChildSafetyPage />} />
+                                                                                <Route path="/governance/organizational-structure" element={<OrganizationalStructurePage />} />
           
                                         {/* Protected Routes */}
           <Route 
