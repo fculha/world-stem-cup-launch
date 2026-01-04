@@ -1100,6 +1100,160 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Mathematics - Integrals */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">∫</span>
+              MATHEMATICS (Integrals) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Definite vs Indefinite Integrals, Area Under a Curve, Accumulation & Physical Meaning, Applications</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Conceptual Understanding</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best describes the definite integral ∫ₐᵇ f(x) dx?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The slope of the function between a and b</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The total accumulated value of f(x) over the interval</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The maximum value of the function</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The average of the function values</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The total accumulated value of f(x) over the interval</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Definite integral represents net accumulation (area with sign).</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Area Interpretation</h4>
+                </div>
+                <p className="text-white/80 mb-4">The function f(x) = x² is defined on the interval [0, 2].</p>
+                <p className="text-white/80 mb-4">What does ∫₀² x² dx represent?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The slope of the curve at x = 2</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The area under the curve from 0 to 2</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The maximum value of f(x)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The length of the curve</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The area under the curve from 0 to 2</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>∫₀² x² dx = [x³/3]₀² = 8/3 - 0 = 8/3</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Physics Connection</h4>
+                </div>
+                <p className="text-white/80 mb-4">The velocity of an object is given by:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  v(t) = 4t - 2
+                </div>
+                <p className="text-white/80 mb-4">What does ∫₁³ (4t - 2) dt represent?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The acceleration at t = 3</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The total distance traveled between t = 1 and t = 3</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The average velocity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The maximum velocity</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The total distance traveled between t = 1 and t = 3</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Velocity integrated over time = displacement.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Area + Negative Region</h4>
+                </div>
+                <p className="text-white/80 mb-4">The function f(x) is positive on [0, 2] and negative on [2, 4].</p>
+                <p className="text-white/80 mb-4">What does ∫₀⁴ f(x) dx represent?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The total area ignoring sign</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The difference between positive and negative areas</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Only the positive area</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Always zero</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The difference between positive and negative areas</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Integral ≠ "absolute area"</p>
+                      <p>Integral = net effect (positive area minus negative area)</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Geometry + Integral (Global Finals Style)</h4>
+                </div>
+                <p className="text-white/80 mb-4">A region is bounded by:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  y = x and y = x²
+                </div>
+                <p className="text-white/80 mb-4">Which integral gives the area of the region?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) ∫₀¹ (x - x²) dx</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) ∫₀¹ (x² - x) dx</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) ∫₁⁰ (x - x²) dx</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) ∫₀¹ (x + x²) dx</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) ∫₀¹ (x - x²) dx</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Upper curve − lower curve → correct order matters.</p>
+                      <p>On [0, 1]: y = x is above y = x², so area = ∫₀¹ (x - x²) dx</p>
+                      <p className="mt-2 italic">Global competition logic: interpretation + modeling</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
