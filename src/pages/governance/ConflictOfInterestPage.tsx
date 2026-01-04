@@ -8,7 +8,8 @@ export default function ConflictOfInterestPage() {
   const DownloadButton = () => (
     <a 
       href="/docs/WSC_Conflict_of_Interest_Public_Statement.pdf" 
-      download
+      target="_blank"
+      rel="noopener noreferrer"
       style={{
         display: 'inline-flex',
         alignItems: 'center',
@@ -29,7 +30,7 @@ export default function ConflictOfInterestPage() {
         <polyline points="7 10 12 15 17 10" />
         <line x1="12" y1="15" x2="12" y2="3" />
       </svg>
-      Download Conflict of Interest – Public Statement (PDF)
+      Download PDF
     </a>
   );
 
