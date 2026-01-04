@@ -2421,6 +2421,329 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Physics - Nuclear Physics */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">☢</span>
+              PHYSICS (Nuclear Physics) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Atomic Nucleus, Strong Nuclear Force, Nuclear Stability, Radioactive Decay, Radiation Types, Half-Life, Fission, Fusion, Mass Defect, Binding Energy</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Atomic Nucleus Basics</h4>
+                </div>
+                <p className="text-white/80 mb-4">The nucleus of an atom consists of:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Protons and electrons</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Electrons and neutrons</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Protons and neutrons</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Only protons</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Protons and neutrons</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Electrons orbit outside the nucleus; the nucleus contains protons + neutrons.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Strong Nuclear Force</h4>
+                </div>
+                <p className="text-white/80 mb-4">What force is primarily responsible for holding the nucleus together?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Gravitational force</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Electromagnetic force</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Strong nuclear force</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Weak nuclear force</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Strong nuclear force</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>The strong nuclear force overcomes the electrostatic repulsion between protons at very short distances.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Nuclear Stability</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why do heavy nuclei tend to be unstable?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) They contain too many electrons</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The strong nuclear force becomes weaker at large distances</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Gravity dominates inside the nucleus</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) They move too fast</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The strong nuclear force becomes weaker at large distances</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>As nuclei grow larger, the strong force cannot fully counteract proton–proton repulsion.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Radioactive Decay</h4>
+                </div>
+                <p className="text-white/80 mb-4">Radioactive decay occurs because:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Nuclei absorb energy from the environment</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Nuclei seek a more stable configuration</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Atoms lose electrons</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Gravity breaks the nucleus</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Nuclei seek a more stable configuration</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Unstable nuclei decay to reach greater stability.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Types of Radiation</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which type of radiation has the greatest penetrating power?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Alpha (α)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Beta (β)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Gamma (γ)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Neutron</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Gamma (γ)</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Gamma rays have no mass or charge, allowing deep penetration.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Half-Life (Conceptual)</h4>
+                </div>
+                <p className="text-white/80 mb-4">The half-life of a radioactive substance is the time required for:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) All nuclei to decay</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Half of the original nuclei to decay</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) One nucleus to decay</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Radiation to stop</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Half of the original nuclei to decay</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Half-life is a statistical property, not a prediction of individual atoms.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Half-Life (Reasoning)</h4>
+                </div>
+                <p className="text-white/80 mb-4">If a sample has a half-life of 5 years, what fraction remains after 10 years?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) 1</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) 1/2</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) 1/4</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) 1/8</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) 1/4</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Two half-lives → (1/2)² = 1/4</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Nuclear Fission</h4>
+                </div>
+                <p className="text-white/80 mb-4">Nuclear fission is best described as:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Combining light nuclei into heavier ones</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Splitting a heavy nucleus into smaller nuclei</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Emission of electrons</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Loss of photons</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Splitting a heavy nucleus into smaller nuclei</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Fission releases energy by splitting heavy nuclei (e.g., Uranium).</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Nuclear Fusion</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which process powers the Sun?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Nuclear fission</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Chemical combustion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Nuclear fusion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Radioactive decay</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Nuclear fusion</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Fusion combines light nuclei (hydrogen) into heavier ones, releasing energy.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Mass Defect</h4>
+                </div>
+                <p className="text-white/80 mb-4">The mass of a nucleus is slightly less than the total mass of its individual nucleons because:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Protons lose mass over time</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Energy is released during nucleus formation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Neutrons decay inside the nucleus</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Gravity compresses the nucleus</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Energy is released during nucleus formation</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>The missing mass is converted into binding energy: E = mc²</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Binding Energy</h4>
+                </div>
+                <p className="text-white/80 mb-4">A high binding energy per nucleon indicates that a nucleus is:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Large</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Radioactive</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Very stable</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Electrically neutral</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Very stable</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>More energy is required to break the nucleus → greater stability.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#22c55e] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Nuclear Physics in Society</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which application uses nuclear physics?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) MRI scanning</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Nuclear power plants</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Carbon dating</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) All of the above</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: D) All of the above</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Nuclear physics impacts energy, medicine, archaeology, and space science.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
