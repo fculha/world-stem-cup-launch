@@ -2150,6 +2150,277 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Physics - Introduction to Relativity */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">c</span>
+              PHYSICS (Introduction to Relativity) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Core Idea of Relativity, Speed of Light, Time Dilation, Length Contraction, Simultaneity, Mass-Energy Equivalence, GPS Applications</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Core Idea of Relativity</h4>
+                </div>
+                <p className="text-white/80 mb-4">Einstein's theory of relativity is based on which fundamental idea?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Time flows at the same rate everywhere</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Space and time are absolute</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The laws of physics are the same in all inertial frames</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Gravity only affects massive objects</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) The laws of physics are the same in all inertial frames</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Relativity begins with the idea that physics does not depend on the observer's constant motion.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Speed of Light</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement about the speed of light in vacuum is correct?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It depends on the observer's motion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It changes with distance</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It is constant for all observers</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It increases with energy</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) It is constant for all observers</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>The speed of light c is constant, regardless of how fast the observer is moving.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Time Dilation (Concept)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Time dilation means that:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Time stops at high speeds</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Moving clocks run slower compared to stationary ones</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) All clocks always agree</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Time only depends on gravity</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Moving clocks run slower compared to stationary ones</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>At speeds close to light speed, time passes more slowly for the moving observer.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Thought Experiment (Light Clock)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why did Einstein use thought experiments like the "light clock"?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) To avoid mathematics</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) To test laboratory equipment</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) To explain complex ideas using logic and imagination</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) To prove classical physics wrong</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) To explain complex ideas using logic and imagination</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Relativity was developed using reasoning, not experiments alone.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Length Contraction</h4>
+                </div>
+                <p className="text-white/80 mb-4">Length contraction occurs when:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) An object heats up</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) An object moves close to the speed of light</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Gravity increases</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Time stops</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) An object moves close to the speed of light</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Objects shrink in the direction of motion at relativistic speeds.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Simultaneity</h4>
+                </div>
+                <p className="text-white/80 mb-4">Two events that are simultaneous for one observer may not be simultaneous for another observer because:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Clocks are inaccurate</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Light travels at finite speed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Gravity bends space</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Energy is quantized</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Light travels at finite speed</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Relativity shows that simultaneity is not absolute.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Mass–Energy Equivalence</h4>
+                </div>
+                <p className="text-white/80 mb-4">Einstein's equation E = mc² implies that:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Mass increases with speed only</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Energy has mass-like properties</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Mass and energy are fundamentally equivalent</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Energy travels at speed c</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Mass and energy are fundamentally equivalent</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>This explains nuclear energy and stellar processes.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Relativity vs Classical Physics</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which situation requires relativistic physics instead of classical physics?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A car moving at 100 km/h</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) A ball thrown upward</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) A spacecraft moving at 0.9c</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) A pendulum swinging</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) A spacecraft moving at 0.9c</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Relativity becomes important near light speed.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">GPS and Relativity</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why must relativity be considered in GPS satellite systems?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Satellites are very large</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Gravity and speed affect satellite clocks</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) GPS uses quantum mechanics</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Earth rotates</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Gravity and speed affect satellite clocks</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Both special and general relativity affect time measurement in satellites.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Big Picture Question</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best summarizes Einstein's relativity?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Space and time are separate</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Time is absolute</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Space and time form a unified spacetime</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Gravity is a force only</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Space and time form a unified spacetime</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Relativity unifies space and time into spacetime.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
