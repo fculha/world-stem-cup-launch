@@ -4038,6 +4038,329 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Biology - Molecular Biology */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🧬</span>
+              BIOLOGY (Molecular Biology) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Central Dogma, DNA Structure, Base Pairing, DNA Replication, RNA Types, Transcription, Translation, Genetic Code, Mutations, Gene Regulation, Biotechnology</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Central Dogma</h4>
+                </div>
+                <p className="text-white/80 mb-4">The central dogma of molecular biology describes the flow of genetic information as:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Protein → DNA → RNA</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) RNA → DNA → Protein</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) DNA → RNA → Protein</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) DNA → Protein → RNA</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) DNA → RNA → Protein</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Genetic information is transcribed from DNA to RNA and translated into protein.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">DNA Structure</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement correctly describes DNA structure?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Single-stranded helix</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Double helix with antiparallel strands</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Circular protein chain</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Triple helix</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Double helix with antiparallel strands</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>DNA consists of two antiparallel strands forming a double helix.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Base Pairing</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which base pairing is correct in DNA?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A–G</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) C–T</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) A–T</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) G–T</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) A–T</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Adenine pairs with Thymine via hydrogen bonds; Cytosine pairs with Guanine.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">DNA Replication</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which enzyme is responsible for synthesizing the new DNA strand?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Helicase</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) DNA ligase</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) DNA polymerase</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) RNA polymerase</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) DNA polymerase</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>DNA polymerase adds nucleotides in the 5′ → 3′ direction.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">RNA Types</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which type of RNA carries amino acids to the ribosome?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) mRNA</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) rRNA</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) tRNA</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) snRNA</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) tRNA</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>tRNA matches codons with the correct amino acids during translation.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Transcription vs Translation</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which process converts genetic information into a functional protein?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Replication</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Transcription</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Translation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Mutation</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Translation</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Translation reads mRNA codons to build a polypeptide.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Genetic Code</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is the genetic code described as "universal"?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) All organisms have identical DNA</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Most organisms use the same codons for the same amino acids</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) All proteins are identical</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) DNA does not mutate</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Most organisms use the same codons for the same amino acids</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>With few exceptions, codons specify the same amino acids across life.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Mutation Effects</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which mutation is most likely to have no effect on the protein?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Frameshift mutation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Nonsense mutation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Silent mutation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Large deletion</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Silent mutation</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A silent mutation does not change the amino acid due to codon redundancy.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Gene Regulation</h4>
+                </div>
+                <p className="text-white/80 mb-4">Gene expression is regulated primarily to:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Increase mutation rates</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Save cellular energy and resources</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Eliminate DNA</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Change species</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Save cellular energy and resources</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Cells express genes only when needed to maintain efficiency.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Operon Model (Prokaryotes)</h4>
+                </div>
+                <p className="text-white/80 mb-4">In the lac operon, genes involved in lactose metabolism are:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Always active</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Always inactive</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Activated only when lactose is present</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Controlled by ribosomes</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Activated only when lactose is present</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>The lac operon is an inducible system—turned on by lactose.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Biotechnology Application</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which technique is used to amplify a specific DNA segment?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Gel electrophoresis</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) DNA sequencing</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) PCR</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Cloning</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) PCR</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>PCR (Polymerase Chain Reaction) rapidly copies DNA segments.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Big Picture</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is molecular biology fundamental to modern medicine?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It explains ecosystems</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It enables gene therapy, diagnostics, and vaccines</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It replaces chemistry</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It studies fossils</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) It enables gene therapy, diagnostics, and vaccines</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Molecular biology underpins genomics, cancer research, and personalized medicine.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
