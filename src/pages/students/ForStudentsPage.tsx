@@ -50,18 +50,18 @@ export default function ForStudentsPage() {
               {showStudentsDropdown && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-[#16213e] border border-white/10 rounded-lg shadow-xl py-2 z-50">
                   <Link 
-                    to="/students/study-practice"
-                    onClick={() => setShowStudentsDropdown(false)}
-                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
-                  >
-                    Study & Practice
-                  </Link>
-                  <Link 
                     to="/students/for-students"
                     onClick={() => setShowStudentsDropdown(false)}
                     className="block px-4 py-2 text-sm text-white font-medium hover:bg-white/5 transition-colors"
                   >
                     For Students
+                  </Link>
+                  <Link 
+                    to="/students/study-practice"
+                    onClick={() => setShowStudentsDropdown(false)}
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Study & Practice
                   </Link>
                 </div>
               )}
@@ -298,8 +298,185 @@ export default function ForStudentsPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Sample Questions Section */}
       <section className="py-16 px-6">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4 flex items-center justify-center gap-3">
+              <Calculator className="w-8 h-8 text-[#4361ee]" />
+              Sample Questions
+            </h2>
+            <p className="text-white/70 max-w-3xl mx-auto">
+              These are sample questions designed to demonstrate the style and level of World STEM Cup assessments. 
+              They are not full exams and are provided for familiarization only.
+            </p>
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-4 py-2 rounded-full mt-4">
+              <GraduationCap className="w-5 h-5 text-[#4361ee]" />
+              <span className="text-sm font-medium">Grade 9 - Sample Questions (Revised / Higher Level)</span>
+            </div>
+          </div>
+
+          {/* Mathematics Questions */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🧮</span>
+              MATHEMATICS - Grade 9
+            </h3>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#4361ee] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Multi-Step Linear Reasoning</h4>
+                </div>
+                <p className="text-white/80 mb-4">Solve for x:</p>
+                <div className="bg-black/30 rounded-lg p-4 font-mono text-center text-lg mb-4">
+                  2(3x - 4) - (x + 5) = 3(x - 2) + 7
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Answer: x = 7</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p><strong>Left side:</strong> 6x - 8 - x - 5 = 5x - 13</p>
+                      <p><strong>Right side:</strong> 3x - 6 + 7 = 3x + 1</p>
+                      <p><strong>Equation:</strong> 5x - 13 = 3x + 1</p>
+                      <p>2x = 14 → x = 7</p>
+                      <p className="mt-2 text-white/50">Verification: left = 2(21-4)-(7+5) = 2(17)-12 = 34-12 = 22, right = 3(7-2)+7 = 15+7 = 22</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#4361ee] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Fraction & Variable Reasoning</h4>
+                </div>
+                <p className="text-white/80 mb-4">If the following equation is true, find x:</p>
+                <div className="bg-black/30 rounded-lg p-4 font-mono text-center text-lg mb-4">
+                  x / (x + 2) = 3 / 5
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Answer: x = 3</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p><strong>Cross multiply:</strong> 5x = 3(x + 2)</p>
+                      <p>5x = 3x + 6</p>
+                      <p>2x = 6 → x = 3</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#4361ee] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Functional Thinking (Early Algebra)</h4>
+                </div>
+                <p className="text-white/80 mb-4">If f(x) = 2x² - x, what is the value of f(3)?</p>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Answer: f(3) = 15</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>f(3) = 2(3)² - 3 = 2(9) - 3 = 18 - 3 = 15</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          {/* Logical Thinking Questions */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🧠</span>
+              LOGICAL THINKING - Grade 9 (Harder)
+            </h3>
+            
+            <div className="space-y-6">
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f72585] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Non-Obvious Pattern</h4>
+                </div>
+                <p className="text-white/80 mb-4">Find the next number in the sequence:</p>
+                <div className="bg-black/30 rounded-lg p-4 font-mono text-center text-lg mb-4">
+                  1, 4, 9, 16, 25, ?
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Answer: 36</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>These are perfect squares: 1², 2², 3², 4², 5²</p>
+                      <p>Next: 6² = 36</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f72585] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Logical Elimination</h4>
+                </div>
+                <p className="text-white/80 mb-4">A student says:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 italic text-white/70">
+                  "All students who study regularly pass the exam. Ali passed the exam."
+                </div>
+                <p className="text-white/80 mb-4">Which statement is logically correct?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Ali studied regularly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Ali did not study regularly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) We cannot be certain whether Ali studied regularly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) No student studied regularly</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) We cannot be certain</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Passing the exam is not a sufficient condition for studying regularly - it's only a necessary condition.</p>
+                      <p>Ali could have passed for other reasons (e.g., natural talent, luck, etc.).</p>
+                      <p>We only know that studying regularly guarantees passing, not that passing means someone studied regularly.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
+              <Lightbulb className="w-5 h-5 text-yellow-400" />
+              <span className="text-white/80">
+                More sample questions and practice materials are available in the <Link to="/students/study-practice" className="text-[#4361ee] hover:text-[#f72585] font-medium">Study & Practice</Link> section.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 px-6 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">Ready to Start Your Journey?</h2>
           <p className="text-white/70 mb-8">
