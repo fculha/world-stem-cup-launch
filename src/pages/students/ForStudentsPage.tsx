@@ -2744,6 +2744,330 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Computer Science - Dynamic Programming */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">💻</span>
+              COMPUTER SCIENCE (Dynamic Programming) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Core DP Concepts, Overlapping Subproblems, Memoization vs Tabulation, Optimal Substructure, Classic DP Problems, Space Optimization</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Core Idea of Dynamic Programming</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is the main idea behind Dynamic Programming?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Solving problems by brute force</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Dividing problems into independent subproblems</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Solving overlapping subproblems and storing their results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Using recursion only</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Solving overlapping subproblems and storing their results</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Dynamic Programming avoids repeated work by saving solutions to subproblems.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Overlapping Subproblems</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which situation best indicates that a problem is suitable for Dynamic Programming?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The problem has a single solution</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The problem can be solved greedily</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The problem has overlapping subproblems</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The problem uses sorting</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) The problem has overlapping subproblems</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>DP is powerful when the same subproblem appears many times.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Fibonacci Numbers (Conceptual)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is Dynamic Programming preferred over simple recursion when computing Fibonacci numbers?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Recursion cannot compute Fibonacci</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) DP reduces repeated calculations</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) DP uses less memory</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) DP avoids base cases</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) DP reduces repeated calculations</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Recursive Fibonacci recalculates the same values repeatedly → inefficient.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Time Complexity Insight</h4>
+                </div>
+                <p className="text-white/80 mb-4">The naive recursive Fibonacci algorithm has approximately:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Linear time complexity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Quadratic time complexity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Exponential time complexity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Constant time complexity</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Exponential time complexity</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Without DP, Fibonacci grows exponentially in time.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Memoization vs Tabulation</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is the key difference between memoization and tabulation?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Memoization uses arrays, tabulation does not</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Memoization is bottom-up, tabulation is top-down</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Memoization is top-down, tabulation is bottom-up</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) They are identical</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Memoization is top-down, tabulation is bottom-up</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Memoization: recursion + cache</p>
+                      <p>Tabulation: iterative table building</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Optimal Substructure</h4>
+                </div>
+                <p className="text-white/80 mb-4">A problem has optimal substructure if:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It has many solutions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It can be divided into independent tasks</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) An optimal solution can be built from optimal subsolutions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It requires sorting</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) An optimal solution can be built from optimal subsolutions</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>This property is essential for DP.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Classic DP Problem Recognition</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which of the following is a classic Dynamic Programming problem?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Binary search</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Shortest path in a weighted graph</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Finding the maximum element in an array</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Sorting numbers</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Shortest path in a weighted graph</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Shortest paths (e.g., Bellman-Ford) rely on DP principles.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Knapsack Problem (Conceptual)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is the Knapsack problem suited for Dynamic Programming?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Items are sorted</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Choices are binary and overlapping</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Greedy always works</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) There is only one constraint</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Choices are binary and overlapping</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Each decision (take or skip) creates overlapping subproblems.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Space Optimization</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why can Dynamic Programming often be optimized to use less memory?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) DP always uses recursion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Only the previous states are needed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) DP problems are small</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Memory is unlimited</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Only the previous states are needed</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Many DP tables only depend on recent rows or states.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Real-World Application</h4>
+                </div>
+                <p className="text-white/80 mb-4">Dynamic Programming is commonly used in:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Image compression</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) DNA sequence alignment</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) AI decision-making</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) All of the above</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: D) All of the above</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>DP is foundational in bioinformatics, AI, NLP, and optimization.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Strategy Choice</h4>
+                </div>
+                <p className="text-white/80 mb-4">When should Dynamic Programming be preferred over a greedy algorithm?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) When greedy is faster</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) When greedy fails to guarantee optimality</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) When the problem is small</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Always</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) When greedy fails to guarantee optimality</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Greedy works only when local choices guarantee global optimum.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0ea5e9] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Big Picture Thinking</h4>
+                </div>
+                <p className="text-white/80 mb-4">What skill does Dynamic Programming primarily test?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Syntax memorization</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Fast typing</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Breaking complex problems into structured steps</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Hardware knowledge</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Breaking complex problems into structured steps</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>DP measures algorithmic thinking, not coding speed.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
