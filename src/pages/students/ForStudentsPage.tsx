@@ -1877,6 +1877,279 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Physics - Introduction to Quantum Physics */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">ℏ</span>
+              PHYSICS (Introduction to Quantum Physics) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Quantum vs Classical, Quantization of Energy, Planck's Constant, Wave-Particle Duality, Heisenberg Uncertainty, Wavefunction, Probability</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#6366f1] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Quantum World vs Classical World</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best describes the quantum world?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Objects have exact positions and velocities at all times</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Energy is always continuous</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Outcomes can only be predicted probabilistically</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Measurement does not affect the system</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Outcomes can only be predicted probabilistically</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Quantum physics replaces certainty with probability.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#6366f1] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Quantization of Energy</h4>
+                </div>
+                <p className="text-white/80 mb-4">What does it mean that energy is "quantized"?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Energy can be infinitely divided</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Energy exists only in discrete packets</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Energy depends only on mass</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Energy is always conserved</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Energy exists only in discrete packets</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Atoms absorb and emit energy in fixed amounts (quanta).</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#6366f1] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Planck's Constant</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is Planck's constant h important in quantum physics?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It determines the speed of light</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It connects energy with frequency</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It explains gravity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It measures mass</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) It connects energy with frequency</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>E = hf</p>
+                      <p>This equation started the quantum revolution.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#6366f1] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Wave–Particle Duality</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best explains wave–particle duality?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Particles sometimes disappear</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Waves sometimes gain mass</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Matter and light can behave as both waves and particles</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Only photons show wave behavior</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Matter and light can behave as both waves and particles</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Electrons can diffract like waves and collide like particles.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#6366f1] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Electron Diffraction</h4>
+                </div>
+                <p className="text-white/80 mb-4">Electron diffraction is strong evidence that:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Electrons are charged</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Electrons have mass</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Electrons behave like waves</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Electrons travel at speed of light</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Electrons behave like waves</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Diffraction is a wave phenomenon.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#6366f1] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Heisenberg Uncertainty Principle (Conceptual)</h4>
+                </div>
+                <p className="text-white/80 mb-4">The uncertainty principle states that:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) We can measure position and momentum exactly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Measurement errors cause uncertainty</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Nature fundamentally limits what can be known</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Instruments are not precise enough</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Nature fundamentally limits what can be known</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Uncertainty is not due to poor instruments—it is fundamental.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#6366f1] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Measurement in Quantum Physics</h4>
+                </div>
+                <p className="text-white/80 mb-4">What happens when a quantum system is measured?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Nothing changes</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The wavefunction collapses</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Energy is destroyed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The particle disappears</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The wavefunction collapses</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Before measurement → probability</p>
+                      <p>After measurement → definite outcome</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#6366f1] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Probability Interpretation</h4>
+                </div>
+                <p className="text-white/80 mb-4">In quantum mechanics, the square of the wavefunction represents:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Energy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Velocity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Probability density</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Force</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Probability density</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>|ψ|² = probability</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#6366f1] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Quantum vs Classical Prediction</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which is a key difference between classical and quantum predictions?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Classical physics is faster</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Quantum physics ignores forces</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Quantum predictions are statistical</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Classical physics is incorrect</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Quantum predictions are statistical</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Quantum mechanics predicts likelihoods, not certainties.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#6366f1] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Big Picture Question</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is quantum physics essential to modern technology?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It explains gravity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It replaces classical physics completely</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It enables semiconductors, lasers, and quantum computing</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It only applies to space</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) It enables semiconductors, lasers, and quantum computing</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>No quantum physics → no computers, no internet, no MRI.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
