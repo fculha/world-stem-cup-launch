@@ -256,7 +256,7 @@ export default function StudyPracticePage() {
   const [showGovernanceDropdown, setShowGovernanceDropdown] = useState(false);
   const [showStudentsDropdown, setShowStudentsDropdown] = useState(false);
   
-  const [selectedGrade, setSelectedGrade] = useState<string>('');
+  const [selectedGrade, setSelectedGrade] = useState<string>('9');
   const [selectedSubject, setSelectedSubject] = useState<string>('');
   const [selectedLanguage, setSelectedLanguage] = useState<string>('en');
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
@@ -439,10 +439,11 @@ export default function StudyPracticePage() {
 
             {/* Subject Selection */}
             <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
-              <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">
+              <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
                 <BookOpen className="w-5 h-5 text-[#f72585]" />
                 Select Subject Domain
               </h2>
+              <p className="text-sm text-white/50 mb-4">These subjects reflect the official World STEM Cup competition framework.</p>
               <div className="grid grid-cols-2 gap-2">
                 {subjects.map(subject => {
                   const Icon = subject.icon;
@@ -583,12 +584,21 @@ export default function StudyPracticePage() {
         </div>
       </section>
 
+      {/* Competition Alignment Notice */}
+      <section className="py-6 px-6 bg-gradient-to-r from-[#4361ee]/10 to-[#f72585]/10 border-y border-white/10">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-sm text-white/70">
+            Practice content is aligned with World STEM Cup reasoning style and difficulty level, but practice scores do not affect competition results.
+          </p>
+        </div>
+      </section>
+
       {/* AI Usage Notice */}
       <section className="py-8 px-6 bg-white/5">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-sm text-white/50">
-            <strong className="text-white/70">AI Usage Policy:</strong> AI is used only for guided tutoring and content delivery. 
-            AI is not used during live competitions. All learning content aligns with predefined academic standards.
+            <strong className="text-white/70">AI Usage Policy:</strong> AI is for learning only. 
+            AI is never used during competitions. No student data is used for model training.
           </p>
         </div>
       </section>
