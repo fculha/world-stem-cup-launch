@@ -217,6 +217,36 @@ export default function GovernancePage() {
           World STEM Cup Education Foundation is committed to academic independence, ethical governance, 
           transparency, and the protection of students worldwide.
         </p>
+
+        {/* Download Buttons */}
+        <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+          <a 
+            href="/docs/WSC_Organizational_Structure_Governance.pdf" 
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              background: 'rgba(67, 97, 238, 0.2)',
+              border: '1px solid rgba(67, 97, 238, 0.5)',
+              color: 'white',
+              padding: '1rem 1.5rem',
+              borderRadius: '0.5rem',
+              textDecoration: 'none',
+              fontWeight: '600',
+              fontSize: '0.95rem',
+              transition: 'all 0.2s'
+            }}
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download Organizational Structure & Governance (PDF)
+          </a>
+        </div>
       </section>
 
       {/* Governance Documents */}
