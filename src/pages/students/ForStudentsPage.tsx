@@ -1599,6 +1599,284 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Physics - Modern Physics */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">⚛</span>
+              PHYSICS (Modern Physics) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Photoelectric Effect, Photon Energy, de Broglie Wavelength, Wave-Particle Duality, Atomic Energy Levels, Nuclear Physics, Mass-Energy Equivalence</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Photoelectric Effect (Core Concept)</h4>
+                </div>
+                <p className="text-white/80 mb-4">According to the photoelectric effect, electrons are emitted from a metal surface when:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The intensity of light is increased</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The frequency of light exceeds a minimum threshold</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The temperature of the metal increases</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The wavelength of light is increased</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The frequency of light exceeds a minimum threshold</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Energy depends on frequency, not intensity. This disproved classical wave-only models.</p>
+                      <p>Key relation: E = hf</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Energy of a Photon</h4>
+                </div>
+                <p className="text-white/80 mb-4">The energy of a photon is directly proportional to:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Its wavelength</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Its speed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Its frequency</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Its mass</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Its frequency</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>E = hf</p>
+                      <p>Higher frequency → higher photon energy.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Increasing Light Intensity</h4>
+                </div>
+                <p className="text-white/80 mb-4">In a photoelectric experiment, if the intensity of light is increased while the frequency remains below the threshold, what happens?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) More electrons are emitted</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Electrons are emitted with greater kinetic energy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) No electrons are emitted</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The metal heats up and emits electrons</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) No electrons are emitted</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Below threshold frequency → no photoelectric effect, regardless of intensity.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">de Broglie Wavelength</h4>
+                </div>
+                <p className="text-white/80 mb-4">According to de Broglie, the wavelength of a particle is given by:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  λ = h/p
+                </div>
+                <p className="text-white/80 mb-4">Which particle would have the shortest wavelength?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A slow-moving electron</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) A fast-moving electron</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) A slow-moving proton</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) A fast-moving proton</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: D) A fast-moving proton</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Larger momentum → shorter wavelength</p>
+                      <p>Proton has much larger mass, fast proton → maximum momentum</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Wave–Particle Duality</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which phenomenon best demonstrates the wave nature of electrons?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Photoelectric effect</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Electron diffraction</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Nuclear fusion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Radioactive decay</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Electron diffraction</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Diffraction and interference are wave behaviors, even for particles.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Atomic Energy Levels</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why do atoms emit discrete (line) spectra instead of continuous spectra?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Electrons move randomly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Atoms vibrate at fixed frequencies</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Electrons occupy quantized energy levels</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Photons lose energy over time</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Electrons occupy quantized energy levels</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Electron transitions occur only between allowed energy states.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Nuclear Physics (Stability)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which force is primarily responsible for holding the nucleus together?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Gravitational force</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Electromagnetic force</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Strong nuclear force</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Weak nuclear force</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Strong nuclear force</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>The strong nuclear force overcomes proton–proton repulsion at short distances.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Mass–Energy Equivalence</h4>
+                </div>
+                <p className="text-white/80 mb-4">Einstein's equation E = mc² implies that:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Mass can be destroyed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Energy has mass</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Mass and energy are interchangeable</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Energy always travels at speed c</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Mass and energy are interchangeable</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Small amounts of mass can convert into enormous energy → nuclear reactions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Nuclear Reactions</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which process powers the Sun?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Nuclear fission</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Chemical combustion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Nuclear fusion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Radioactive decay</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Nuclear fusion</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Hydrogen nuclei fuse to form helium, releasing energy.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Modern Physics Big Picture</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best summarizes modern physics?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Energy is continuous</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Matter behaves only as particles</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Classical physics explains all phenomena</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Nature behaves discretely at microscopic scales</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: D) Nature behaves discretely at microscopic scales</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Modern physics introduced quantization, probability, and duality.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
