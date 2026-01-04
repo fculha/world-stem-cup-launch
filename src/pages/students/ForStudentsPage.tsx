@@ -3068,6 +3068,330 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Computer Science - Advanced Algorithms */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">⚡</span>
+              COMPUTER SCIENCE (Advanced Algorithms) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Algorithm Efficiency, Big-O Notation, Divide and Conquer, Sorting, Greedy Algorithms, Graph Algorithms, NP Problems, Backtracking</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Algorithm Efficiency</h4>
+                </div>
+                <p className="text-white/80 mb-4">What does the time complexity of an algorithm describe?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The exact time an algorithm takes</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The number of lines of code</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) How execution time grows with input size</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The speed of the computer</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) How execution time grows with input size</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Time complexity measures scalability, not actual seconds.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Big-O Notation</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which algorithm grows the slowest as input size increases?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) O(n²)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) O(n log n)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) O(n)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) O(2ⁿ)</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) O(n)</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Linear time is more efficient than quadratic or exponential growth.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Divide and Conquer</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which strategy breaks a problem into smaller independent parts, solves them, and combines the results?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Greedy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Dynamic Programming</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Divide and Conquer</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Backtracking</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Divide and Conquer</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Classic examples: Merge Sort, Quick Sort.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Sorting Algorithms</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which sorting algorithm has an average-case time complexity of O(n log n)?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Bubble Sort</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Insertion Sort</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Merge Sort</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Selection Sort</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Merge Sort</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Merge Sort guarantees O(n log n) in all cases.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Greedy Algorithms</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why do greedy algorithms sometimes fail?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) They are too slow</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) They do not consider all possibilities</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) They always use recursion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) They require extra memory</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) They do not consider all possibilities</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Greedy makes locally optimal choices that may not lead to a global optimum.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Graph Algorithms</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which algorithm is commonly used to find the shortest path in a graph with non-negative edge weights?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Depth-First Search</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Breadth-First Search</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Dijkstra's Algorithm</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Binary Search</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Dijkstra's Algorithm</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Dijkstra's algorithm efficiently computes shortest paths.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">BFS vs DFS</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement is true?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) DFS always finds the shortest path</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) BFS uses a stack</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) BFS explores nodes level by level</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) DFS is always faster than BFS</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) BFS explores nodes level by level</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>BFS: queue, level-by-level</p>
+                      <p>DFS: stack/recursion, depth-first</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">NP Problems (Conceptual)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best describes NP problems?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) They can be solved quickly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) They have no solutions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Solutions can be verified quickly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) They require quantum computers</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Solutions can be verified quickly</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>NP problems are hard to solve, but easy to verify.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Backtracking</h4>
+                </div>
+                <p className="text-white/80 mb-4">Backtracking is best described as:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Always choosing the best option</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Trying all possibilities efficiently by undoing choices</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Using tables to store results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Sorting data repeatedly</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Trying all possibilities efficiently by undoing choices</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Used in puzzles like N-Queens, Sudoku.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Algorithm Design Choice</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which algorithmic technique is most suitable for problems with overlapping subproblems and optimal substructure?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Greedy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Divide and Conquer</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Dynamic Programming</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Backtracking</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Dynamic Programming</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>This is the core condition for Dynamic Programming.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Real-World Algorithms</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which area heavily relies on advanced algorithms?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Search engines</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Cryptography</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Artificial Intelligence</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) All of the above</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: D) All of the above</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Algorithms power modern technology.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Algorithmic Thinking</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which skill best represents algorithmic thinking?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Memorizing code</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Writing fast programs</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Structuring problems into clear logical steps</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Using powerful computers</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Structuring problems into clear logical steps</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Algorithms test how you think, not how fast you type.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
