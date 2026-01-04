@@ -453,18 +453,18 @@ function App() {
               {showStudentsDropdown && (
                 <div className="absolute top-full left-0 mt-2 w-48 bg-[#16213e] border border-white/10 rounded-lg shadow-xl py-2 z-50">
                   <Link 
-                    to="/students/study-practice"
-                    onClick={() => setShowStudentsDropdown(false)}
-                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
-                  >
-                    Study & Practice
-                  </Link>
-                  <Link 
                     to="/students/for-students"
                     onClick={() => setShowStudentsDropdown(false)}
                     className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
                   >
                     For Students
+                  </Link>
+                  <Link 
+                    to="/students/study-practice"
+                    onClick={() => setShowStudentsDropdown(false)}
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Study & Practice
                   </Link>
                 </div>
               )}
