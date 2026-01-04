@@ -4361,6 +4361,355 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Biology - Biotechnology */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🧪</span>
+              BIOLOGY (Biotechnology) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Biotechnology Definition, Recombinant DNA, Plasmids, Insulin Production, PCR, Gel Electrophoresis, CRISPR-Cas9, GMOs, Gene Therapy, Stem Cells, Ethics, Bioremediation</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Biotechnology Definition</h4>
+                </div>
+                <p className="text-white/80 mb-4">Biotechnology is best defined as:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The study of ecosystems</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The use of living organisms or biological systems to develop useful products</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The classification of organisms</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The study of fossils</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The use of living organisms or biological systems to develop useful products</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Biotechnology applies biology to technology, from medicine to agriculture.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Recombinant DNA</h4>
+                </div>
+                <p className="text-white/80 mb-4">Recombinant DNA technology involves:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Destroying DNA</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Mixing proteins</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Combining DNA from different sources</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Cloning whole organisms</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Combining DNA from different sources</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Genes from different organisms are combined to produce new traits or products.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Plasmids</h4>
+                </div>
+                <p className="text-white/80 mb-4">Plasmids are primarily used in biotechnology because they:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Produce energy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Act as vectors to transfer genes</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Control mutations</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Are part of the nucleus</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Act as vectors to transfer genes</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Plasmids are circular DNA molecules used as gene carriers, especially in bacteria.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Insulin Production</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is genetically engineered bacteria used to produce human insulin?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It is cheaper and safer than animal insulin</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Humans cannot produce insulin</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Bacteria naturally produce insulin</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Insulin does not work in humans</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) It is cheaper and safer than animal insulin</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Recombinant insulin is identical to human insulin, reducing allergic reactions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">PCR Function</h4>
+                </div>
+                <p className="text-white/80 mb-4">The main purpose of PCR is to:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Separate DNA fragments</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Cut DNA</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Amplify DNA</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Sequence DNA</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Amplify DNA</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>PCR makes millions of copies of a specific DNA segment.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Gel Electrophoresis</h4>
+                </div>
+                <p className="text-white/80 mb-4">Gel electrophoresis separates DNA fragments based on:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Color</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Shape</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Electrical charge only</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Size</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: D) Size</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Smaller DNA fragments move faster through the gel.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">CRISPR-Cas9</h4>
+                </div>
+                <p className="text-white/80 mb-4">CRISPR-Cas9 technology is primarily used for:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) DNA replication</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) DNA sequencing</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Precise gene editing</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Protein folding</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Precise gene editing</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>CRISPR allows targeted modification of specific genes.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">GMOs</h4>
+                </div>
+                <p className="text-white/80 mb-4">A genetically modified organism (GMO) is:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) An organism exposed to radiation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) An organism with DNA altered using biotechnology</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) A cloned organism</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) An extinct species</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) An organism with DNA altered using biotechnology</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>GMOs contain introduced or modified genes for desired traits.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Medical Biotechnology</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which application is an example of medical biotechnology?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Biofuels</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Pest-resistant crops</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Gene therapy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Composting</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Gene therapy</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Gene therapy aims to treat diseases at the genetic level.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Stem Cells</h4>
+                </div>
+                <p className="text-white/80 mb-4">Stem cells are important because they:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Cannot divide</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Can differentiate into specialized cell types</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Only exist in plants</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Cause mutations</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Can differentiate into specialized cell types</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Stem cells have self-renewal and differentiation abilities.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Ethical Considerations</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which is a major ethical concern in biotechnology?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Speed of computers</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Gene editing in humans</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) DNA size</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Bacterial growth</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Gene editing in humans</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Human gene editing raises concerns about equity, consent, and long-term effects.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Environmental Biotechnology</h4>
+                </div>
+                <p className="text-white/80 mb-4">Bioremediation refers to:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Medical treatment</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Cleaning pollutants using organisms</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) DNA sequencing</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Crop breeding</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Cleaning pollutants using organisms</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Microorganisms are used to break down environmental pollutants.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 13 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q13</span>
+                  <h4 className="font-semibold text-lg">Competition-Level Reasoning</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which biotechnology advancement has the greatest potential to impact global health equity?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Designer pets</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Gene editing for cosmetic traits</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Affordable vaccine production</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Luxury pharmaceuticals</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Affordable vaccine production</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Low-cost vaccines can save millions of lives globally.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
