@@ -464,6 +464,162 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Physics Questions */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">⚛️</span>
+              PHYSICS - Grade 9
+            </h3>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Motion & Reasoning</h4>
+                </div>
+                <p className="text-white/80 mb-4">
+                  A car moves at a constant speed of 10 m/s for 5 seconds, then instantly increases its speed to 20 m/s and continues for another 5 seconds.
+                </p>
+                <p className="text-white/80 mb-4">What is the total distance traveled?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) 100 m</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) 125 m</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) 150 m</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) 200 m</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) 150 m</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p><strong>First part:</strong> 10 m/s × 5 s = 50 m</p>
+                      <p><strong>Second part:</strong> 20 m/s × 5 s = 100 m</p>
+                      <p><strong>Total distance:</strong> 50 + 100 = 150 m</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Forces & Equilibrium</h4>
+                </div>
+                <p className="text-white/80 mb-4">A book is resting on a table and is not moving.</p>
+                <p className="text-white/80 mb-4">Which statement is correct?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) No forces act on the book</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Gravity acts, but there is no opposing force</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Gravity and an equal upward force act on the book</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The book has no mass</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Gravity and an equal upward force act on the book</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Gravity pulls the book downward.</p>
+                      <p>The table provides an equal upward normal force.</p>
+                      <p>Forces are balanced → no motion.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Energy Transformation</h4>
+                </div>
+                <p className="text-white/80 mb-4">A ball is dropped from a height and falls freely to the ground.</p>
+                <p className="text-white/80 mb-4">Which energy transformation occurs during the fall?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Kinetic → potential</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Potential → kinetic</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Thermal → kinetic</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Electrical → mechanical</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Potential → kinetic</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>At the top: gravitational potential energy</p>
+                      <p>As it falls: energy becomes kinetic energy</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Density & Floating</h4>
+                </div>
+                <p className="text-white/80 mb-4">Two objects have the same volume but different masses.</p>
+                <p className="text-white/80 mb-2">Object A sinks in water.</p>
+                <p className="text-white/80 mb-4">Object B floats.</p>
+                <p className="text-white/80 mb-4">What can be concluded?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Object A has lower density than water</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Object B has higher density than water</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Object A has higher density than water</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Both objects have the same density</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Object A has higher density than water</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Objects sink if their density is greater than water.</p>
+                      <p>Floating means lower density.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Simple Circuits</h4>
+                </div>
+                <p className="text-white/80 mb-4">A circuit contains a battery, a bulb, and a switch.</p>
+                <p className="text-white/80 mb-4">When the switch is open, the bulb is off. Why?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The battery stops working</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Electric current cannot complete the circuit</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The bulb has no resistance</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The wires lose electrons</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Electric current cannot complete the circuit</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Electric current requires a closed path.</p>
+                      <p>Open switch = broken circuit = no current.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
