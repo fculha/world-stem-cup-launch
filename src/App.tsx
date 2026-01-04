@@ -361,6 +361,7 @@ function App() {
   const [showVideoModal, setShowVideoModal] = useState(false);
   const [showCompetitionDropdown, setShowCompetitionDropdown] = useState(false);
   const [showGovernanceDropdown, setShowGovernanceDropdown] = useState(false);
+  const [showStudentsDropdown, setShowStudentsDropdown] = useState(false);
 
   // Scroll to section with offset for fixed navbar
   const scrollToSection = (id: string) => {
@@ -439,10 +440,39 @@ function App() {
                         >
                           Sponsors
                         </Link>
+            {/* Students Dropdown */}
+            <div className="relative">
+              <button 
+                onClick={() => { setShowStudentsDropdown(v => !v); setShowGovernanceDropdown(false); setShowCompetitionDropdown(false); }}
+                className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1"
+              >
+                <Users className="w-4 h-4" />
+                Students
+                <ChevronDown className={`w-3 h-3 transition-transform ${showStudentsDropdown ? 'rotate-180' : ''}`} />
+              </button>
+              {showStudentsDropdown && (
+                <div className="absolute top-full left-0 mt-2 w-48 bg-[#16213e] border border-white/10 rounded-lg shadow-xl py-2 z-50">
+                  <Link 
+                    to="/students/study-practice"
+                    onClick={() => setShowStudentsDropdown(false)}
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    Study & Practice
+                  </Link>
+                  <Link 
+                    to="/students/for-students"
+                    onClick={() => setShowStudentsDropdown(false)}
+                    className="block px-4 py-2 text-sm text-white/70 hover:text-white hover:bg-white/5 transition-colors"
+                  >
+                    For Students
+                  </Link>
+                </div>
+              )}
+            </div>
             {/* Governance Dropdown */}
             <div className="relative">
               <button 
-                onClick={() => { setShowGovernanceDropdown(v => !v); setShowCompetitionDropdown(false); }}
+                onClick={() => { setShowGovernanceDropdown(v => !v); setShowCompetitionDropdown(false); setShowStudentsDropdown(false); }}
                 className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1"
               >
                 <Shield className="w-4 h-4" />
@@ -492,7 +522,7 @@ function App() {
             {/* Competition Dropdown */}
             <div className="relative">
               <button 
-                onClick={() => { setShowCompetitionDropdown(v => !v); setShowGovernanceDropdown(false); }}
+                onClick={() => { setShowCompetitionDropdown(v => !v); setShowGovernanceDropdown(false); setShowStudentsDropdown(false); }}
                 className="text-sm text-white/70 hover:text-white transition-colors flex items-center gap-1"
               >
                 <Globe className="w-4 h-4" />

@@ -54,6 +54,10 @@ import ConflictOfInterestPage from './pages/governance/ConflictOfInterestPage';
 import DataProtectionChildSafetyPage from './pages/governance/DataProtectionChildSafetyPage';
 import OrganizationalStructurePage from './pages/governance/OrganizationalStructurePage';
 import WhyFundWorldStemCupPage from './pages/WhyFundWorldStemCupPage';
+// Student Learning Pages
+import StudyPracticePage from './pages/students/StudyPracticePage';
+import ForStudentsPage from './pages/students/ForStudentsPage';
+import TopicPage from './pages/students/TopicPage';
 // Team and Bracket Pages
 import TeamPage from './pages/TeamPage';
 import BracketPage from './pages/BracketPage';
@@ -105,6 +109,10 @@ export default function AppRouter() {
                                                                                 <Route path="/governance/conflict-of-interest" element={<ConflictOfInterestPage />} />
                                                                                 <Route path="/governance/data-protection-child-safety" element={<DataProtectionChildSafetyPage />} />
                                                                                 <Route path="/governance/organizational-structure" element={<OrganizationalStructurePage />} />
+                                                                                {/* Student Learning Routes */}
+                                                                                <Route path="/students/study-practice" element={<StudyPracticePage />} />
+                                                                                <Route path="/students/for-students" element={<ForStudentsPage />} />
+                                                                                <Route path="/students/topic/:subject/:grade/:topicId" element={<TopicPage />} />
           
                                         {/* Protected Routes */}
           <Route 
