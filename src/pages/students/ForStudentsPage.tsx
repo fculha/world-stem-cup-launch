@@ -620,6 +620,160 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Logical & Scientific Reasoning Questions */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🔬</span>
+              LOGICAL & SCIENTIFIC REASONING - Grade 9
+            </h3>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Cause & Effect</h4>
+                </div>
+                <p className="text-white/80 mb-4">
+                  A student performs an experiment and notices that when the temperature increases, the reaction happens faster.
+                </p>
+                <p className="text-white/80 mb-4">Which conclusion is most reasonable?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Temperature causes the reaction to stop</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Temperature has no effect on reactions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Higher temperature increases reaction rate</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Reactions only depend on time</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Higher temperature increases reaction rate</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Increasing temperature generally increases particle motion, leading to more frequent and energetic collisions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Controlled Experiments</h4>
+                </div>
+                <p className="text-white/80 mb-4">
+                  In an experiment testing plant growth, a student changes only the amount of sunlight while keeping all other conditions the same.
+                </p>
+                <p className="text-white/80 mb-4">Why is this important?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) To make the experiment faster</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) To reduce the number of plants</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) To isolate the effect of sunlight</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) To increase randomness</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) To isolate the effect of sunlight</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Changing only one variable allows the student to determine its direct effect.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Logical Consistency</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement is logically valid?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) If it rains, the ground is wet. The ground is wet, so it rained.</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) If it rains, the ground is wet. It rained, so the ground is wet.</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The ground is wet only when it rains.</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Wet ground causes rain.</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) If it rains, the ground is wet. It rained, so the ground is wet.</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>This follows correct if-then logic.</p>
+                      <p>Option A is a common logical fallacy (affirming the consequent).</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Hypothesis Evaluation</h4>
+                </div>
+                <p className="text-white/80 mb-4">A hypothesis states:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 italic text-white/70">
+                  "Students who sleep at least 8 hours perform better on tests."
+                </div>
+                <p className="text-white/80 mb-4">Which evidence best supports this hypothesis?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A survey of favorite subjects</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Test scores compared with sleep duration</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Teacher opinions about sleep</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Number of students in each class</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Test scores compared with sleep duration</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Data directly linking sleep duration and test performance is required.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#10b981] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Error Detection</h4>
+                </div>
+                <p className="text-white/80 mb-4">
+                  A student concludes that a new fertilizer improves plant growth after testing it on only one plant.
+                </p>
+                <p className="text-white/80 mb-4">What is the main flaw?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The fertilizer was expensive</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The experiment lacked repetition</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The plant was too small</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The soil type was unknown</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The experiment lacked repetition</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A single trial is not sufficient to draw reliable conclusions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
