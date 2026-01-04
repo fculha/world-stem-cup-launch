@@ -3715,6 +3715,329 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Computer Science - Introduction to Cryptography */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🔐</span>
+              COMPUTER SCIENCE (Introduction to Cryptography) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Cryptography Purpose, Plaintext/Ciphertext, Symmetric/Asymmetric Encryption, Hash Functions, Digital Signatures, HTTPS, Security</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Purpose of Cryptography</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is the primary purpose of cryptography?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Making computers faster</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Hiding information permanently</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Securing communication and data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Compressing files</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Securing communication and data</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Cryptography ensures confidentiality, integrity, and authenticity of information.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Plaintext vs Ciphertext</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is the correct relationship between plaintext and ciphertext?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Ciphertext is readable text</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Plaintext is encrypted text</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Ciphertext is encrypted plaintext</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Plaintext and ciphertext are identical</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Ciphertext is encrypted plaintext</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Plaintext → encryption → ciphertext → decryption → plaintext.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Symmetric Encryption</h4>
+                </div>
+                <p className="text-white/80 mb-4">In symmetric-key cryptography:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Two different keys are used</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The same key is used for encryption and decryption</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) No key is required</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Only public keys are used</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The same key is used for encryption and decryption</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Sender and receiver share one secret key.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Asymmetric Encryption</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which feature distinguishes asymmetric cryptography from symmetric cryptography?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It is faster</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It uses one key only</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It uses a public–private key pair</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It does not use mathematics</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) It uses a public–private key pair</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Asymmetric systems (e.g., RSA) use two mathematically linked keys.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Public Key Concept</h4>
+                </div>
+                <p className="text-white/80 mb-4">What can be safely shared with anyone?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Private key</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Symmetric key</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Public key</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Password</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Public key</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Public keys are designed to be openly distributed.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Hash Functions</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is the main property of a cryptographic hash function?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It can be reversed easily</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It always produces different outputs</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It produces a fixed-size output</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It encrypts data</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) It produces a fixed-size output</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Hashes map input data to a fixed-length "fingerprint".</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Password Storage</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why are passwords stored as hashes instead of plaintext?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Hashes use less memory</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Hashes are faster</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Hashes protect passwords even if data is leaked</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Hashes can be decrypted easily</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Hashes protect passwords even if data is leaked</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Even if a database is compromised, hashed passwords remain protected.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Digital Signatures</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is the main purpose of a digital signature?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Encrypt data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Compress messages</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Verify authenticity and integrity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Hide sender identity</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Verify authenticity and integrity</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Digital signatures confirm who sent the message and that it wasn't altered.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Man-in-the-Middle Attack</h4>
+                </div>
+                <p className="text-white/80 mb-4">A man-in-the-middle attack occurs when:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A computer overheats</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) An attacker intercepts communication between two parties</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) A password is forgotten</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) A system crashes</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) An attacker intercepts communication between two parties</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>The attacker secretly listens or alters communication.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">HTTPS and Cryptography</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is HTTPS important?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It speeds up websites</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It encrypts communication between browser and server</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It blocks ads</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It hides the website</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) It encrypts communication between browser and server</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>HTTPS uses cryptography to ensure secure web communication.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Cryptography and Trust</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which problem does cryptography help solve on the internet?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Network speed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Trust between unknown parties</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Hardware failures</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Software updates</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Trust between unknown parties</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Cryptography enables secure interaction without prior trust.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f59e0b] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Big Picture Question</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is cryptography essential in the modern digital world?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It makes computers smarter</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It protects privacy, security, and digital economies</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It replaces passwords</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It only applies to governments</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) It protects privacy, security, and digital economies</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Cryptography underpins banking, messaging, blockchain, and national security.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
