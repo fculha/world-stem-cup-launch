@@ -3392,6 +3392,329 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Computer Science - Artificial Intelligence Basics */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🤖</span>
+              COMPUTER SCIENCE (Artificial Intelligence - Basics) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: AI Definition, Narrow vs General AI, Machine Learning, Supervised/Unsupervised Learning, Training Data, AI Bias, Ethics in AI</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">What Is Artificial Intelligence?</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which definition best describes Artificial Intelligence?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Computers that work faster than humans</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Machines that can perform tasks requiring human-like intelligence</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Robots that look like humans</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Computers that store large amounts of data</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Machines that can perform tasks requiring human-like intelligence</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>AI focuses on intelligent behavior, not appearance or speed.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Narrow AI vs General AI</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which of the following is an example of Narrow AI?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A robot that can perform any human task</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) A system that understands and learns all subjects</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) A chess-playing program</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) A conscious machine</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) A chess-playing program</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Current AI systems are task-specific (narrow AI).</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Core Components of AI</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which field is NOT a core component of Artificial Intelligence?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Machine Learning</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Data Science</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Human Psychology</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Logic and Algorithms</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Human Psychology</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>AI draws inspiration from psychology, but it is not a core technical component.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Machine Learning Concept</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is Machine Learning?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Programming computers with fixed rules</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Allowing machines to learn patterns from data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Storing data in databases</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Teaching computers human emotions</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Allowing machines to learn patterns from data</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>ML systems learn from data, rather than following explicit instructions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Supervised Learning</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which best describes supervised learning?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Learning without any data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Learning from labeled examples</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Learning by trial and error only</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Learning with no human involvement</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Learning from labeled examples</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Supervised learning uses input–output pairs.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Unsupervised Learning</h4>
+                </div>
+                <p className="text-white/80 mb-4">Unsupervised learning is mainly used to:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Predict exact outcomes</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Find hidden patterns in data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Control robots</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Generate random numbers</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Find hidden patterns in data</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Clustering and pattern discovery are key unsupervised tasks.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Training Data</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is training data important in AI systems?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It makes computers faster</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It defines how the system behaves</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It replaces algorithms</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It removes errors completely</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) It defines how the system behaves</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>AI systems reflect the data they are trained on.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Bias in AI</h4>
+                </div>
+                <p className="text-white/80 mb-4">AI bias occurs when:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The algorithm is too slow</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The model is trained on unbalanced or biased data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The computer overheats</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The system uses mathematics</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The model is trained on unbalanced or biased data</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Biased data leads to biased decisions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">AI Decision-Making</h4>
+                </div>
+                <p className="text-white/80 mb-4">How do most AI systems make decisions?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) By random guessing</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) By following human emotions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) By optimizing mathematical objectives</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) By copying humans directly</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) By optimizing mathematical objectives</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>AI optimizes objective functions based on data.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Real-World AI Applications</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which of the following uses AI?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Voice assistants</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Recommendation systems</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Medical image analysis</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) All of the above</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: D) All of the above</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>AI is deeply embedded in daily life and science.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">AI Limitations</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which is a limitation of current AI systems?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) They can think like humans</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) They understand context perfectly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) They depend heavily on data quality</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) They are always unbiased</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) They depend heavily on data quality</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>AI is only as good as the data and objectives it is given.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#ef4444] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Ethical AI</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is ethics important in Artificial Intelligence?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) AI systems are conscious</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) AI decisions can affect human lives</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Ethics improves processing speed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Ethics replaces algorithms</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) AI decisions can affect human lives</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>AI impacts privacy, fairness, and opportunity, especially in education.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
