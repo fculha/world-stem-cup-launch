@@ -1254,6 +1254,165 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Mathematics - Differential Equations */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">dy/dx</span>
+              MATHEMATICS (Differential Equations) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Conceptual Understanding, First-Order Equations, Initial Value Problems, Real-World Applications, Separation of Variables</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Conceptual Understanding</h4>
+                </div>
+                <p className="text-white/80 mb-4">What does a differential equation describe?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A fixed numerical relationship</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) A relationship between a function and its rate of change</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Only algebraic expressions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) A graphical approximation method</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) A relationship between a function and its rate of change</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A differential equation relates a function to one or more of its derivatives, describing how a quantity changes over time or space.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Solving a First-Order Differential Equation</h4>
+                </div>
+                <p className="text-white/80 mb-4">Solve the differential equation:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  dy/dx = 3x²
+                </div>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) y = x³ + C</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) y = x² + C</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) y = 3x³ + C</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) y = (3/2)x² + C</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) y = x³ + C</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>y = ∫3x² dx = x³ + C</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Initial Value Problem</h4>
+                </div>
+                <p className="text-white/80 mb-4">Given:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  dy/dx = 2x and y(1) = 5
+                </div>
+                <p className="text-white/80 mb-4">Find y(x).</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) y = x² + 4</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) y = x² + 5</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) y = 2x² + 3</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) y = x² + 6</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) y = x² + 4</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>y = ∫2x dx = x² + C</p>
+                      <p>Using y(1) = 5: 1 + C = 5, so C = 4</p>
+                      <p>Therefore y = x² + 4</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Real-World Interpretation</h4>
+                </div>
+                <p className="text-white/80 mb-4">A population grows according to:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  dP/dt = kP
+                </div>
+                <p className="text-white/80 mb-4">What does this model imply?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Population grows linearly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Growth rate is constant</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Growth rate is proportional to population size</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Population decreases over time</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Growth rate is proportional to population size</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>This is the standard exponential growth model, used in biology, economics, and physics.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#06b6d4] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Separation of Variables</h4>
+                </div>
+                <p className="text-white/80 mb-4">Solve:</p>
+                <div className="bg-black/30 rounded-lg p-4 mb-4 text-white/70 font-mono">
+                  dy/dx = xy
+                </div>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) y = x² + C</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) y = Ce^(x²/2)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) y = Ce^x</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) y = Cx²</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) y = Ce^(x²/2)</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Separating variables: (1/y) dy = x dx</p>
+                      <p>Integrating: ln|y| = x²/2 + C</p>
+                      <p>Therefore: y = Ce^(x²/2)</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
