@@ -7851,6 +7851,381 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Critical Thinking - Metacognition */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🪞</span>
+              CRITICAL THINKING (Metacognition) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Definition of Metacognition, Planning Phase, Monitoring Understanding, Strategy Adjustment, Reflection After Task Completion, Awareness of Limitations, Learning Transfer, Illusion of Understanding, Expert vs Novice Thinking, Self-Regulated Learning, Error Analysis, Metacognition in STEM, Competition-Level Reasoning, Ethical & Lifelong Learning</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Definition of Metacognition</h4>
+                </div>
+                <p className="text-white/80 mb-4">What best defines metacognition?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Memorizing information</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Thinking faster</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Awareness and regulation of one's own thinking processes</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Solving problems automatically</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Awareness and regulation of one's own thinking processes</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Metacognition involves understanding how you think, monitor progress, and adjust strategies when needed.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Planning Phase</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which action demonstrates metacognitive planning?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Solving problems randomly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Reviewing answers after finishing</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Choosing a problem-solving strategy before starting</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Guessing quickly</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Choosing a problem-solving strategy before starting</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Planning requires selecting appropriate strategies before engaging in a task.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Monitoring Understanding</h4>
+                </div>
+                <p className="text-white/80 mb-4">A student pauses during problem-solving to ask, "Does this step logically follow from the previous one?" This behavior demonstrates:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Memorization</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Monitoring</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Evaluation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Recall</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Monitoring</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Monitoring involves checking understanding while a task is in progress.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Strategy Adjustment</h4>
+                </div>
+                <p className="text-white/80 mb-4">A student realizes their approach is not working and switches methods. This is an example of:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Trial and error</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Lack of focus</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Metacognitive control</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Guessing</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Metacognitive control</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Metacognitive control allows learners to modify strategies when necessary.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Reflection After Task Completion</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which activity best represents metacognitive evaluation?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Reviewing notes before an exam</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Asking why a solution failed after completing a task</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Copying a solution</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Skipping difficult questions</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Asking why a solution failed after completing a task</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Evaluation occurs after completing a task and reflects on effectiveness.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Awareness of Limitations</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is recognizing one's own knowledge limits important?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It slows learning</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It prevents effort</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It helps identify when help or new strategies are needed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It reduces confidence</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) It helps identify when help or new strategies are needed</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Metacognition includes understanding what you do not yet know.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Learning Transfer</h4>
+                </div>
+                <p className="text-white/80 mb-4">How does metacognition support learning transfer?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) By repeating the same method</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) By avoiding mistakes</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) By selecting strategies that work across contexts</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) By eliminating uncertainty</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) By selecting strategies that work across contexts</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Metacognitive learners adapt strategies to new situations.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Illusion of Understanding</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which scenario reflects a false sense of understanding?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Testing knowledge with practice questions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Explaining a concept to someone else</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Feeling confident after rereading without testing</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Reflecting on errors</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Feeling confident after rereading without testing</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Passive review often creates an illusion of understanding without real mastery.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Expert vs. Novice Thinking</h4>
+                </div>
+                <p className="text-white/80 mb-4">Experts differ from novices primarily because experts:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Work faster</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Memorize more</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Use metacognitive strategies effectively</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Avoid mistakes</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Use metacognitive strategies effectively</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Experts actively monitor and adjust their thinking processes.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Self-Regulated Learning</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which behavior best supports self-regulated learning?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Waiting for instructions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Ignoring feedback</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Setting goals and tracking progress</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Avoiding reflection</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Setting goals and tracking progress</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Self-regulation relies on goal setting, monitoring, and evaluation.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Error Analysis</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is analyzing mistakes valuable?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It reduces confidence</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It wastes time</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It strengthens future problem-solving strategies</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It discourages effort</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) It strengthens future problem-solving strategies</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Metacognitive learners use errors as feedback for improvement.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Metacognition in STEM</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best describes metacognition in STEM disciplines?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Memorizing formulas is sufficient</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Speed is more important than accuracy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Understanding why a method works is as important as using it</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Following instructions exactly</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Understanding why a method works is as important as using it</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Deep STEM learning requires awareness of reasoning, not just procedures.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 13 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q13</span>
+                  <h4 className="font-semibold text-lg">Competition-Level Reasoning</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which student demonstrates advanced metacognition?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) One who solves problems quickly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) One who copies solutions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) One who evaluates strategy effectiveness and adapts</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) One who avoids difficult tasks</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) One who evaluates strategy effectiveness and adapts</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Advanced metacognition involves continuous self-assessment and adaptation.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 14 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#8b5cf6] text-white text-sm font-bold px-3 py-1 rounded-full">Q14</span>
+                  <h4 className="font-semibold text-lg">Ethical & Lifelong Learning Perspective</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is metacognition critical beyond school?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It increases test scores only</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It replaces teachers</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It enables lifelong, independent learning</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It eliminates uncertainty</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) It enables lifelong, independent learning</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Metacognition empowers learners to adapt in changing environments.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
