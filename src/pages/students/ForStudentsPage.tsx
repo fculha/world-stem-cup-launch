@@ -5059,6 +5059,355 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Scientific Reasoning - Research Methodology */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🔬</span>
+              SCIENTIFIC REASONING (Research Methodology) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Scientific Method, Hypothesis, Variables, Control Group, Correlation vs Causation, Bias, Sample Size, Reproducibility, Peer Review, Data Interpretation, Ethics, Null Hypothesis</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Scientific Method (Foundations)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which sequence correctly represents the scientific method?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Conclusion → Hypothesis → Observation → Experiment</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Observation → Hypothesis → Experiment → Conclusion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Experiment → Observation → Theory → Law</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Hypothesis → Conclusion → Observation → Data</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Observation → Hypothesis → Experiment → Conclusion</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Science begins with observation and continues with a testable hypothesis.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Hypothesis vs Theory</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best describes a scientific hypothesis?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A proven explanation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) A guess with no evidence</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) A testable and falsifiable explanation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) A scientific law</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) A testable and falsifiable explanation</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A hypothesis must be testable and falsifiable.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Variables</h4>
+                </div>
+                <p className="text-white/80 mb-4">In an experiment, the variable that is intentionally changed is called:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Dependent variable</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Controlled variable</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Independent variable</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Confounding variable</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Independent variable</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>The independent variable is the factor intentionally changed in an experiment.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Control Group</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is a control group important in an experiment?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) To increase sample size</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) To eliminate all variables</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) To provide a baseline for comparison</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) To confirm the hypothesis</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) To provide a baseline for comparison</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>The control group shows whether the effect truly comes from the independent variable.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Correlation vs Causation</h4>
+                </div>
+                <p className="text-white/80 mb-4">A study shows that students who study more get higher grades. What can be concluded?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Studying causes intelligence</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Higher grades cause studying</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) There is a correlation, not necessarily causation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The data proves causation</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) There is a correlation, not necessarily causation</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Correlation does not equal causation. This is a critical distinction in competitions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Experimental Bias</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which situation introduces bias into a study?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Random sampling</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Double-blind design</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Researcher influencing participants</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Large sample size</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Researcher influencing participants</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Researcher influence can distort results.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Sample Size</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is a larger sample size generally preferred?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It guarantees correct results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It reduces random error</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It eliminates bias</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It makes experiments faster</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) It reduces random error</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Larger sample size increases statistical reliability.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Reproducibility</h4>
+                </div>
+                <p className="text-white/80 mb-4">A scientific result is considered strong if:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It is published once</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It is confirmed by repeated independent experiments</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It supports existing beliefs</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It is complex</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) It is confirmed by repeated independent experiments</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Scientific confidence comes from reproducibility.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Peer Review</h4>
+                </div>
+                <p className="text-white/80 mb-4">The main purpose of peer review is to:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Promote famous scientists</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Increase publication speed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Evaluate research quality and validity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Approve funding</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Evaluate research quality and validity</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Peer review is the scientific quality control mechanism.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Data Interpretation</h4>
+                </div>
+                <p className="text-white/80 mb-4">An experiment produces unexpected results. What is the most scientific response?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Discard the data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Adjust the hypothesis</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Repeat the experiment and analyze errors</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Change the conclusion to fit expectations</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Repeat the experiment and analyze errors</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Science is not adjusted to fit results; results are analyzed.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Ethics in Research</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which action violates scientific ethics?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Reporting negative results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Repeating experiments</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Manipulating data to fit a hypothesis</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Citing previous studies</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Manipulating data to fit a hypothesis</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Manipulating data is scientific fraud.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Null Hypothesis</h4>
+                </div>
+                <p className="text-white/80 mb-4">The null hypothesis assumes that:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The experiment will succeed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) There is no effect or difference</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The theory is true</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The data is invalid</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) There is no effect or difference</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>In statistics, the starting point is the assumption that "there is no effect."</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 13 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#f97316] text-white text-sm font-bold px-3 py-1 rounded-full">Q13</span>
+                  <h4 className="font-semibold text-lg">High-Level Reasoning (Olympiad Style)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best represents scientific thinking?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) "This must be true because it feels logical."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) "If the data contradicts my idea, the data is wrong."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) "Conclusions must be revised when new evidence appears."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) "Authority determines correctness."</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) "Conclusions must be revised when new evidence appears."</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Science is a dynamic and self-correcting process.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
