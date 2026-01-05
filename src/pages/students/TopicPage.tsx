@@ -155,6 +155,357 @@ Doğrulama:
         explanation: 'x² = 4 → x = ±2'
       }
     ]
+  },
+  'derivatives': {
+    title: 'Türev',
+    titleEn: 'Derivatives',
+    concept: {
+      native: `Türev, bir fonksiyonun değişim hızını ölçer. f(x) fonksiyonunun türevi f'(x) olarak gösterilir.
+
+Temel türev kuralları:
+• Sabit kuralı: d/dx[c] = 0
+• Kuvvet kuralı: d/dx[xⁿ] = nxⁿ⁻¹
+• Toplam kuralı: d/dx[f + g] = f' + g'
+• Çarpım kuralı: d/dx[fg] = f'g + fg'
+• Zincir kuralı: d/dx[f(g(x))] = f'(g(x)) · g'(x)
+
+Türevin yorumu:
+• f'(x) > 0: Fonksiyon artan
+• f'(x) < 0: Fonksiyon azalan
+• f'(x) = 0: Kritik nokta (maksimum, minimum veya bükülme noktası olabilir)`,
+      english: `The derivative measures the rate of change of a function. The derivative of f(x) is denoted as f'(x).
+
+Basic derivative rules:
+• Constant rule: d/dx[c] = 0
+• Power rule: d/dx[xⁿ] = nxⁿ⁻¹
+• Sum rule: d/dx[f + g] = f' + g'
+• Product rule: d/dx[fg] = f'g + fg'
+• Chain rule: d/dx[f(g(x))] = f'(g(x)) · g'(x)
+
+Interpretation of derivative:
+• f'(x) > 0: Function is increasing
+• f'(x) < 0: Function is decreasing
+• f'(x) = 0: Critical point (could be maximum, minimum, or inflection point)`
+    },
+    examples: [
+      {
+        problem: `A function f(x) is continuous on an interval.
+Which of the following statements is always true?
+A) If f'(x) = 0 at a point, the function has a maximum there
+B) If f'(x) > 0, the function is increasing at that point
+C) If f'(x) does not exist, the function is discontinuous
+D) If f'(x) is constant, the function must be quadratic`,
+        solution: 'B) If f\'(x) > 0, the function is increasing at that point',
+        explanation: `Positive derivative means the function is increasing locally.
+A is false: f'(x) = 0 could be an inflection point.
+C is false: |x| has no derivative at x=0 but is continuous.
+D is false: constant derivative means linear function.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'The graph of f(x) is shown (imagine a smooth curve). At which point does the function change from concave up to concave down?',
+        options: ['Where f\'(x) = 0', 'Where f\'\'(x) = 0 and changes sign', 'Where the function crosses the x-axis', 'Where the slope is maximum'],
+        correctIndex: 1,
+        explanation: 'This is the definition of an inflection point. The second derivative determines concavity, and a sign change indicates the transition.'
+      },
+      {
+        question: 'Let f(x) = (3x² - 5)⁴. Find f\'(x).',
+        options: ['f\'(x) = 4(3x² - 5)³', 'f\'(x) = 24x(3x² - 5)³', 'f\'(x) = 6x(3x² - 5)³', 'f\'(x) = 12x(3x² - 5)⁴'],
+        correctIndex: 1,
+        explanation: 'Using the chain rule: f\'(x) = 4(3x² - 5)³ · 6x = 24x(3x² - 5)³. Chain rule is fundamental in AI, physics, optimization, and neural networks.'
+      },
+      {
+        question: 'The position of a particle is given by s(t) = t³ - 6t² + 9t. What is the velocity at t = 2?',
+        options: ['1', '-3', '3', '9'],
+        correctIndex: 1,
+        explanation: 'Velocity is the derivative of position: v(t) = s\'(t) = 3t² - 12t + 9. v(2) = 3(4) - 12(2) + 9 = 12 - 24 + 9 = -3'
+      },
+      {
+        question: 'A rectangle has a perimeter of 40 units. What dimensions maximize its area?',
+        options: ['5 × 15', '8 × 12', '10 × 10', '12 × 8'],
+        correctIndex: 2,
+        explanation: 'For a fixed perimeter, maximum area occurs when the rectangle is a square. Perimeter = 40, so each side = 40/4 = 10. Area = 10 × 10 = 100 (maximum)'
+      }
+    ]
+  },
+  'integrals': {
+    title: 'İntegral',
+    titleEn: 'Integrals',
+    concept: {
+      native: `İntegral, türevin tersi işlemidir ve alan hesaplamada kullanılır.
+
+Belirli integral: ∫ₐᵇ f(x) dx = F(b) - F(a)
+Belirsiz integral: ∫ f(x) dx = F(x) + C
+
+Temel integral kuralları:
+• ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C (n ≠ -1)
+• ∫ eˣ dx = eˣ + C
+• ∫ 1/x dx = ln|x| + C
+
+İntegralin yorumu:
+• Belirli integral, eğri altındaki alanı verir
+• Negatif değerler, x-ekseninin altındaki alanı temsil eder`,
+      english: `Integration is the reverse operation of differentiation and is used for area calculation.
+
+Definite integral: ∫ₐᵇ f(x) dx = F(b) - F(a)
+Indefinite integral: ∫ f(x) dx = F(x) + C
+
+Basic integration rules:
+• ∫ xⁿ dx = xⁿ⁺¹/(n+1) + C (n ≠ -1)
+• ∫ eˣ dx = eˣ + C
+• ∫ 1/x dx = ln|x| + C
+
+Interpretation of integral:
+• Definite integral gives the area under the curve
+• Negative values represent area below the x-axis`
+    },
+    examples: [
+      {
+        problem: `Which statement best describes the definite integral ∫ₐᵇ f(x) dx?
+A) The slope of f(x) at a point
+B) The accumulated area under f(x) from a to b
+C) The maximum value of f(x)
+D) The average rate of change`,
+        solution: 'B) The accumulated area under f(x) from a to b',
+        explanation: `The definite integral represents the net signed area between the curve and the x-axis from x = a to x = b. This is a fundamental concept connecting calculus to real-world applications like physics and economics.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'Evaluate ∫₀² (3x²) dx',
+        options: ['6', '8', '12', '24'],
+        correctIndex: 1,
+        explanation: '∫₀² 3x² dx = [x³]₀² = 2³ - 0³ = 8'
+      },
+      {
+        question: 'A function f(x) is positive on [0, 2] and negative on [2, 4]. What does ∫₀⁴ f(x) dx represent?',
+        options: ['Total area under the curve', 'Net signed area (positive minus negative)', 'Only the positive area', 'Only the negative area'],
+        correctIndex: 1,
+        explanation: 'The definite integral gives the net signed area. Positive regions contribute positively, negative regions contribute negatively.'
+      },
+      {
+        question: 'If velocity v(t) = 4t, what is the displacement from t = 0 to t = 3?',
+        options: ['12', '18', '24', '36'],
+        correctIndex: 1,
+        explanation: 'Displacement = ∫₀³ 4t dt = [2t²]₀³ = 2(9) - 0 = 18'
+      },
+      {
+        question: 'To find the area between two curves y = f(x) and y = g(x), where f(x) > g(x), we compute:',
+        options: ['∫[f(x) - g(x)] dx', '∫[g(x) - f(x)] dx', '∫f(x) dx - ∫g(x) dx separately', '∫[f(x) + g(x)] dx'],
+        correctIndex: 0,
+        explanation: 'Upper curve − lower curve → correct order matters. Area = ∫[f(x) - g(x)] dx'
+      }
+    ]
+  },
+  'differential-equations': {
+    title: 'Diferansiyel Denklemler',
+    titleEn: 'Differential Equations',
+    concept: {
+      native: `Diferansiyel denklemler, türevler içeren denklemlerdir. Birçok doğal olayı modellemek için kullanılır.
+
+Temel türler:
+• Birinci derece: dy/dx = f(x, y)
+• İkinci derece: d²y/dx² = f(x, y, dy/dx)
+
+Çözüm yöntemleri:
+• Değişkenleri ayırma
+• İntegrasyon faktörü
+• Karakteristik denklem
+
+Uygulamalar:
+• Popülasyon büyümesi
+• Radyoaktif bozunma
+• Isı transferi`,
+      english: `Differential equations are equations containing derivatives. They are used to model many natural phenomena.
+
+Basic types:
+• First order: dy/dx = f(x, y)
+• Second order: d²y/dx² = f(x, y, dy/dx)
+
+Solution methods:
+• Separation of variables
+• Integrating factor
+• Characteristic equation
+
+Applications:
+• Population growth
+• Radioactive decay
+• Heat transfer`
+    },
+    examples: [
+      {
+        problem: `Which of the following is a differential equation?
+A) x² + 3x = 5
+B) dy/dx = 2x
+C) y = 3x + 1
+D) ∫x dx = x²/2`,
+        solution: 'B) dy/dx = 2x',
+        explanation: `A differential equation contains derivatives. Only option B contains dy/dx, which is a derivative. The others are algebraic equations, linear equations, or integrals.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'A population grows at a rate proportional to its size. Which equation models this?',
+        options: ['dP/dt = k', 'dP/dt = kP', 'dP/dt = k/P', 'dP/dt = kP²'],
+        correctIndex: 1,
+        explanation: 'Exponential growth is modeled by dP/dt = kP, where the rate of change is proportional to the current population.'
+      },
+      {
+        question: 'Solve: dy/dx = x, with y(0) = 1',
+        options: ['y = x²/2', 'y = x²/2 + 1', 'y = x + 1', 'y = 2x'],
+        correctIndex: 1,
+        explanation: 'Integrating dy/dx = x gives y = x²/2 + C. Using y(0) = 1: 1 = 0 + C, so C = 1. Therefore y = x²/2 + 1'
+      },
+      {
+        question: 'The half-life of a substance is 10 years. If you start with 100g, how much remains after 20 years?',
+        options: ['50g', '25g', '10g', '0g'],
+        correctIndex: 1,
+        explanation: 'After one half-life (10 years): 100g → 50g. After two half-lives (20 years): 50g → 25g'
+      },
+      {
+        question: 'Which method is used to solve dy/dx = xy?',
+        options: ['Direct integration', 'Separation of variables', 'Substitution only', 'Cannot be solved'],
+        correctIndex: 1,
+        explanation: 'Separation of variables: dy/y = x dx → ln|y| = x²/2 + C → y = Ce^(x²/2)'
+      }
+    ]
+  },
+  'vectors': {
+    title: 'Vektörler',
+    titleEn: 'Vectors',
+    concept: {
+      native: `Vektörler, hem büyüklük hem de yön içeren matematiksel nesnelerdir.
+
+Temel işlemler:
+• Toplama: (a₁, a₂) + (b₁, b₂) = (a₁+b₁, a₂+b₂)
+• Skaler çarpım: k(a₁, a₂) = (ka₁, ka₂)
+• Nokta çarpım: a⃗ · b⃗ = |a||b|cos(θ)
+• Çapraz çarpım: a⃗ × b⃗ (3D'de)
+
+Uygulamalar:
+• Fizik (kuvvet, hız)
+• Bilgisayar grafikleri
+• Mühendislik`,
+      english: `Vectors are mathematical objects that have both magnitude and direction.
+
+Basic operations:
+• Addition: (a₁, a₂) + (b₁, b₂) = (a₁+b₁, a₂+b₂)
+• Scalar multiplication: k(a₁, a₂) = (ka₁, ka₂)
+• Dot product: a⃗ · b⃗ = |a||b|cos(θ)
+• Cross product: a⃗ × b⃗ (in 3D)
+
+Applications:
+• Physics (force, velocity)
+• Computer graphics
+• Engineering`
+    },
+    examples: [
+      {
+        problem: `A vector has:
+A) Only magnitude
+B) Only direction
+C) Both magnitude and direction
+D) Neither`,
+        solution: 'C) Both magnitude and direction',
+        explanation: `A vector is defined by both its magnitude (length) and direction. This distinguishes it from a scalar, which has only magnitude.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'If a⃗ = (3, 4), what is |a⃗|?',
+        options: ['5', '7', '12', '25'],
+        correctIndex: 0,
+        explanation: '|a⃗| = √(3² + 4²) = √(9 + 16) = √25 = 5'
+      },
+      {
+        question: 'Two vectors are perpendicular when their dot product is:',
+        options: ['1', '-1', '0', 'undefined'],
+        correctIndex: 2,
+        explanation: 'a⃗ · b⃗ = |a||b|cos(θ). When θ = 90°, cos(90°) = 0, so the dot product is 0.'
+      },
+      {
+        question: 'If a⃗ = (2, 3) and b⃗ = (4, -1), find a⃗ + b⃗',
+        options: ['(6, 2)', '(6, 4)', '(-2, 4)', '(8, -3)'],
+        correctIndex: 0,
+        explanation: 'a⃗ + b⃗ = (2+4, 3+(-1)) = (6, 2)'
+      },
+      {
+        question: 'Work done by a force F⃗ over displacement d⃗ is calculated as:',
+        options: ['F⃗ × d⃗', 'F⃗ · d⃗', '|F⃗| + |d⃗|', 'F⃗ / d⃗'],
+        correctIndex: 1,
+        explanation: 'Work = F⃗ · d⃗ (dot product). This directly connects vectors to physics and engineering.'
+      }
+    ]
+  },
+  'matrices': {
+    title: 'Matrisler',
+    titleEn: 'Matrices',
+    concept: {
+      native: `Matrisler, sayıların dikdörtgen düzende sıralandığı matematiksel yapılardır.
+
+Temel işlemler:
+• Toplama: Aynı boyutlu matrislerin karşılıklı elemanları toplanır
+• Çarpma: (m×n) × (n×p) = (m×p)
+• Determinant: 2×2 için ad - bc
+• Ters matris: A⁻¹ (det(A) ≠ 0 ise)
+
+Uygulamalar:
+• Lineer denklem sistemleri
+• Bilgisayar grafikleri
+• Yapay zeka`,
+      english: `Matrices are mathematical structures where numbers are arranged in a rectangular array.
+
+Basic operations:
+• Addition: Add corresponding elements of same-sized matrices
+• Multiplication: (m×n) × (n×p) = (m×p)
+• Determinant: For 2×2, ad - bc
+• Inverse matrix: A⁻¹ (if det(A) ≠ 0)
+
+Applications:
+• Systems of linear equations
+• Computer graphics
+• Artificial intelligence`
+    },
+    examples: [
+      {
+        problem: `Given A = [1 2; 3 4] and B = [5 6; 7 8], find A + B.
+A) [6 8; 10 12]
+B) [4 4; 4 4]
+C) [5 12; 21 32]
+D) Cannot be added`,
+        solution: 'A) [6 8; 10 12]',
+        explanation: `Matrix addition: add corresponding elements.
+[1+5  2+6]   [6  8]
+[3+7  4+8] = [10 12]`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'What is the determinant of [3 1; 2 4]?',
+        options: ['10', '14', '5', '11'],
+        correctIndex: 0,
+        explanation: 'det = (3)(4) - (1)(2) = 12 - 2 = 10'
+      },
+      {
+        question: 'For matrix multiplication AB to be defined, which must be true?',
+        options: ['A and B must be square', 'Columns of A = Rows of B', 'Rows of A = Columns of B', 'A and B must be identical'],
+        correctIndex: 1,
+        explanation: 'For AB to be defined, the number of columns in A must equal the number of rows in B.'
+      },
+      {
+        question: 'The identity matrix I satisfies:',
+        options: ['AI = 0', 'AI = A', 'AI = I', 'AI = A⁻¹'],
+        correctIndex: 1,
+        explanation: 'The identity matrix I is the multiplicative identity: AI = IA = A for any compatible matrix A.'
+      },
+      {
+        question: 'Matrices are used in computer graphics for:',
+        options: ['Only storing images', 'Transformations like rotation and scaling', 'Only color calculations', 'Sound processing only'],
+        correctIndex: 1,
+        explanation: 'Rotations, scaling, reflections → matrices. This bridges to graphics, robotics, and AI.'
+      }
+    ]
   }
 };
 
