@@ -897,6 +897,424 @@ D) Weak nuclear force`,
         explanation: 'Nuclear physics impacts energy, medicine (PET, MRI), archaeology (carbon dating), and space science.'
       }
     ]
+  },
+  'dynamic-programming': {
+    title: 'Dinamik Programlama',
+    titleEn: 'Dynamic Programming',
+    concept: {
+      native: `Dinamik programlama, karmaşık problemleri daha küçük alt problemlere bölerek çözen bir algoritma tasarım tekniğidir.
+
+Temel kavramlar:
+• Örtüşen alt problemler
+• Optimal alt yapı
+• Memoization (üstten aşağı)
+• Tabulation (alttan yukarı)
+
+Klasik DP problemleri:
+• Fibonacci sayıları
+• En uzun ortak alt dizi
+• Sırt çantası problemi
+• En kısa yol algoritmaları`,
+      english: `Dynamic programming is an algorithm design technique that solves complex problems by breaking them into smaller subproblems.
+
+Key concepts:
+• Overlapping subproblems
+• Optimal substructure
+• Memoization (top-down)
+• Tabulation (bottom-up)
+
+Classic DP problems:
+• Fibonacci numbers
+• Longest common subsequence
+• Knapsack problem
+• Shortest path algorithms`
+    },
+    examples: [
+      {
+        problem: `What is the main idea behind Dynamic Programming?
+A) Solving problems by brute force
+B) Dividing problems into independent subproblems
+C) Solving overlapping subproblems and storing their results
+D) Using recursion only`,
+        solution: 'C) Solving overlapping subproblems and storing their results',
+        explanation: `Dynamic Programming avoids repeated work by saving solutions to subproblems.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'Which situation best indicates that a problem is suitable for Dynamic Programming?',
+        options: ['The problem has a single solution', 'The problem can be solved greedily', 'The problem has overlapping subproblems', 'The problem uses sorting'],
+        correctIndex: 2,
+        explanation: 'DP is powerful when the same subproblem appears many times.'
+      },
+      {
+        question: 'Why is Dynamic Programming preferred over simple recursion when computing Fibonacci numbers?',
+        options: ['Recursion cannot compute Fibonacci', 'DP reduces repeated calculations', 'DP uses less memory', 'DP avoids base cases'],
+        correctIndex: 1,
+        explanation: 'Recursive Fibonacci recalculates the same values repeatedly → inefficient.'
+      },
+      {
+        question: 'The naive recursive Fibonacci algorithm has approximately:',
+        options: ['Linear time complexity', 'Quadratic time complexity', 'Exponential time complexity', 'Constant time complexity'],
+        correctIndex: 2,
+        explanation: 'Without DP, Fibonacci grows exponentially in time.'
+      },
+      {
+        question: 'What is the key difference between memoization and tabulation?',
+        options: ['Memoization uses arrays, tabulation does not', 'Memoization is bottom-up, tabulation is top-down', 'Memoization is top-down, tabulation is bottom-up', 'They are identical'],
+        correctIndex: 2,
+        explanation: 'Memoization: recursion + cache. Tabulation: iterative table building.'
+      },
+      {
+        question: 'A problem has optimal substructure if:',
+        options: ['It has many solutions', 'It can be divided into independent tasks', 'An optimal solution can be built from optimal subsolutions', 'It requires sorting'],
+        correctIndex: 2,
+        explanation: 'This property is essential for DP.'
+      },
+      {
+        question: 'Which of the following is a classic Dynamic Programming problem?',
+        options: ['Binary search', 'Shortest path in a weighted graph', 'Finding the maximum element in an array', 'Sorting numbers'],
+        correctIndex: 1,
+        explanation: 'Shortest paths (e.g., Bellman-Ford) rely on DP principles.'
+      },
+      {
+        question: 'Why is the Knapsack problem suited for Dynamic Programming?',
+        options: ['Items are sorted', 'Choices are binary and overlapping', 'Greedy always works', 'There is only one constraint'],
+        correctIndex: 1,
+        explanation: 'Each decision (take or skip) creates overlapping subproblems.'
+      },
+      {
+        question: 'Why can Dynamic Programming often be optimized to use less memory?',
+        options: ['DP always uses recursion', 'Only the previous states are needed', 'DP problems are small', 'Memory is unlimited'],
+        correctIndex: 1,
+        explanation: 'Many DP tables only depend on recent rows or states.'
+      },
+      {
+        question: 'Dynamic Programming is commonly used in:',
+        options: ['Image compression', 'DNA sequence alignment', 'AI decision-making', 'All of the above'],
+        correctIndex: 3,
+        explanation: 'DP is foundational in bioinformatics, AI, NLP, and optimization.'
+      },
+      {
+        question: 'When should Dynamic Programming be preferred over a greedy algorithm?',
+        options: ['When greedy is faster', 'When greedy fails to guarantee optimality', 'When the problem is small', 'Always'],
+        correctIndex: 1,
+        explanation: 'Greedy works only when local choices guarantee global optimum.'
+      },
+      {
+        question: 'What skill does Dynamic Programming primarily test?',
+        options: ['Syntax memorization', 'Fast typing', 'Breaking complex problems into structured steps', 'Hardware knowledge'],
+        correctIndex: 2,
+        explanation: 'DP measures algorithmic thinking, not coding speed.'
+      }
+    ]
+  },
+  'advanced-algorithms': {
+    title: 'İleri Algoritmalar',
+    titleEn: 'Advanced Algorithms',
+    concept: {
+      native: `İleri algoritmalar, karmaşık problemleri verimli bir şekilde çözmek için kullanılan gelişmiş tekniklerdir.
+
+Temel konular:
+• Zaman karmaşıklığı ve Big-O notasyonu
+• Böl ve fethet
+• Açgözlü algoritmalar
+• Graf algoritmaları
+• NP problemleri
+• Geri izleme`,
+      english: `Advanced algorithms are sophisticated techniques used to solve complex problems efficiently.
+
+Key topics:
+• Time complexity and Big-O notation
+• Divide and conquer
+• Greedy algorithms
+• Graph algorithms
+• NP problems
+• Backtracking`
+    },
+    examples: [
+      {
+        problem: `What does the time complexity of an algorithm describe?
+A) The exact time an algorithm takes
+B) The number of lines of code
+C) How execution time grows with input size
+D) The speed of the computer`,
+        solution: 'C) How execution time grows with input size',
+        explanation: `Time complexity measures scalability, not actual seconds.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'Which algorithm grows the slowest as input size increases?',
+        options: ['O(n²)', 'O(n log n)', 'O(n)', 'O(2ⁿ)'],
+        correctIndex: 2,
+        explanation: 'Linear time is more efficient than quadratic or exponential growth.'
+      },
+      {
+        question: 'Which strategy breaks a problem into smaller independent parts, solves them, and combines the results?',
+        options: ['Greedy', 'Dynamic Programming', 'Divide and Conquer', 'Backtracking'],
+        correctIndex: 2,
+        explanation: 'Classic examples: Merge Sort, Quick Sort.'
+      },
+      {
+        question: 'Which sorting algorithm has an average-case time complexity of O(n log n)?',
+        options: ['Bubble Sort', 'Insertion Sort', 'Merge Sort', 'Selection Sort'],
+        correctIndex: 2,
+        explanation: 'Merge Sort guarantees O(n log n) in all cases.'
+      },
+      {
+        question: 'Why do greedy algorithms sometimes fail?',
+        options: ['They are too slow', 'They do not consider all possibilities', 'They always use recursion', 'They require extra memory'],
+        correctIndex: 1,
+        explanation: 'Greedy makes locally optimal choices that may not lead to a global optimum.'
+      },
+      {
+        question: 'Which algorithm is commonly used to find the shortest path in a graph with non-negative edge weights?',
+        options: ['Depth-First Search', 'Breadth-First Search', 'Dijkstra\'s Algorithm', 'Binary Search'],
+        correctIndex: 2,
+        explanation: 'Dijkstra\'s algorithm efficiently computes shortest paths.'
+      },
+      {
+        question: 'Which statement is true about BFS vs DFS?',
+        options: ['DFS always finds the shortest path', 'BFS uses a stack', 'BFS explores nodes level by level', 'DFS is always faster than BFS'],
+        correctIndex: 2,
+        explanation: 'BFS: queue, level-by-level. DFS: stack/recursion, depth-first.'
+      },
+      {
+        question: 'Which statement best describes NP problems?',
+        options: ['They can be solved quickly', 'They have no solutions', 'Solutions can be verified quickly', 'They require quantum computers'],
+        correctIndex: 2,
+        explanation: 'NP problems are hard to solve, but easy to verify.'
+      },
+      {
+        question: 'Backtracking is best described as:',
+        options: ['Always choosing the best option', 'Trying all possibilities efficiently by undoing choices', 'Using tables to store results', 'Sorting data repeatedly'],
+        correctIndex: 1,
+        explanation: 'Used in puzzles like N-Queens, Sudoku.'
+      },
+      {
+        question: 'Which algorithmic technique is most suitable for problems with overlapping subproblems and optimal substructure?',
+        options: ['Greedy', 'Divide and Conquer', 'Dynamic Programming', 'Backtracking'],
+        correctIndex: 2,
+        explanation: 'This is the core condition for Dynamic Programming.'
+      },
+      {
+        question: 'Which area heavily relies on advanced algorithms?',
+        options: ['Search engines', 'Cryptography', 'Artificial Intelligence', 'All of the above'],
+        correctIndex: 3,
+        explanation: 'Algorithms power modern technology.'
+      },
+      {
+        question: 'Which skill best represents algorithmic thinking?',
+        options: ['Memorizing code', 'Writing fast programs', 'Structuring problems into clear logical steps', 'Using powerful computers'],
+        correctIndex: 2,
+        explanation: 'Algorithms test how you think, not how fast you type.'
+      }
+    ]
+  },
+  'ai-basics': {
+    title: 'Yapay Zeka Temelleri',
+    titleEn: 'Artificial Intelligence - Basics',
+    concept: {
+      native: `Yapay zeka, makinelerin insan benzeri zeka gerektiren görevleri yerine getirmesini sağlayan bilgisayar bilimi dalıdır.
+
+Temel kavramlar:
+• Dar YZ vs Genel YZ
+• Makine öğrenmesi
+• Denetimli ve denetimsiz öğrenme
+• Eğitim verisi
+• YZ önyargısı ve etik`,
+      english: `Artificial intelligence is the branch of computer science that enables machines to perform tasks requiring human-like intelligence.
+
+Key concepts:
+• Narrow AI vs General AI
+• Machine learning
+• Supervised and unsupervised learning
+• Training data
+• AI bias and ethics`
+    },
+    examples: [
+      {
+        problem: `Which definition best describes Artificial Intelligence?
+A) Computers that work faster than humans
+B) Machines that can perform tasks requiring human-like intelligence
+C) Robots that look like humans
+D) Computers that store large amounts of data`,
+        solution: 'B) Machines that can perform tasks requiring human-like intelligence',
+        explanation: `AI focuses on intelligent behavior, not appearance or speed.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'Which of the following is an example of Narrow AI?',
+        options: ['A robot that can perform any human task', 'A system that understands and learns all subjects', 'A chess-playing program', 'A conscious machine'],
+        correctIndex: 2,
+        explanation: 'Current AI systems are task-specific (narrow AI).'
+      },
+      {
+        question: 'Which field is NOT a core component of Artificial Intelligence?',
+        options: ['Machine Learning', 'Data Science', 'Human Psychology', 'Logic and Algorithms'],
+        correctIndex: 2,
+        explanation: 'AI draws inspiration from psychology, but it is not a core technical component.'
+      },
+      {
+        question: 'What is Machine Learning?',
+        options: ['Programming computers with fixed rules', 'Allowing machines to learn patterns from data', 'Storing data in databases', 'Teaching computers human emotions'],
+        correctIndex: 1,
+        explanation: 'ML systems learn from data, rather than following explicit instructions.'
+      },
+      {
+        question: 'Which best describes supervised learning?',
+        options: ['Learning without any data', 'Learning from labeled examples', 'Learning by trial and error only', 'Learning with no human involvement'],
+        correctIndex: 1,
+        explanation: 'Supervised learning uses input–output pairs.'
+      },
+      {
+        question: 'Unsupervised learning is mainly used to:',
+        options: ['Predict exact outcomes', 'Find hidden patterns in data', 'Control robots', 'Generate random numbers'],
+        correctIndex: 1,
+        explanation: 'Clustering and pattern discovery are key unsupervised tasks.'
+      },
+      {
+        question: 'Why is training data important in AI systems?',
+        options: ['It makes computers faster', 'It defines how the system behaves', 'It replaces algorithms', 'It removes errors completely'],
+        correctIndex: 1,
+        explanation: 'AI systems reflect the data they are trained on.'
+      },
+      {
+        question: 'AI bias occurs when:',
+        options: ['The algorithm is too slow', 'The model is trained on unbalanced or biased data', 'The computer overheats', 'The system uses mathematics'],
+        correctIndex: 1,
+        explanation: 'Biased data leads to biased decisions.'
+      },
+      {
+        question: 'How do most AI systems make decisions?',
+        options: ['By random guessing', 'By following human emotions', 'By optimizing mathematical objectives', 'By copying humans directly'],
+        correctIndex: 2,
+        explanation: 'AI optimizes objective functions based on data.'
+      },
+      {
+        question: 'Which of the following uses AI?',
+        options: ['Voice assistants', 'Recommendation systems', 'Medical image analysis', 'All of the above'],
+        correctIndex: 3,
+        explanation: 'AI is deeply embedded in daily life and science.'
+      },
+      {
+        question: 'Which is a limitation of current AI systems?',
+        options: ['They can think like humans', 'They understand context perfectly', 'They depend heavily on data quality', 'They are always unbiased'],
+        correctIndex: 2,
+        explanation: 'AI is only as good as the data and objectives it is given.'
+      },
+      {
+        question: 'Why is ethics important in Artificial Intelligence?',
+        options: ['AI systems are conscious', 'AI decisions can affect human lives', 'Ethics improves processing speed', 'Ethics replaces algorithms'],
+        correctIndex: 1,
+        explanation: 'AI impacts privacy, fairness, and opportunity, especially in education.'
+      }
+    ]
+  },
+  'cryptography-intro': {
+    title: 'Kriptografiye Giriş',
+    titleEn: 'Introduction to Cryptography',
+    concept: {
+      native: `Kriptografi, iletişim ve verilerin güvenliğini sağlayan bilim dalıdır.
+
+Temel kavramlar:
+• Düz metin ve şifreli metin
+• Simetrik şifreleme (tek anahtar)
+• Asimetrik şifreleme (açık/özel anahtar çifti)
+• Hash fonksiyonları
+• Dijital imzalar
+• HTTPS ve güvenli iletişim`,
+      english: `Cryptography is the science of securing communication and data.
+
+Key concepts:
+• Plaintext and ciphertext
+• Symmetric encryption (single key)
+• Asymmetric encryption (public/private key pair)
+• Hash functions
+• Digital signatures
+• HTTPS and secure communication`
+    },
+    examples: [
+      {
+        problem: `What is the primary purpose of cryptography?
+A) Making computers faster
+B) Hiding information permanently
+C) Securing communication and data
+D) Compressing files`,
+        solution: 'C) Securing communication and data',
+        explanation: `Cryptography ensures confidentiality, integrity, and authenticity of information.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'What is the correct relationship between plaintext and ciphertext?',
+        options: ['Ciphertext is readable text', 'Plaintext is encrypted text', 'Ciphertext is encrypted plaintext', 'Plaintext and ciphertext are identical'],
+        correctIndex: 2,
+        explanation: 'Plaintext → encryption → ciphertext → decryption → plaintext.'
+      },
+      {
+        question: 'In symmetric-key cryptography:',
+        options: ['Two different keys are used', 'The same key is used for encryption and decryption', 'No key is required', 'Only public keys are used'],
+        correctIndex: 1,
+        explanation: 'Sender and receiver share one secret key.'
+      },
+      {
+        question: 'Which feature distinguishes asymmetric cryptography from symmetric cryptography?',
+        options: ['It is faster', 'It uses one key only', 'It uses a public–private key pair', 'It does not use mathematics'],
+        correctIndex: 2,
+        explanation: 'Asymmetric systems (e.g., RSA) use two mathematically linked keys.'
+      },
+      {
+        question: 'What can be safely shared with anyone?',
+        options: ['Private key', 'Symmetric key', 'Public key', 'Password'],
+        correctIndex: 2,
+        explanation: 'Public keys are designed to be openly distributed.'
+      },
+      {
+        question: 'What is the main property of a cryptographic hash function?',
+        options: ['It can be reversed easily', 'It always produces different outputs', 'It produces a fixed-size output', 'It encrypts data'],
+        correctIndex: 2,
+        explanation: 'Hashes map input data to a fixed-length "fingerprint".'
+      },
+      {
+        question: 'Why are passwords stored as hashes instead of plaintext?',
+        options: ['Hashes use less memory', 'Hashes are faster', 'Hashes protect passwords even if data is leaked', 'Hashes can be decrypted easily'],
+        correctIndex: 2,
+        explanation: 'Even if a database is compromised, hashed passwords remain protected.'
+      },
+      {
+        question: 'What is the main purpose of a digital signature?',
+        options: ['Encrypt data', 'Compress messages', 'Verify authenticity and integrity', 'Hide sender identity'],
+        correctIndex: 2,
+        explanation: 'Digital signatures confirm who sent the message and that it wasn\'t altered.'
+      },
+      {
+        question: 'A man-in-the-middle attack occurs when:',
+        options: ['A computer overheats', 'An attacker intercepts communication between two parties', 'A password is forgotten', 'A system crashes'],
+        correctIndex: 1,
+        explanation: 'The attacker secretly listens or alters communication.'
+      },
+      {
+        question: 'Why is HTTPS important?',
+        options: ['It speeds up websites', 'It encrypts communication between browser and server', 'It blocks ads', 'It hides the website'],
+        correctIndex: 1,
+        explanation: 'HTTPS uses cryptography to ensure secure web communication.'
+      },
+      {
+        question: 'Which problem does cryptography help solve on the internet?',
+        options: ['Network speed', 'Trust between unknown parties', 'Hardware failures', 'Software updates'],
+        correctIndex: 1,
+        explanation: 'Cryptography enables secure interaction without prior trust.'
+      },
+      {
+        question: 'Why is cryptography essential in the modern digital world?',
+        options: ['It makes computers smarter', 'It protects privacy, security, and digital economies', 'It replaces passwords', 'It only applies to governments'],
+        correctIndex: 1,
+        explanation: 'Cryptography underpins banking, messaging, blockchain, and national security.'
+      }
+    ]
   }
 };
 
