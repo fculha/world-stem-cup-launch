@@ -6830,6 +6830,381 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Data Interpretation - Predictive Analysis */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🔮</span>
+              DATA INTERPRETATION (Predictive Analysis) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Definition, Predictive vs Descriptive Analytics, Input Data, Model Assumptions, Overfitting, Training vs Testing, Predictive Variables, Uncertainty, Evaluation Metrics, Time Series, Predictive Bias, Ethics, Real-World Applications</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Definition</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is the primary goal of predictive analysis?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) To describe past events</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) To organize raw data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) To forecast future outcomes based on patterns</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) To eliminate uncertainty</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) To forecast future outcomes based on patterns</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Predictive analysis uses historical data, statistical models, and algorithms to estimate future outcomes.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Predictive vs. Descriptive Analytics</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which task best represents predictive analytics?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Calculating average test scores</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Visualizing past trends</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Estimating future student performance</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Summarizing survey responses</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Estimating future student performance</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Predictive analytics focuses on what is likely to happen next, not just what has already occurred.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Input Data</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which type of data is MOST critical for reliable predictions?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Randomly generated data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Historical and relevant data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Only the latest observation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Perfectly clean data</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Historical and relevant data</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Predictive models rely on meaningful historical data that reflects real patterns.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Model Assumptions</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why are model assumptions important in predictive analysis?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) They guarantee accuracy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) They reduce computation time</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) They define when a model is valid</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) They eliminate bias</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) They define when a model is valid</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Predictions are only reliable when model assumptions match real-world conditions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Overfitting</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is overfitting?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) When a model is too simple</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) When a model memorizes training data but performs poorly on new data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) When data is incomplete</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) When predictions are averaged</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) When a model memorizes training data but performs poorly on new data</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Overfitting occurs when a model captures noise instead of general patterns.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Training vs. Testing Data</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is data split into training and testing sets?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) To reduce dataset size</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) To increase speed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) To evaluate model performance on unseen data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) To remove outliers</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) To evaluate model performance on unseen data</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Testing data assesses how well a model generalizes beyond training examples.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Predictive Variables</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which variable is typically used to make predictions?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Dependent variable</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Response variable</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Independent variable</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Output label</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Independent variable</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Independent variables (features) are used to predict outcomes.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Uncertainty in Predictions</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why are predictions never 100% certain?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Models are useless</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Data is always incorrect</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Real-world systems are complex and variable</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Computers are limited</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Real-world systems are complex and variable</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Randomness, unknown factors, and changing conditions introduce uncertainty.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Evaluation Metrics</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which metric is commonly used to evaluate predictive accuracy?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Mean Squared Error (MSE)</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Median</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Mode</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Range</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) Mean Squared Error (MSE)</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>MSE measures the average squared difference between predicted and actual values.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Time Series Prediction</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which factor is especially important in time-series forecasting?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Data randomness</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Order of observations</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Sample size only</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Color of charts</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Order of observations</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Time-series data depends on the sequence and temporal structure of observations.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Predictive Bias</h4>
+                </div>
+                <p className="text-white/80 mb-4">How can predictive models unintentionally create unfair outcomes?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) By using large datasets</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) By ignoring historical patterns</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) By learning biases present in the data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) By being too slow</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) By learning biases present in the data</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Models reflect the data they are trained on, including embedded biases.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Ethical Use of Predictive Analytics</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which is an ethical best practice?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Automating decisions without review</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Using predictions as absolute truth</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Explaining model limitations and uncertainty</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Hiding assumptions</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Explaining model limitations and uncertainty</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Transparency ensures responsible interpretation and use of predictions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 13 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q13</span>
+                  <h4 className="font-semibold text-lg">Real-World Application</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which scenario best illustrates predictive analysis?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Counting past exam results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Predicting student dropout risk using performance data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Displaying historical enrollment</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Sorting names alphabetically</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Predicting student dropout risk using performance data</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Predictive analytics helps anticipate outcomes to support proactive decision-making.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 14 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#7c3aed] text-white text-sm font-bold px-3 py-1 rounded-full">Q14</span>
+                  <h4 className="font-semibold text-lg">Advanced Reasoning (Competition-Level)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why should predictive results always be combined with human judgment?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Models are always wrong</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Predictions lack mathematical basis</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Context and ethical implications require human oversight</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Algorithms cannot handle data</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Context and ethical implications require human oversight</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Human reasoning ensures predictions are applied responsibly and appropriately.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
