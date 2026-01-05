@@ -6455,6 +6455,381 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Data Interpretation - Big Data Concepts */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">💾</span>
+              DATA INTERPRETATION (Big Data Concepts) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: 3 Vs (Volume, Velocity, Variety), Structured vs Unstructured Data, Data Sources, Distributed Computing, MapReduce, Data Quality, Bias, Ethics & Privacy, Big Data in Science</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Defining Big Data</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which characteristic is NOT traditionally considered one of the core dimensions of Big Data?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Volume</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Velocity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Variety</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Accuracy</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: D) Accuracy</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Big Data is commonly described by the "3 Vs": Volume, Velocity, and Variety (sometimes extended to include Veracity and Value). Accuracy alone is not a defining dimension.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Volume</h4>
+                </div>
+                <p className="text-white/80 mb-4">What does Volume refer to in Big Data systems?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Speed of data processing</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Diversity of data formats</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Size and amount of data generated</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Quality of data</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Size and amount of data generated</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Volume describes the massive scale of data, often measured in terabytes, petabytes, or exabytes.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Velocity</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which scenario best represents Velocity?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Storing historical census data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Analyzing satellite images yearly</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Processing real-time sensor data from IoT devices</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Cleaning survey responses</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Processing real-time sensor data from IoT devices</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Velocity refers to how fast data is generated, transmitted, and processed.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Variety</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which dataset best demonstrates Variety?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A spreadsheet of exam scores</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) A single database table</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Text, images, videos, and sensor logs combined</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) A numerical time series</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Text, images, videos, and sensor logs combined</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Variety involves handling structured, semi-structured, and unstructured data simultaneously.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Structured vs. Unstructured Data</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which is an example of unstructured data?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) SQL table</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) CSV file</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Social media video posts</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Relational database</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Social media video posts</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Unstructured data does not follow a predefined schema, making analysis more complex.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Data Sources in Big Data</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which is a Big Data source?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Single classroom survey</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Manual attendance sheet</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Global GPS location streams</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Small experimental dataset</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Global GPS location streams</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Big Data often originates from large-scale, continuously generated digital systems.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Distributed Computing</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is distributed computing essential for Big Data?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It reduces data size</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It allows multiple computers to process data in parallel</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It eliminates errors</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It guarantees accuracy</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) It allows multiple computers to process data in parallel</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Big Data processing requires parallelization to handle scale efficiently.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">MapReduce Concept</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is the primary goal of the MapReduce model?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Encrypt data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Visualize datasets</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Divide tasks and aggregate results efficiently</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Store data permanently</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Divide tasks and aggregate results efficiently</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>MapReduce splits tasks across machines and combines results for large-scale computation.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Big Data vs. Traditional Data</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which difference is most accurate?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Big Data is always numerical</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Traditional data cannot be analyzed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Big Data requires scalable infrastructure</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Traditional data is useless</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Big Data requires scalable infrastructure</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Big Data demands distributed storage and computing architectures beyond traditional systems.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Data Quality Challenge</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which challenge is most common in Big Data?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Lack of storage</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Perfect consistency</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Noise and missing values</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Absence of algorithms</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Noise and missing values</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Large datasets often contain errors, duplicates, and incomplete records.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Big Data & Bias</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why can Big Data still lead to biased conclusions?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Large data removes bias</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Algorithms are neutral</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Data reflects existing societal biases</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Size guarantees fairness</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Data reflects existing societal biases</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Big datasets can amplify bias if underlying data sources are biased.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Ethics & Privacy</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which concern is most critical in Big Data analysis involving students?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) File size</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Processing speed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Data privacy and consent</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Visualization style</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Data privacy and consent</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Student data requires strict protection under privacy and child safety regulations.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 13 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q13</span>
+                  <h4 className="font-semibold text-lg">Big Data in Science</h4>
+                </div>
+                <p className="text-white/80 mb-4">How does Big Data benefit scientific research?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Eliminates hypotheses</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Replaces experiments</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Enables pattern discovery at scale</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Guarantees causation</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Enables pattern discovery at scale</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Big Data allows researchers to detect trends and correlations across massive datasets.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 14 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#059669] text-white text-sm font-bold px-3 py-1 rounded-full">Q14</span>
+                  <h4 className="font-semibold text-lg">Interpretation Skill (Competition-Level)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement reflects responsible Big Data interpretation?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Bigger data always means better conclusions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Correlation equals causation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Results must be contextualized and validated</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Algorithms replace human judgment</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Results must be contextualized and validated</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Big Data insights require domain knowledge, validation, and ethical reasoning.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
