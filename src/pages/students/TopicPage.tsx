@@ -506,6 +506,397 @@ D) Cannot be added`,
         explanation: 'Rotations, scaling, reflections → matrices. This bridges to graphics, robotics, and AI.'
       }
     ]
+  },
+  'modern-physics': {
+    title: 'Modern Fizik',
+    titleEn: 'Modern Physics',
+    concept: {
+      native: `Modern fizik, 20. yüzyılda gelişen ve klasik fiziğin ötesine geçen fizik dalıdır.
+
+Temel konular:
+• Fotoelektrik etki: E = hf
+• Foton enerjisi ve frekans ilişkisi
+• de Broglie dalga boyu: λ = h/p
+• Dalga-parçacık ikiliği
+• Atomik enerji seviyeleri
+• Kütle-enerji eşdeğerliği: E = mc²
+
+Uygulamalar:
+• Güneş panelleri
+• Lazerler
+• Nükleer enerji`,
+      english: `Modern physics is the branch of physics developed in the 20th century that goes beyond classical physics.
+
+Key topics:
+• Photoelectric effect: E = hf
+• Photon energy and frequency relationship
+• de Broglie wavelength: λ = h/p
+• Wave-particle duality
+• Atomic energy levels
+• Mass-energy equivalence: E = mc²
+
+Applications:
+• Solar panels
+• Lasers
+• Nuclear energy`
+    },
+    examples: [
+      {
+        problem: `According to the photoelectric effect, electrons are emitted from a metal surface when:
+A) The intensity of light is increased
+B) The frequency of light exceeds a minimum threshold
+C) The temperature of the metal increases
+D) The wavelength of light is increased`,
+        solution: 'B) The frequency of light exceeds a minimum threshold',
+        explanation: `Energy depends on frequency, not intensity. This disproved classical wave-only models.
+Key relation: E = hf`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'The energy of a photon is directly proportional to:',
+        options: ['Its wavelength', 'Its speed', 'Its frequency', 'Its mass'],
+        correctIndex: 2,
+        explanation: 'E = hf. Higher frequency → higher photon energy.'
+      },
+      {
+        question: 'In a photoelectric experiment, if the intensity of light is increased while the frequency remains below the threshold, what happens?',
+        options: ['More electrons are emitted', 'Electrons are emitted with greater kinetic energy', 'No electrons are emitted', 'The metal heats up and emits electrons'],
+        correctIndex: 2,
+        explanation: 'Below threshold frequency → no photoelectric effect, regardless of intensity.'
+      },
+      {
+        question: 'According to de Broglie (λ = h/p), which particle would have the shortest wavelength?',
+        options: ['A slow-moving electron', 'A fast-moving electron', 'A slow-moving proton', 'A fast-moving proton'],
+        correctIndex: 3,
+        explanation: 'Larger momentum → shorter wavelength. Proton has much larger mass, fast proton → maximum momentum.'
+      },
+      {
+        question: 'Which phenomenon best demonstrates the wave nature of electrons?',
+        options: ['Photoelectric effect', 'Electron diffraction', 'Nuclear fusion', 'Radioactive decay'],
+        correctIndex: 1,
+        explanation: 'Diffraction and interference are wave behaviors, even for particles.'
+      },
+      {
+        question: 'Why do atoms emit discrete (line) spectra instead of continuous spectra?',
+        options: ['Electrons move randomly', 'Atoms vibrate at fixed frequencies', 'Electrons occupy quantized energy levels', 'Photons lose energy over time'],
+        correctIndex: 2,
+        explanation: 'Electron transitions occur only between allowed energy states.'
+      },
+      {
+        question: 'Which force is primarily responsible for holding the nucleus together?',
+        options: ['Gravitational force', 'Electromagnetic force', 'Strong nuclear force', 'Weak nuclear force'],
+        correctIndex: 2,
+        explanation: 'The strong nuclear force overcomes proton–proton repulsion at short distances.'
+      },
+      {
+        question: 'Einstein\'s equation E = mc² implies that:',
+        options: ['Mass can be destroyed', 'Energy has mass', 'Mass and energy are interchangeable', 'Energy always travels at speed c'],
+        correctIndex: 2,
+        explanation: 'Small amounts of mass can convert into enormous energy → nuclear reactions.'
+      },
+      {
+        question: 'Which process powers the Sun?',
+        options: ['Nuclear fission', 'Chemical combustion', 'Nuclear fusion', 'Radioactive decay'],
+        correctIndex: 2,
+        explanation: 'Hydrogen nuclei fuse to form helium, releasing energy.'
+      },
+      {
+        question: 'Which statement best summarizes modern physics?',
+        options: ['Energy is continuous', 'Matter behaves only as particles', 'Classical physics explains all phenomena', 'Nature behaves discretely at microscopic scales'],
+        correctIndex: 3,
+        explanation: 'Modern physics introduced quantization, probability, and duality.'
+      }
+    ]
+  },
+  'quantum-intro': {
+    title: 'Kuantuma Giriş',
+    titleEn: 'Introduction to Quantum Physics',
+    concept: {
+      native: `Kuantum fiziği, atom altı parçacıkların davranışını açıklayan fizik dalıdır.
+
+Temel kavramlar:
+• Kuantizasyon: Enerji kesikli paketler halinde
+• Planck sabiti: h = 6.626 × 10⁻³⁴ J·s
+• Dalga-parçacık ikiliği
+• Heisenberg belirsizlik ilkesi
+• Dalga fonksiyonu ve olasılık
+
+Klasik vs Kuantum:
+• Klasik: Kesin konum ve hız
+• Kuantum: Olasılıksal tahminler`,
+      english: `Quantum physics is the branch of physics that explains the behavior of subatomic particles.
+
+Key concepts:
+• Quantization: Energy in discrete packets
+• Planck's constant: h = 6.626 × 10⁻³⁴ J·s
+• Wave-particle duality
+• Heisenberg uncertainty principle
+• Wave function and probability
+
+Classical vs Quantum:
+• Classical: Exact position and velocity
+• Quantum: Probabilistic predictions`
+    },
+    examples: [
+      {
+        problem: `Which statement best describes the quantum world?
+A) Objects have exact positions and velocities at all times
+B) Energy is always continuous
+C) Outcomes can only be predicted probabilistically
+D) Measurement does not affect the system`,
+        solution: 'C) Outcomes can only be predicted probabilistically',
+        explanation: `Quantum physics replaces certainty with probability.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'What does it mean that energy is "quantized"?',
+        options: ['Energy can be infinitely divided', 'Energy exists only in discrete packets', 'Energy depends only on mass', 'Energy is always conserved'],
+        correctIndex: 1,
+        explanation: 'Atoms absorb and emit energy in fixed amounts (quanta).'
+      },
+      {
+        question: 'Why is Planck\'s constant h important in quantum physics?',
+        options: ['It determines the speed of light', 'It connects energy with frequency', 'It explains gravity', 'It measures mass'],
+        correctIndex: 1,
+        explanation: 'E = hf. This equation started the quantum revolution.'
+      },
+      {
+        question: 'Which statement best explains wave–particle duality?',
+        options: ['Particles sometimes disappear', 'Waves sometimes gain mass', 'Matter and light can behave as both waves and particles', 'Only photons show wave behavior'],
+        correctIndex: 2,
+        explanation: 'Electrons can diffract like waves and collide like particles.'
+      },
+      {
+        question: 'Electron diffraction is strong evidence that:',
+        options: ['Electrons are charged', 'Electrons have mass', 'Electrons behave like waves', 'Electrons travel at speed of light'],
+        correctIndex: 2,
+        explanation: 'Diffraction is a wave phenomenon.'
+      },
+      {
+        question: 'The uncertainty principle states that:',
+        options: ['We can measure position and momentum exactly', 'Measurement errors cause uncertainty', 'Nature fundamentally limits what can be known', 'Instruments are not precise enough'],
+        correctIndex: 2,
+        explanation: 'Uncertainty is not due to poor instruments—it is fundamental.'
+      },
+      {
+        question: 'What happens when a quantum system is measured?',
+        options: ['Nothing changes', 'The wavefunction collapses', 'Energy is destroyed', 'The particle disappears'],
+        correctIndex: 1,
+        explanation: 'Before measurement → probability. After measurement → definite outcome.'
+      },
+      {
+        question: 'In quantum mechanics, the square of the wavefunction represents:',
+        options: ['Energy', 'Velocity', 'Probability density', 'Force'],
+        correctIndex: 2,
+        explanation: '|ψ|² = probability'
+      },
+      {
+        question: 'How do quantum predictions differ from classical predictions?',
+        options: ['Quantum is always wrong', 'Quantum physics ignores forces', 'Quantum predictions are statistical', 'Quantum only applies to large objects'],
+        correctIndex: 2,
+        explanation: 'Quantum mechanics predicts likelihoods, not certainties.'
+      },
+      {
+        question: 'Why is quantum physics important for technology?',
+        options: ['It only applies to space', 'It enables semiconductors, lasers, quantum computing', 'It has no practical use', 'It only explains gravity'],
+        correctIndex: 1,
+        explanation: 'No quantum physics → no computers, no internet, no MRI.'
+      }
+    ]
+  },
+  'relativity': {
+    title: 'Görelilik',
+    titleEn: 'Introduction to Relativity',
+    concept: {
+      native: `Görelilik teorisi, Einstein tarafından geliştirilen ve uzay, zaman ve kütlenin ilişkisini açıklayan teoridir.
+
+Özel görelilik:
+• Işık hızı sabittir (c ≈ 3×10⁸ m/s)
+• Zaman genişlemesi
+• Uzunluk kısalması
+• Eşzamanlılığın göreliliği
+
+Genel görelilik:
+• Kütle uzay-zamanı büker
+• Kütleçekim bir kuvvet değil, geometridir
+
+Uygulamalar:
+• GPS sistemleri
+• Kara delik fiziği`,
+      english: `Relativity theory, developed by Einstein, explains the relationship between space, time, and mass.
+
+Special relativity:
+• Speed of light is constant (c ≈ 3×10⁸ m/s)
+• Time dilation
+• Length contraction
+• Relativity of simultaneity
+
+General relativity:
+• Mass curves spacetime
+• Gravity is not a force, it's geometry
+
+Applications:
+• GPS systems
+• Black hole physics`
+    },
+    examples: [
+      {
+        problem: `What is the core idea of Einstein's special relativity?
+A) Time is absolute
+B) The speed of light is the same for all observers
+C) Mass cannot change
+D) Energy is always conserved`,
+        solution: 'B) The speed of light is the same for all observers',
+        explanation: `This postulate leads to time dilation and length contraction.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'What happens to time for a moving observer (relative to a stationary one)?',
+        options: ['Time speeds up', 'Time slows down', 'Time stays the same', 'Time reverses'],
+        correctIndex: 1,
+        explanation: 'Time dilation: moving clocks run slower.'
+      },
+      {
+        question: 'What happens to the length of an object moving at high speed?',
+        options: ['It increases', 'It decreases in the direction of motion', 'It stays the same', 'It oscillates'],
+        correctIndex: 1,
+        explanation: 'Length contraction: objects shorten along the direction of motion.'
+      },
+      {
+        question: 'Two events that are simultaneous in one frame:',
+        options: ['Are simultaneous in all frames', 'May not be simultaneous in another frame', 'Always happen at the same place', 'Cannot be observed'],
+        correctIndex: 1,
+        explanation: 'Simultaneity is relative—it depends on the observer\'s motion.'
+      },
+      {
+        question: 'Why is E = mc² significant?',
+        options: ['It proves energy is infinite', 'It shows mass and energy are equivalent', 'It only applies to light', 'It disproves quantum physics'],
+        correctIndex: 1,
+        explanation: 'A small amount of mass can release enormous energy (nuclear reactions).'
+      },
+      {
+        question: 'GPS satellites must account for relativity because:',
+        options: ['They move slowly', 'Time runs differently in orbit', 'They use quantum physics', 'They are very heavy'],
+        correctIndex: 1,
+        explanation: 'Without relativistic corrections, GPS would drift by kilometers per day.'
+      },
+      {
+        question: 'In general relativity, gravity is described as:',
+        options: ['A force between masses', 'Curvature of spacetime', 'Electromagnetic attraction', 'Quantum entanglement'],
+        correctIndex: 1,
+        explanation: 'Mass tells spacetime how to curve; spacetime tells mass how to move.'
+      },
+      {
+        question: 'What is the maximum speed anything can travel?',
+        options: ['Sound speed', 'Light speed', 'Infinite', 'Depends on mass'],
+        correctIndex: 1,
+        explanation: 'Nothing with mass can reach or exceed the speed of light.'
+      },
+      {
+        question: 'What is the big picture of relativity?',
+        options: ['Space and time are separate', 'Only energy matters', 'Space and time are unified into spacetime', 'Gravity is a force only'],
+        correctIndex: 2,
+        explanation: 'Relativity unifies space and time into spacetime.'
+      }
+    ]
+  },
+  'nuclear-physics': {
+    title: 'Nükleer Fizik',
+    titleEn: 'Nuclear Physics',
+    concept: {
+      native: `Nükleer fizik, atom çekirdeğinin yapısını ve davranışını inceleyen fizik dalıdır.
+
+Temel kavramlar:
+• Protonlar ve nötronlar (nükleonlar)
+• Güçlü nükleer kuvvet
+• Radyoaktif bozunma (alfa, beta, gama)
+• Yarı ömür
+• Nükleer fisyon ve füzyon
+• Bağlanma enerjisi
+
+Uygulamalar:
+• Nükleer enerji
+• Tıbbi görüntüleme
+• Karbon tarihleme`,
+      english: `Nuclear physics is the branch of physics that studies the structure and behavior of atomic nuclei.
+
+Key concepts:
+• Protons and neutrons (nucleons)
+• Strong nuclear force
+• Radioactive decay (alpha, beta, gamma)
+• Half-life
+• Nuclear fission and fusion
+• Binding energy
+
+Applications:
+• Nuclear energy
+• Medical imaging
+• Carbon dating`
+    },
+    examples: [
+      {
+        problem: `What holds the nucleus together despite proton repulsion?
+A) Gravitational force
+B) Electromagnetic force
+C) Strong nuclear force
+D) Weak nuclear force`,
+        solution: 'C) Strong nuclear force',
+        explanation: `The strong nuclear force is much stronger than electromagnetic repulsion at short distances, binding protons and neutrons together.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'What is the composition of an atomic nucleus?',
+        options: ['Electrons and protons', 'Protons and neutrons', 'Only protons', 'Electrons and neutrons'],
+        correctIndex: 1,
+        explanation: 'The nucleus contains protons (positive) and neutrons (neutral).'
+      },
+      {
+        question: 'What type of radiation consists of helium nuclei?',
+        options: ['Alpha', 'Beta', 'Gamma', 'X-ray'],
+        correctIndex: 0,
+        explanation: 'Alpha particles are helium nuclei (2 protons + 2 neutrons).'
+      },
+      {
+        question: 'What is half-life?',
+        options: ['Time for all atoms to decay', 'Time for half the atoms to decay', 'Time for energy to double', 'Time for fusion to occur'],
+        correctIndex: 1,
+        explanation: 'Half-life is the time for half of a radioactive sample to decay.'
+      },
+      {
+        question: 'Nuclear fission involves:',
+        options: ['Combining light nuclei', 'Splitting heavy nuclei', 'Electron emission', 'Photon absorption'],
+        correctIndex: 1,
+        explanation: 'Fission splits heavy nuclei (like uranium) into lighter ones, releasing energy.'
+      },
+      {
+        question: 'Nuclear fusion involves:',
+        options: ['Splitting heavy nuclei', 'Combining light nuclei', 'Electron capture', 'Neutron decay'],
+        correctIndex: 1,
+        explanation: 'Fusion combines light nuclei (like hydrogen) into heavier ones, releasing energy.'
+      },
+      {
+        question: 'Which process powers the Sun?',
+        options: ['Fission', 'Fusion', 'Chemical burning', 'Radioactive decay'],
+        correctIndex: 1,
+        explanation: 'The Sun fuses hydrogen into helium, releasing enormous energy.'
+      },
+      {
+        question: 'Binding energy per nucleon is highest for:',
+        options: ['Very light nuclei', 'Very heavy nuclei', 'Medium-mass nuclei (like iron)', 'All nuclei equally'],
+        correctIndex: 2,
+        explanation: 'Iron-56 has the highest binding energy per nucleon, making it the most stable.'
+      },
+      {
+        question: 'Nuclear physics impacts which areas?',
+        options: ['Only weapons', 'Only energy', 'Energy, medicine, archaeology, and space science', 'Only space exploration'],
+        correctIndex: 2,
+        explanation: 'Nuclear physics impacts energy, medicine (PET, MRI), archaeology (carbon dating), and space science.'
+      }
+    ]
   }
 };
 
