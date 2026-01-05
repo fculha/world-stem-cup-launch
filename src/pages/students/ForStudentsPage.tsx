@@ -4710,6 +4710,355 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Biology - Bioinformatics */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">💻</span>
+              BIOLOGY (Bioinformatics) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Bioinformatics Definition, Biological Data, Genome Sequencing, Databases, Sequence Alignment, BLAST, Protein Structure, Algorithms, Phylogenetic Trees, Personalized Medicine, Ethics</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Bioinformatics Definition</h4>
+                </div>
+                <p className="text-white/80 mb-4">Bioinformatics is best described as:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The study of fossils using computers</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The application of computer science and statistics to analyze biological data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The design of laboratory equipment</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The study of animal behavior</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The application of computer science and statistics to analyze biological data</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Bioinformatics combines biology, computer science, and data analysis to interpret complex biological data.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Biological Data Types</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which of the following is most commonly analyzed in bioinformatics?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Rock layers</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) DNA and protein sequences</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Climate maps</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Electrical circuits</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) DNA and protein sequences</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Genomic and proteomic sequences are core bioinformatics data types.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Genome Sequencing</h4>
+                </div>
+                <p className="text-white/80 mb-4">Genome sequencing refers to:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Editing genes</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Measuring protein mass</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Determining the complete DNA sequence of an organism</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Counting chromosomes</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Determining the complete DNA sequence of an organism</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Sequencing reveals the exact order of nucleotides in DNA.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Databases</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which is an example of a biological database?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Google Maps</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) GenBank</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Excel</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Photoshop</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) GenBank</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>GenBank stores publicly available DNA sequences used worldwide.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Sequence Alignment</h4>
+                </div>
+                <p className="text-white/80 mb-4">The main purpose of sequence alignment is to:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Increase mutation rates</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Identify similarities between biological sequences</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Delete genes</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Speed up cell division</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Identify similarities between biological sequences</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Alignment helps identify evolutionary relationships and functional regions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">BLAST Tool</h4>
+                </div>
+                <p className="text-white/80 mb-4">BLAST is primarily used to:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Edit DNA</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Compare a sequence against a database</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Simulate protein folding</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Visualize cells</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Compare a sequence against a database</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>BLAST finds similar sequences in large biological databases.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Protein Structure Prediction</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is protein structure prediction important?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Proteins have no structure</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Structure determines protein function</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It speeds up DNA replication</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Proteins are only decorative</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Structure determines protein function</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A protein's 3D structure directly affects its biological role.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Algorithms in Bioinformatics</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why are algorithms critical in bioinformatics?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Biological data is small</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Manual analysis is faster</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Biological datasets are extremely large and complex</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Algorithms replace experiments</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Biological datasets are extremely large and complex</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Genomic data is too large for manual processing.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Phylogenetic Trees</h4>
+                </div>
+                <p className="text-white/80 mb-4">Phylogenetic trees are used to:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Predict protein folding</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Show evolutionary relationships</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Measure enzyme speed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Store DNA</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Show evolutionary relationships</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>They visualize evolutionary distance and ancestry.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Bioinformatics in Medicine</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which application best represents bioinformatics in medicine?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Vaccine distribution</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Personalized medicine based on genetic profiles</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Blood pressure measurement</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Surgical robotics</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Personalized medicine based on genetic profiles</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Bioinformatics enables precision medicine using genetic data.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Data Interpretation</h4>
+                </div>
+                <p className="text-white/80 mb-4">A mutation appears repeatedly in patients with the same disease. What is the most reasonable bioinformatics conclusion?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The mutation is random</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The mutation may be linked to the disease</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The disease is environmental only</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The data is useless</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The mutation may be linked to the disease</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Recurrent mutations suggest potential disease association.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Ethics in Bioinformatics</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which is a major ethical concern in bioinformatics?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Computer speed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Data storage cost</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Genetic privacy and data security</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) DNA size</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Genetic privacy and data security</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Genomic data is highly sensitive and must be protected.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 13 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#a855f7] text-white text-sm font-bold px-3 py-1 rounded-full">Q13</span>
+                  <h4 className="font-semibold text-lg">High-Level Reasoning (Competition Style)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which bioinformatics advancement has the greatest long-term global impact?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Faster gaming processors</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) DNA-based ancestry tests for entertainment</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Early disease detection through genomic analysis</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Cosmetic gene screening</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Early disease detection through genomic analysis</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Early detection can save lives and reduce healthcare inequality.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
