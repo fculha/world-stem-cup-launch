@@ -1315,6 +1315,327 @@ D) Compressing files`,
         explanation: 'Cryptography underpins banking, messaging, blockchain, and national security.'
       }
     ]
+  },
+  'molecular-biology': {
+    title: 'Moleküler Biyoloji',
+    titleEn: 'Molecular Biology',
+    concept: {
+      native: `Moleküler biyoloji, hücrelerin moleküler düzeydeki işleyişini inceleyen bilim dalıdır.
+
+Temel kavramlar:
+• Merkezi dogma: DNA → RNA → Protein
+• DNA yapısı ve replikasyonu
+• Transkripsiyon ve translasyon
+• Genetik kod
+• Mutasyonlar
+• Gen regülasyonu`,
+      english: `Molecular biology is the branch of biology that studies the molecular basis of cellular processes.
+
+Key concepts:
+• Central dogma: DNA → RNA → Protein
+• DNA structure and replication
+• Transcription and translation
+• Genetic code
+• Mutations
+• Gene regulation`
+    },
+    examples: [
+      {
+        problem: `The central dogma of molecular biology describes the flow of genetic information as:
+A) Protein → DNA → RNA
+B) RNA → DNA → Protein
+C) DNA → RNA → Protein
+D) DNA → Protein → RNA`,
+        solution: 'C) DNA → RNA → Protein',
+        explanation: `Genetic information is transcribed from DNA to RNA and translated into protein.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'Which statement correctly describes DNA structure?',
+        options: ['Single-stranded helix', 'Double helix with antiparallel strands', 'Circular protein chain', 'Triple helix'],
+        correctIndex: 1,
+        explanation: 'DNA consists of two antiparallel strands forming a double helix.'
+      },
+      {
+        question: 'Which base pairing is correct in DNA?',
+        options: ['A–G', 'C–T', 'A–T', 'G–T'],
+        correctIndex: 2,
+        explanation: 'Adenine pairs with Thymine via hydrogen bonds; Cytosine pairs with Guanine.'
+      },
+      {
+        question: 'Which enzyme is responsible for synthesizing the new DNA strand?',
+        options: ['Helicase', 'DNA ligase', 'DNA polymerase', 'RNA polymerase'],
+        correctIndex: 2,
+        explanation: 'DNA polymerase adds nucleotides in the 5′ → 3′ direction.'
+      },
+      {
+        question: 'Which type of RNA carries amino acids to the ribosome?',
+        options: ['mRNA', 'rRNA', 'tRNA', 'snRNA'],
+        correctIndex: 2,
+        explanation: 'tRNA matches codons with the correct amino acids during translation.'
+      },
+      {
+        question: 'Which process converts genetic information into a functional protein?',
+        options: ['Replication', 'Transcription', 'Translation', 'Mutation'],
+        correctIndex: 2,
+        explanation: 'Translation reads mRNA codons to build a polypeptide.'
+      },
+      {
+        question: 'Why is the genetic code described as "universal"?',
+        options: ['All organisms have identical DNA', 'Most organisms use the same codons for the same amino acids', 'All proteins are identical', 'DNA does not mutate'],
+        correctIndex: 1,
+        explanation: 'With few exceptions, codons specify the same amino acids across life.'
+      },
+      {
+        question: 'Which mutation is most likely to have no effect on the protein?',
+        options: ['Frameshift mutation', 'Nonsense mutation', 'Silent mutation', 'Large deletion'],
+        correctIndex: 2,
+        explanation: 'A silent mutation does not change the amino acid due to codon redundancy.'
+      },
+      {
+        question: 'Gene expression is regulated primarily to:',
+        options: ['Increase mutation rates', 'Save cellular energy and resources', 'Eliminate DNA', 'Change species'],
+        correctIndex: 1,
+        explanation: 'Cells express genes only when needed to maintain efficiency.'
+      },
+      {
+        question: 'In the lac operon, genes involved in lactose metabolism are:',
+        options: ['Always active', 'Always inactive', 'Activated only when lactose is present', 'Controlled by ribosomes'],
+        correctIndex: 2,
+        explanation: 'The lac operon is an inducible system—turned on by lactose.'
+      },
+      {
+        question: 'Which technique is used to amplify a specific DNA segment?',
+        options: ['Gel electrophoresis', 'DNA sequencing', 'PCR', 'Cloning'],
+        correctIndex: 2,
+        explanation: 'PCR (Polymerase Chain Reaction) rapidly copies DNA segments.'
+      },
+      {
+        question: 'Why is molecular biology fundamental to modern medicine?',
+        options: ['It explains ecosystems', 'It enables gene therapy, diagnostics, and vaccines', 'It replaces chemistry', 'It studies fossils'],
+        correctIndex: 1,
+        explanation: 'Molecular biology underpins genomics, cancer research, and personalized medicine.'
+      }
+    ]
+  },
+  'biotechnology': {
+    title: 'Biyoteknoloji',
+    titleEn: 'Biotechnology',
+    concept: {
+      native: `Biyoteknoloji, canlı organizmaları veya biyolojik sistemleri kullanarak yararlı ürünler geliştiren bilim dalıdır.
+
+Temel kavramlar:
+• Rekombinant DNA teknolojisi
+• Plazmidler ve gen transferi
+• PCR ve jel elektroforezi
+• CRISPR-Cas9 gen düzenleme
+• GDO'lar
+• Gen terapisi ve kök hücreler`,
+      english: `Biotechnology is the use of living organisms or biological systems to develop useful products.
+
+Key concepts:
+• Recombinant DNA technology
+• Plasmids and gene transfer
+• PCR and gel electrophoresis
+• CRISPR-Cas9 gene editing
+• GMOs
+• Gene therapy and stem cells`
+    },
+    examples: [
+      {
+        problem: `Biotechnology is best defined as:
+A) The study of ecosystems
+B) The use of living organisms or biological systems to develop useful products
+C) The classification of organisms
+D) The study of fossils`,
+        solution: 'B) The use of living organisms or biological systems to develop useful products',
+        explanation: `Biotechnology applies biology to technology, from medicine to agriculture.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'Recombinant DNA technology involves:',
+        options: ['Destroying DNA', 'Mixing proteins', 'Combining DNA from different sources', 'Cloning whole organisms'],
+        correctIndex: 2,
+        explanation: 'Genes from different organisms are combined to produce new traits or products.'
+      },
+      {
+        question: 'Plasmids are primarily used in biotechnology because they:',
+        options: ['Produce energy', 'Act as vectors to transfer genes', 'Control mutations', 'Are part of the nucleus'],
+        correctIndex: 1,
+        explanation: 'Plasmids are circular DNA molecules used as gene carriers, especially in bacteria.'
+      },
+      {
+        question: 'Why is genetically engineered bacteria used to produce human insulin?',
+        options: ['It is cheaper and safer than animal insulin', 'Humans cannot produce insulin', 'Bacteria naturally produce insulin', 'Insulin does not work in humans'],
+        correctIndex: 0,
+        explanation: 'Recombinant insulin is identical to human insulin, reducing allergic reactions.'
+      },
+      {
+        question: 'The main purpose of PCR is to:',
+        options: ['Separate DNA fragments', 'Cut DNA', 'Amplify DNA', 'Sequence DNA'],
+        correctIndex: 2,
+        explanation: 'PCR makes millions of copies of a specific DNA segment.'
+      },
+      {
+        question: 'Gel electrophoresis separates DNA fragments based on:',
+        options: ['Color', 'Shape', 'Electrical charge only', 'Size'],
+        correctIndex: 3,
+        explanation: 'Smaller DNA fragments move faster through the gel.'
+      },
+      {
+        question: 'CRISPR-Cas9 technology is primarily used for:',
+        options: ['DNA replication', 'DNA sequencing', 'Precise gene editing', 'Protein folding'],
+        correctIndex: 2,
+        explanation: 'CRISPR allows targeted modification of specific genes.'
+      },
+      {
+        question: 'A genetically modified organism (GMO) is:',
+        options: ['An organism exposed to radiation', 'An organism with DNA altered using biotechnology', 'A cloned organism', 'An extinct species'],
+        correctIndex: 1,
+        explanation: 'GMOs contain introduced or modified genes for desired traits.'
+      },
+      {
+        question: 'Which application is an example of medical biotechnology?',
+        options: ['Biofuels', 'Pest-resistant crops', 'Gene therapy', 'Composting'],
+        correctIndex: 2,
+        explanation: 'Gene therapy aims to treat diseases at the genetic level.'
+      },
+      {
+        question: 'Stem cells are important because they:',
+        options: ['Cannot divide', 'Can differentiate into specialized cell types', 'Only exist in plants', 'Cause mutations'],
+        correctIndex: 1,
+        explanation: 'Stem cells have self-renewal and differentiation abilities.'
+      },
+      {
+        question: 'Which is a major ethical concern in biotechnology?',
+        options: ['Speed of computers', 'Gene editing in humans', 'DNA size', 'Bacterial growth'],
+        correctIndex: 1,
+        explanation: 'Human gene editing raises concerns about equity, consent, and long-term effects.'
+      },
+      {
+        question: 'Bioremediation refers to:',
+        options: ['Medical treatment', 'Cleaning pollutants using organisms', 'DNA sequencing', 'Crop breeding'],
+        correctIndex: 1,
+        explanation: 'Microorganisms are used to break down environmental pollutants.'
+      },
+      {
+        question: 'Which biotechnology advancement has the greatest potential to impact global health equity?',
+        options: ['Designer pets', 'Gene editing for cosmetic traits', 'Affordable vaccine production', 'Luxury pharmaceuticals'],
+        correctIndex: 2,
+        explanation: 'Low-cost vaccines can save millions of lives globally.'
+      }
+    ]
+  },
+  'bioinformatics': {
+    title: 'Biyoinformatik',
+    titleEn: 'Bioinformatics',
+    concept: {
+      native: `Biyoinformatik, biyolojik verileri analiz etmek için bilgisayar bilimi ve istatistik uygulayan disiplinler arası bir alandır.
+
+Temel kavramlar:
+• Genom dizileme
+• Dizi hizalama
+• BLAST araçları
+• Protein yapı tahmini
+• Filogenetik ağaçlar
+• Kişiselleştirilmiş tıp`,
+      english: `Bioinformatics is an interdisciplinary field that applies computer science and statistics to analyze biological data.
+
+Key concepts:
+• Genome sequencing
+• Sequence alignment
+• BLAST tools
+• Protein structure prediction
+• Phylogenetic trees
+• Personalized medicine`
+    },
+    examples: [
+      {
+        problem: `Bioinformatics is best described as:
+A) The study of fossils using computers
+B) The application of computer science and statistics to analyze biological data
+C) The design of laboratory equipment
+D) The study of animal behavior`,
+        solution: 'B) The application of computer science and statistics to analyze biological data',
+        explanation: `Bioinformatics combines biology, computer science, and data analysis to interpret complex biological data.`
+      }
+    ],
+    practiceQuestions: [
+      {
+        question: 'Which of the following is most commonly analyzed in bioinformatics?',
+        options: ['Rock layers', 'DNA and protein sequences', 'Climate maps', 'Electrical circuits'],
+        correctIndex: 1,
+        explanation: 'Genomic and proteomic sequences are core bioinformatics data types.'
+      },
+      {
+        question: 'Genome sequencing refers to:',
+        options: ['Editing genes', 'Measuring protein mass', 'Determining the complete DNA sequence of an organism', 'Counting chromosomes'],
+        correctIndex: 2,
+        explanation: 'Sequencing reveals the exact order of nucleotides in DNA.'
+      },
+      {
+        question: 'Which is an example of a biological database?',
+        options: ['Google Maps', 'GenBank', 'Excel', 'Photoshop'],
+        correctIndex: 1,
+        explanation: 'GenBank stores publicly available DNA sequences used worldwide.'
+      },
+      {
+        question: 'The main purpose of sequence alignment is to:',
+        options: ['Increase mutation rates', 'Identify similarities between biological sequences', 'Delete genes', 'Speed up cell division'],
+        correctIndex: 1,
+        explanation: 'Alignment helps identify evolutionary relationships and functional regions.'
+      },
+      {
+        question: 'BLAST is primarily used to:',
+        options: ['Edit DNA', 'Compare a sequence against a database', 'Simulate protein folding', 'Visualize cells'],
+        correctIndex: 1,
+        explanation: 'BLAST finds similar sequences in large biological databases.'
+      },
+      {
+        question: 'Why is protein structure prediction important?',
+        options: ['Proteins have no structure', 'Structure determines protein function', 'It speeds up DNA replication', 'Proteins are only decorative'],
+        correctIndex: 1,
+        explanation: 'A protein\'s 3D structure directly affects its biological role.'
+      },
+      {
+        question: 'Why are algorithms critical in bioinformatics?',
+        options: ['Biological data is small', 'Manual analysis is faster', 'Biological datasets are extremely large and complex', 'Algorithms replace experiments'],
+        correctIndex: 2,
+        explanation: 'Genomic data is too large for manual processing.'
+      },
+      {
+        question: 'Phylogenetic trees are used to:',
+        options: ['Predict protein folding', 'Show evolutionary relationships', 'Measure enzyme speed', 'Store DNA'],
+        correctIndex: 1,
+        explanation: 'They visualize evolutionary distance and ancestry.'
+      },
+      {
+        question: 'Which application best represents bioinformatics in medicine?',
+        options: ['Vaccine distribution', 'Personalized medicine based on genetic profiles', 'Blood pressure measurement', 'Surgical robotics'],
+        correctIndex: 1,
+        explanation: 'Bioinformatics enables precision medicine using genetic data.'
+      },
+      {
+        question: 'A mutation appears repeatedly in patients with the same disease. What is the most reasonable bioinformatics conclusion?',
+        options: ['The mutation is random', 'The mutation may be linked to the disease', 'The disease is environmental only', 'The data is useless'],
+        correctIndex: 1,
+        explanation: 'Recurrent mutations suggest potential disease association.'
+      },
+      {
+        question: 'Which is a major ethical concern in bioinformatics?',
+        options: ['Computer speed', 'Data storage cost', 'Genetic privacy and data security', 'DNA size'],
+        correctIndex: 2,
+        explanation: 'Genomic data is highly sensitive and must be protected.'
+      },
+      {
+        question: 'Which bioinformatics advancement has the greatest long-term global impact?',
+        options: ['Faster gaming processors', 'DNA-based ancestry tests for entertainment', 'Early disease detection through genomic analysis', 'Cosmetic gene screening'],
+        correctIndex: 2,
+        explanation: 'Early detection can save lives and reduce healthcare inequality.'
+      }
+    ]
   }
 };
 
