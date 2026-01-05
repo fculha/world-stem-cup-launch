@@ -5408,6 +5408,355 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Scientific Reasoning - Peer Review */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">📝</span>
+              SCIENTIFIC REASONING (Peer Review) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Purpose of Peer Review, Peer Reviewers, Blind Review, Reviewer Responsibilities, Rejection, Limitations, Ethics, Scientific Progress, Post-Publication Review, Reviewer Bias, Open Peer Review</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Purpose of Peer Review</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is the primary purpose of the peer review process?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) To approve funding for research</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) To determine the popularity of a study</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) To evaluate the quality, validity, and integrity of research</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) To speed up publication</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) To evaluate the quality, validity, and integrity of research</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Peer review functions as a quality control system in science. It evaluates the validity, methodology, and significance of research before it becomes part of the scientific record.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Who Are Peer Reviewers?</h4>
+                </div>
+                <p className="text-white/80 mb-4">Peer reviewers are typically:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Journal editors</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Government officials</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Independent experts in the same field</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Students in the discipline</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Independent experts in the same field</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Peer reviewers are independent subject-matter experts who assess the scientific merit of research within their field of expertise.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Blind Review</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is the main advantage of a double-blind peer review process?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Faster publication</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Increased citation count</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Reduced bias from author or reviewer identity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Guaranteed acceptance</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Reduced bias from author or reviewer identity</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Double-blind review reduces bias by concealing the identities of both authors and reviewers, allowing evaluation based solely on scientific quality.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Reviewer Responsibilities</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which of the following is NOT a responsibility of a peer reviewer?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Assessing methodology</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Evaluating data interpretation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Rewriting the paper for the authors</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Identifying ethical concerns</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Rewriting the paper for the authors</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Reviewers assess and critique research but do not rewrite papers. Authors remain responsible for revisions and final content.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Rejection After Peer Review</h4>
+                </div>
+                <p className="text-white/80 mb-4">A paper rejected after peer review most commonly means:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The research is fraudulent</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The topic is unimportant</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The study needs improvement or clarification</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The authors are unqualified</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) The study needs improvement or clarification</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Rejection often indicates that a study requires clarification, stronger evidence, or improved methodology, not that it lacks value or integrity.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Peer Review Limitations</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which is a known limitation of peer review?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It completely eliminates bias</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It guarantees correctness</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Reviewers may disagree or miss errors</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It prevents plagiarism entirely</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Reviewers may disagree or miss errors</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Peer review improves reliability but cannot eliminate all errors or disagreements. Scientific evaluation remains a human process with limitations.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Ethical Peer Review</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which behavior violates peer review ethics?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Declaring a conflict of interest</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Giving constructive criticism</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Using unpublished data for personal research</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Suggesting methodological improvements</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Using unpublished data for personal research</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Using confidential or unpublished information obtained through peer review for personal research violates ethical standards.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Peer Review and Scientific Progress</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is peer review essential for scientific progress?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It promotes competition</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It filters unreliable or weak research</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It increases journal profits</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It enforces consensus</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) It filters unreliable or weak research</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Peer review filters out unreliable or weak studies, helping maintain the overall quality and credibility of scientific literature.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Post-Publication Review</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement about post-publication review is correct?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Research cannot be challenged after publication</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Published research may still be corrected or retracted</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Peer review ends scientific discussion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Retractions always indicate misconduct</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Published research may still be corrected or retracted</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Scientific research remains open to correction after publication. Retractions or revisions may occur without implying misconduct.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Reviewer Bias</h4>
+                </div>
+                <p className="text-white/80 mb-4">A reviewer rejects a paper because it contradicts their own previous work. This is an example of:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Scientific rigor</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Constructive criticism</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Reviewer bias</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Replication</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Reviewer bias</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Rejecting research because it challenges personal beliefs or prior work demonstrates bias, which undermines scientific objectivity.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Open Peer Review</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is a potential advantage of open peer review?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Guaranteed acceptance</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Reviewer anonymity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Increased transparency and accountability</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Faster rejection</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Increased transparency and accountability</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Open peer review increases transparency and accountability by making reviewer identities or reports publicly available.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Peer Review vs Popularity</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best reflects the scientific value of peer review?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) "Well-reviewed science is always correct."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) "Science is judged by popularity."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) "Peer review improves reliability, not certainty."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) "Authority defines truth."</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) "Peer review improves reliability, not certainty."</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Peer review enhances reliability but does not guarantee correctness. Scientific knowledge evolves through continuous evaluation and evidence.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 13 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#84cc16] text-white text-sm font-bold px-3 py-1 rounded-full">Q13</span>
+                  <h4 className="font-semibold text-lg">Olympiad-Level Reasoning</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which conclusion best aligns with scientific peer review principles?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) New ideas should be rejected to protect existing theories</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Peer review ensures science remains open to correction</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Consensus is more important than evidence</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Only famous scientists produce valid research</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Peer review ensures science remains open to correction</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Scientific progress depends on openness to criticism, replication, and correction, not authority or consensus alone.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
