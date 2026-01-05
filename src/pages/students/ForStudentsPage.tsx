@@ -5757,6 +5757,355 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Scientific Reasoning - Scientific Communication */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">📢</span>
+              SCIENTIFIC REASONING (Scientific Communication) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Purpose of Scientific Communication, Audience Awareness, Scientific vs Popular Communication, Use of Visuals, Misleading Communication, Uncertainty and Error, Reproducibility, Ethical Responsibility, Scientific Language, Peer Feedback, Media Representation, Data vs Interpretation</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Purpose of Scientific Communication</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which of the following best describes the primary purpose of scientific communication?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) To promote individual researchers</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) To persuade the public to accept conclusions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) To share methods, data, and findings transparently</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) To simplify science for entertainment</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) To share methods, data, and findings transparently</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Scientific communication exists to clearly and transparently share methods, data, results, and interpretations so that research can be evaluated, replicated, and built upon.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Audience Awareness</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why must scientists consider their audience when communicating research?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) To change scientific results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) To hide uncertainty</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) To adapt language, depth, and format appropriately</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) To avoid criticism</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) To adapt language, depth, and format appropriately</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Effective communication requires adapting terminology, structure, and level of detail to ensure understanding without compromising accuracy.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Scientific vs. Popular Communication</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is a key difference between scientific papers and popular science articles?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Popular articles include data; scientific papers do not</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Scientific papers emphasize methods and evidence</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Popular articles are peer-reviewed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Scientific papers avoid interpretation</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Scientific papers emphasize methods and evidence</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Scientific papers prioritize methodology, data, and reproducibility, while popular science focuses on accessibility and narrative.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Use of Visuals</h4>
+                </div>
+                <p className="text-white/80 mb-4">What is the primary role of figures and graphs in scientific communication?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) To decorate the paper</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) To replace written explanations</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) To present data clearly and accurately</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) To impress reviewers</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) To present data clearly and accurately</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Visuals are tools for clarity. They must accurately represent data and support, not replace, scientific explanation.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Misleading Communication</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which practice undermines scientific integrity in communication?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Reporting uncertainty</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Using standard units</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Selectively reporting favorable results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Providing references</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Selectively reporting favorable results</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Cherry-picking results misrepresents reality and violates ethical standards of scientific honesty.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Uncertainty and Error</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is reporting uncertainty important in scientific communication?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It weakens conclusions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It confuses readers</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It reflects measurement limitations</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It reduces credibility</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) It reflects measurement limitations</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Uncertainty communicates the reliability and limitations of results, which is essential for accurate interpretation.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Reproducibility</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which element is essential for reproducibility in scientific communication?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Persuasive language</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Complete methodology description</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Personal opinion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Visual appeal</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Complete methodology description</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Reproducibility requires sufficient methodological detail so others can repeat and verify results.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Ethical Responsibility</h4>
+                </div>
+                <p className="text-white/80 mb-4">Scientists communicating to the public should primarily aim to:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Simplify science even if accuracy is lost</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Avoid controversial topics</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Maintain accuracy while improving understanding</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Promote funding opportunities</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Maintain accuracy while improving understanding</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Ethical communication balances clarity with accuracy, never sacrificing truth for simplicity.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Scientific Language</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is precise language critical in scientific communication?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) To appear sophisticated</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) To reduce ambiguity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) To exclude non-experts</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) To increase publication length</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) To reduce ambiguity</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Precision prevents misinterpretation and ensures shared understanding among researchers.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Peer Feedback</h4>
+                </div>
+                <p className="text-white/80 mb-4">How does peer feedback improve scientific communication?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) By enforcing conformity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) By eliminating disagreement</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) By clarifying arguments and identifying weaknesses</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) By accelerating publication</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) By clarifying arguments and identifying weaknesses</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Feedback improves clarity, structure, and logic, strengthening the overall quality of communication.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Media Representation of Science</h4>
+                </div>
+                <p className="text-white/80 mb-4">A major risk when scientific findings are communicated through media is:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Increased accessibility</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Oversimplification or exaggeration</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Peer validation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Transparency</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Oversimplification or exaggeration</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Media summaries may distort findings if nuance, uncertainty, or context is lost.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Data vs. Interpretation</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best reflects good scientific communication practice?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Conclusions should exceed data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Data should be hidden</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Interpretation must be clearly distinguished from data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Interpretation is unnecessary</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Interpretation must be clearly distinguished from data</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Separating observed data from interpretation allows readers to independently evaluate conclusions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 13 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0891b2] text-white text-sm font-bold px-3 py-1 rounded-full">Q13</span>
+                  <h4 className="font-semibold text-lg">Advanced Reasoning (Olympiad Level)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which principle best defines responsible scientific communication?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Authority-based trust</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Simplicity over accuracy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Transparency, clarity, and accountability</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Popularity and reach</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Transparency, clarity, and accountability</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Responsible scientific communication ensures openness, clarity, and accountability to both the scientific community and society.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
