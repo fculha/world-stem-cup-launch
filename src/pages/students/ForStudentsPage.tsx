@@ -7528,6 +7528,329 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Critical Thinking - Synthesis */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🔗</span>
+              CRITICAL THINKING (Synthesis) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Conceptual Synthesis, Integrating Evidence, Cross-Disciplinary Reasoning, Argument Construction, Contradictory Information, Synthesis vs Summary, Systems Thinking, Decision-Making, Knowledge Transfer, Research Synthesis, Ethical Synthesis</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Conceptual Synthesis</h4>
+                </div>
+                <p className="text-white/80 mb-4">A student studies climate data, economic growth trends, and energy consumption patterns. Which task best demonstrates synthesis?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Listing each dataset separately</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Comparing two graphs</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Integrating all datasets to propose a sustainable energy policy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Memorizing numerical values</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Integrating all datasets to propose a sustainable energy policy</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Synthesis involves combining multiple sources to generate a new, integrated understanding or solution.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Integrating Evidence</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which action best reflects evidence synthesis?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Selecting only evidence that supports one opinion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Ignoring conflicting data</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Combining results from multiple studies to form a conclusion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Reporting one data point</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Combining results from multiple studies to form a conclusion</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Synthesis requires evaluating and integrating evidence from different sources, even when they conflict.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Cross-Disciplinary Reasoning</h4>
+                </div>
+                <p className="text-white/80 mb-4">A researcher combines biology, computer science, and statistics to study disease spread. This approach is best described as:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Specialization</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Memorization</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Interdisciplinary synthesis</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Data collection</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Interdisciplinary synthesis</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Synthesis often involves integrating knowledge across disciplines to solve complex problems.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Argument Construction</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement shows synthesized reasoning?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) "Study A says X."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) "Study B disagrees."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) "Considering both studies, a combined model explains the results."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) "One study is better than the other."</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) "Considering both studies, a combined model explains the results."</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Synthesis builds a unified explanation rather than selecting a single source.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Contradictory Information</h4>
+                </div>
+                <p className="text-white/80 mb-4">When sources provide conflicting conclusions, synthesis requires:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Rejecting all sources</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Choosing the most recent source</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Analyzing assumptions and reconciling differences</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Ignoring uncertainty</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Analyzing assumptions and reconciling differences</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Synthesis evaluates why sources differ and integrates insights where possible.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Synthesis vs. Summary</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which best distinguishes synthesis from summary?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Summary adds opinion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Synthesis reorganizes information into new insight</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Summary is always longer</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Synthesis ignores details</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Synthesis reorganizes information into new insight</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A summary restates information; synthesis creates new understanding.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Systems Thinking</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is synthesis essential in systems thinking?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Systems have only one variable</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Systems require isolated analysis</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Interactions between components must be understood together</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Systems eliminate uncertainty</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Interactions between components must be understood together</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Complex systems require integrating multiple interacting elements.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Decision-Making</h4>
+                </div>
+                <p className="text-white/80 mb-4">A policymaker evaluates scientific data, economic constraints, and ethical concerns. This process best illustrates:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Data collection</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Optimization</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Synthesis-based decision-making</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Simple reasoning</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Synthesis-based decision-making</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Effective decisions synthesize data, values, and consequences.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Knowledge Transfer</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which example shows synthesis through knowledge transfer?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Solving a known problem using a memorized formula</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Applying physics modeling techniques to economic forecasting</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Repeating classroom experiments</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Copying an algorithm</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Applying physics modeling techniques to economic forecasting</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Synthesis often involves transferring concepts across domains.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Research Synthesis</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why are meta-analyses valuable in science?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) They replace experiments</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) They select one best study</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) They synthesize results from many studies</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) They simplify data</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) They synthesize results from many studies</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Meta-analyses integrate findings to identify overall trends and conclusions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Ethical Synthesis</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which demonstrates ethical synthesis?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Maximizing efficiency only</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Ignoring societal impact</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Balancing technological benefits with ethical consequences</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Avoiding responsibility</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Balancing technological benefits with ethical consequences</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Ethical synthesis integrates technical, social, and moral considerations.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#0d9488] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Advanced Reasoning (Competition Level)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best reflects high-level synthesis?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Selecting the strongest argument</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Combining ideas to form a coherent, justified framework</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Eliminating uncertainty</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Repeating expert opinions</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Combining ideas to form a coherent, justified framework</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Advanced synthesis produces a structured, original framework grounded in multiple sources.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
