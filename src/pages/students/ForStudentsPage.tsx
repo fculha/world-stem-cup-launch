@@ -7205,6 +7205,329 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Critical Thinking - Complex Reasoning */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">🧠</span>
+              CRITICAL THINKING (Complex Reasoning) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Multi-Step Logical Reasoning, Hidden Assumptions, Causation vs Correlation, Evidence Strength, Logical Fallacies, Conditional Reasoning, Counterarguments, Multi-Perspective Analysis, Problem Decomposition, Ethical Reasoning, Inference vs Observation</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Multi-Step Logical Reasoning</h4>
+                </div>
+                <p className="text-white/80 mb-4">All scientists in Group A are researchers. Some researchers are engineers. No engineers are artists. Which statement must be true?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Some scientists are engineers</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) No scientists are artists</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Some researchers are artists</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) All engineers are scientists</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) No scientists are artists</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Since engineers cannot be artists and some scientists may be engineers, scientists cannot be artists through this chain. Only statement B is logically guaranteed.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Identifying Hidden Assumptions</h4>
+                </div>
+                <p className="text-white/80 mb-4">A report claims: "Students who participate in science competitions develop stronger problem-solving skills." Which assumption is necessary for this claim?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) All students enjoy competitions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Competitions involve problem-solving tasks</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Problem-solving skills cannot be learned elsewhere</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Only talented students join competitions</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Competitions involve problem-solving tasks</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>The conclusion assumes that the competitions themselves involve activities that build problem-solving skills.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Causation vs. Correlation</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement demonstrates causal reasoning rather than correlation?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Students who read more books have higher grades</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Schools with laboratories have better science results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Increased study time leads to improved exam performance</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Taller students perform better in sports</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Increased study time leads to improved exam performance</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Option C explicitly states a cause-and-effect relationship, not just an observed association.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Evaluating Evidence Strength</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which piece of evidence provides the strongest support for a scientific claim?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) A single personal experience</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Anecdotal reports</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) A controlled experiment with repeatable results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Online opinions</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) A controlled experiment with repeatable results</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Controlled experiments with repeatable results are the most reliable form of scientific evidence.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Logical Fallacies</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which argument contains a false dilemma?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) "You either support this policy or you are against education."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) "This method worked before, so it will work again."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) "Many experts agree, so it must be true."</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) "The data may be incomplete."</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: A) "You either support this policy or you are against education."</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A false dilemma limits options unfairly, ignoring alternative possibilities.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Conditional Reasoning</h4>
+                </div>
+                <p className="text-white/80 mb-4">If the statement "If a student qualifies for the final, they passed the regional round" is true, which must also be true?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) All students passed the regional round</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Some students failed the regional round</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Any student who did not pass the regional round cannot qualify for the final</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Passing the regional round guarantees a win</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Any student who did not pass the regional round cannot qualify for the final</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>This is the contrapositive of the original statement and must be logically true.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Evaluating Counterarguments</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is considering counterarguments important in complex reasoning?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It weakens an argument</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It confuses conclusions</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It tests the strength and validity of claims</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It replaces evidence</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) It tests the strength and validity of claims</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Addressing counterarguments strengthens reasoning by challenging assumptions.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Multi-Perspective Analysis</h4>
+                </div>
+                <p className="text-white/80 mb-4">A new technology improves efficiency but increases environmental risk. What is the most reasonable conclusion?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The technology should always be used</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The technology should be completely banned</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Benefits and risks must be carefully evaluated</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Efficiency is more important than safety</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Benefits and risks must be carefully evaluated</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Complex reasoning requires weighing multiple competing factors rather than choosing extremes.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Problem Decomposition</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is breaking a complex problem into smaller parts effective?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It avoids responsibility</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It simplifies analysis and improves clarity</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It reduces data accuracy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It limits creativity</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) It simplifies analysis and improves clarity</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Decomposing problems allows focused analysis of each component.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">Ethical Reasoning</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which principle best supports ethical decision-making in science?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Maximizing speed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Ignoring uncertainty</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Transparency and accountability</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Avoiding peer review</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Transparency and accountability</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Ethical reasoning requires openness, responsibility, and acknowledgment of limitations.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Inference vs. Observation</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which is an inference, not an observation?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The temperature is 25°C</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The graph shows an upward trend</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The experiment failed due to human error</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The device recorded five measurements</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) The experiment failed due to human error</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>An inference interprets data; it is not directly observed.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#dc2626] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Advanced Reasoning (Competition Level)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best reflects high-level critical thinking?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Accepting conclusions without questioning</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Focusing only on results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Examining assumptions, evidence, and implications</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Avoiding uncertainty</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Examining assumptions, evidence, and implications</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Advanced critical thinking evaluates not only outcomes but also the reasoning process itself.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
