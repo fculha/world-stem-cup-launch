@@ -6106,6 +6106,355 @@ export default function ForStudentsPage() {
             </div>
           </div>
 
+          {/* Grade 12 Data Interpretation - Advanced Statistics */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-3">
+              <span className="text-3xl">📊</span>
+              DATA INTERPRETATION (Advanced Statistics) - Grade 12
+            </h3>
+            <p className="text-white/60 text-sm mb-6">Topics: Mean vs Median, Standard Deviation, Normal Distribution, Z-Score, Correlation vs Causation, Regression Analysis, Sampling Bias, Confidence Intervals, Hypothesis Testing, P-Value, Data Visualization, Multivariable Analysis</p>
+            
+            <div className="space-y-6">
+              {/* Question 1 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q1</span>
+                  <h4 className="font-semibold text-lg">Mean vs. Median (Outliers)</h4>
+                </div>
+                <p className="text-white/80 mb-4">A dataset representing household incomes is right-skewed due to a small number of extremely high values. Which measure best represents the "typical" household income?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Mean</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Mode</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Median</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Range</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Median</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>In skewed distributions, the median is resistant to outliers and better represents the central tendency than the mean.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 2 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q2</span>
+                  <h4 className="font-semibold text-lg">Standard Deviation Interpretation</h4>
+                </div>
+                <p className="text-white/80 mb-4">Two datasets have the same mean but different standard deviations. What does a larger standard deviation indicate?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Higher accuracy</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Greater variability</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Larger sample size</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Higher median</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) Greater variability</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Standard deviation measures how spread out the data values are from the mean.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 3 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q3</span>
+                  <h4 className="font-semibold text-lg">Normal Distribution</h4>
+                </div>
+                <p className="text-white/80 mb-4">In a perfectly normal distribution:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Mean &gt; Median</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Median &gt; Mean</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Mean = Median = Mode</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Mode does not exist</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Mean = Median = Mode</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A normal distribution is symmetric, with all three measures of central tendency equal.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 4 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q4</span>
+                  <h4 className="font-semibold text-lg">Z-Score Concept</h4>
+                </div>
+                <p className="text-white/80 mb-4">A student scored 1.5 standard deviations above the mean on a test. What does this indicate?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The student scored below average</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The student scored exactly at the mean</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The student performed better than most peers</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The score is invalid</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) The student performed better than most peers</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A positive z-score indicates performance above the mean; higher values indicate stronger relative performance.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 5 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q5</span>
+                  <h4 className="font-semibold text-lg">Correlation vs. Causation</h4>
+                </div>
+                <p className="text-white/80 mb-4">A strong positive correlation is observed between ice cream sales and drowning incidents. What is the most accurate conclusion?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Ice cream causes drowning</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Drowning increases ice cream sales</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) A third variable influences both</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Correlation implies causation</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) A third variable influences both</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Correlation does not imply causation. In this case, temperature is a likely confounding variable.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 6 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q6</span>
+                  <h4 className="font-semibold text-lg">Regression Analysis</h4>
+                </div>
+                <p className="text-white/80 mb-4">In linear regression, the slope of the line represents:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Data dispersion</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Strength of correlation</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Rate of change between variables</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Measurement error</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Rate of change between variables</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>The slope quantifies how much the dependent variable changes for each unit increase in the independent variable.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 7 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q7</span>
+                  <h4 className="font-semibold text-lg">Sampling Bias</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which sampling method is most likely to produce biased results?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Random sampling</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Stratified sampling</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Voluntary response sampling</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Systematic sampling</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Voluntary response sampling</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Voluntary response samples often attract participants with strong opinions, leading to bias.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 8 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q8</span>
+                  <h4 className="font-semibold text-lg">Confidence Intervals</h4>
+                </div>
+                <p className="text-white/80 mb-4">A 95% confidence interval means:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) 95% of data points fall within the interval</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The true parameter lies in the interval with 95% certainty</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) The sample mean is always correct</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The experiment is error-free</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The true parameter lies in the interval with 95% certainty</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A confidence interval reflects the probability that the interval contains the true population parameter.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 9 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q9</span>
+                  <h4 className="font-semibold text-lg">Hypothesis Testing</h4>
+                </div>
+                <p className="text-white/80 mb-4">Failing to reject a null hypothesis means:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The null hypothesis is proven true</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The alternative hypothesis is false</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) There is insufficient evidence against the null hypothesis</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The experiment failed</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) There is insufficient evidence against the null hypothesis</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Statistical tests assess evidence, not absolute truth.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 10 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q10</span>
+                  <h4 className="font-semibold text-lg">P-Value Interpretation</h4>
+                </div>
+                <p className="text-white/80 mb-4">A p-value of 0.03 indicates:</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) The null hypothesis is true</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) The result is statistically significant at α = 0.05</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) There is a 3% chance the experiment failed</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) The data is normally distributed</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: B) The result is statistically significant at α = 0.05</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>A p-value below the significance level suggests strong evidence against the null hypothesis.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 11 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q11</span>
+                  <h4 className="font-semibold text-lg">Data Visualization Integrity</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which graph choice is most misleading?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Bar chart with equal scales</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Histogram with labeled bins</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Truncated y-axis exaggerating differences</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Scatter plot with trend line</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Truncated y-axis exaggerating differences</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Truncated axes distort visual interpretation and exaggerate differences.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 12 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q12</span>
+                  <h4 className="font-semibold text-lg">Multivariable Analysis</h4>
+                </div>
+                <p className="text-white/80 mb-4">Why is multivariable analysis important?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) It simplifies results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) It removes uncertainty</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) It accounts for multiple influencing factors</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) It guarantees causation</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) It accounts for multiple influencing factors</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Real-world phenomena are influenced by multiple variables that must be analyzed simultaneously.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+
+              {/* Question 13 */}
+              <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
+                <div className="flex items-start gap-3 mb-4">
+                  <span className="bg-[#d946ef] text-white text-sm font-bold px-3 py-1 rounded-full">Q13</span>
+                  <h4 className="font-semibold text-lg">Advanced Reasoning (Competition Level)</h4>
+                </div>
+                <p className="text-white/80 mb-4">Which statement best reflects responsible data interpretation?</p>
+                <div className="space-y-2 mb-4">
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">A) Highlight only statistically significant results</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">B) Ignore outliers</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">C) Report assumptions, limitations, and uncertainty</div>
+                  <div className="bg-white/5 rounded-lg p-3 border border-white/10">D) Focus on conclusions only</div>
+                </div>
+                <details className="group">
+                  <summary className="cursor-pointer text-[#4361ee] hover:text-[#f72585] transition-colors font-medium">
+                    Show Answer & Explanation
+                  </summary>
+                  <div className="mt-4 bg-green-500/10 rounded-lg p-4 border border-green-500/20">
+                    <p className="font-bold text-green-400 mb-3">Correct Answer: C) Report assumptions, limitations, and uncertainty</p>
+                    <div className="text-white/70 space-y-2 text-sm">
+                      <p>Transparent reporting allows accurate interpretation and ethical use of data.</p>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4361ee]/20 to-[#f72585]/20 px-6 py-3 rounded-xl">
               <Lightbulb className="w-5 h-5 text-yellow-400" />
