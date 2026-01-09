@@ -3,7 +3,7 @@ import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { 
   BookOpen, Calculator, Atom, Code, Dna, Brain, BarChart3, 
   ChevronDown, ChevronLeft, ChevronRight, Globe, Shield, GraduationCap,
-  CheckCircle, Play, FileText, Lightbulb, Languages, X, Check
+  CheckCircle, Play, FileText, Lightbulb, Languages, Check
 } from 'lucide-react';
 
 // Subject metadata
@@ -2649,22 +2649,12 @@ export default function TopicPage() {
   const [selectedLanguage, setSelectedLanguage] = useState(langParam);
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
   const [activeTab, setActiveTab] = useState<'concept' | 'examples' | 'practice'>('concept');
-  const [selectedAnswers, setSelectedAnswers] = useState<Record<number, number>>({});
-  const [showResults, setShowResults] = useState<Record<number, boolean>>({});
   const [questionTabs, setQuestionTabs] = useState<Record<number, 'question' | 'answer' | 'explanation'>>({});
 
   const subjectInfo = subject ? subjectMeta[subject] : null;
   const content = topicId ? (topicContent[topicId] || defaultContent) : defaultContent;
   const currentLanguage = languages.find(l => l.code === selectedLanguage) || languages[0];
   const Icon = subjectInfo?.icon || BookOpen;
-
-  const handleAnswerSelect = (questionIndex: number, optionIndex: number) => {
-    setSelectedAnswers(prev => ({ ...prev, [questionIndex]: optionIndex }));
-  };
-
-  const handleCheckAnswer = (questionIndex: number) => {
-    setShowResults(prev => ({ ...prev, [questionIndex]: true }));
-  };
 
   const getQuestionTab = (qIndex: number) => questionTabs[qIndex] || 'question';
   
