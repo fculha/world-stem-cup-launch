@@ -58,28 +58,28 @@ Solution method:
       {
         problem: '2x + 5 = 13',
         solution: 'x = 4',
-        explanation: `Adım 1: Her iki taraftan 5 çıkarın
+        explanation: `Step 1: Subtract 5 from both sides
 2x + 5 - 5 = 13 - 5
 2x = 8
 
-Adım 2: Her iki tarafı 2'ye bölün
+Step 2: Divide both sides by 2
 2x ÷ 2 = 8 ÷ 2
 x = 4
 
-Doğrulama: 2(4) + 5 = 8 + 5 = 13 ✓`
+Verification: 2(4) + 5 = 8 + 5 = 13 ✓`
       },
       {
         problem: '3x - 7 = 2x + 4',
         solution: 'x = 11',
-        explanation: `Adım 1: x terimlerini bir tarafa toplayın
+        explanation: `Step 1: Collect x terms on one side
 3x - 2x - 7 = 4
 x - 7 = 4
 
-Adım 2: Her iki tarafa 7 ekleyin
+Step 2: Add 7 to both sides
 x - 7 + 7 = 4 + 7
 x = 11
 
-Doğrulama: 3(11) - 7 = 33 - 7 = 26
+Verification: 3(11) - 7 = 33 - 7 = 26
 2(11) + 4 = 22 + 4 = 26 ✓`
       }
     ],
@@ -135,14 +135,14 @@ Discriminant (Δ = b² - 4ac):
       {
         problem: 'x² - 5x + 6 = 0',
         solution: 'x = 2 veya x = 3',
-        explanation: `Çarpanlara ayırma yöntemi:
+        explanation: `Factoring method:
 x² - 5x + 6 = 0
 (x - 2)(x - 3) = 0
 
 x - 2 = 0 → x = 2
 x - 3 = 0 → x = 3
 
-Doğrulama: 
+Verification: 
 2² - 5(2) + 6 = 4 - 10 + 6 = 0 ✓
 3² - 5(3) + 6 = 9 - 15 + 6 = 0 ✓`
       }
@@ -2651,6 +2651,7 @@ export default function TopicPage() {
   const [activeTab, setActiveTab] = useState<'concept' | 'examples' | 'practice'>('concept');
   const [selectedAnswers, setSelectedAnswers] = useState<Record<number, number>>({});
   const [showResults, setShowResults] = useState<Record<number, boolean>>({});
+  const [questionTabs, setQuestionTabs] = useState<Record<number, 'question' | 'answer' | 'explanation'>>({});
 
   const subjectInfo = subject ? subjectMeta[subject] : null;
   const content = topicId ? (topicContent[topicId] || defaultContent) : defaultContent;
@@ -2663,6 +2664,12 @@ export default function TopicPage() {
 
   const handleCheckAnswer = (questionIndex: number) => {
     setShowResults(prev => ({ ...prev, [questionIndex]: true }));
+  };
+
+  const getQuestionTab = (qIndex: number) => questionTabs[qIndex] || 'question';
+  
+  const setQuestionTab = (qIndex: number, tab: 'question' | 'answer' | 'explanation') => {
+    setQuestionTabs(prev => ({ ...prev, [qIndex]: tab }));
   };
 
   return (
@@ -2950,85 +2957,114 @@ export default function TopicPage() {
                 {content.practiceQuestions.length > 0 ? (
                   <div className="space-y-6">
                     {content.practiceQuestions.map((q, qIndex) => {
-                      const isAnswered = selectedAnswers[qIndex] !== undefined;
-                      const isCorrect = selectedAnswers[qIndex] === q.correctIndex;
-                      const showResult = showResults[qIndex];
+                      const currentTab = getQuestionTab(qIndex);
                       
                       return (
-                        <div key={qIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
-                          <div className="flex items-center gap-2 text-sm text-white/50 mb-4">
-                            <span className="bg-white/10 px-2 py-1 rounded font-mono">Question {qIndex + 1}</span>
-                          </div>
-                          
-                          <div className="text-lg mb-4">{q.question}</div>
-                          
-                          <div className="space-y-2 mb-4">
-                            {q.options.map((option, oIndex) => {
-                              const isSelected = selectedAnswers[qIndex] === oIndex;
-                              const isCorrectOption = oIndex === q.correctIndex;
-                              
-                              let optionClass = 'bg-white/5 hover:bg-white/10 border-white/10';
-                              if (showResult) {
-                                if (isCorrectOption) {
-                                  optionClass = 'bg-green-500/20 border-green-500/50';
-                                } else if (isSelected && !isCorrectOption) {
-                                  optionClass = 'bg-red-500/20 border-red-500/50';
-                                }
-                              } else if (isSelected) {
-                                optionClass = 'bg-[#4361ee]/20 border-[#4361ee]/50';
-                              }
-                              
-                              return (
+                        <div key={qIndex} className="bg-white/5 rounded-xl border border-white/10 overflow-hidden">
+                          {/* Question Header with Tabs */}
+                          <div className="bg-white/5 border-b border-white/10 px-4 py-3">
+                            <div className="flex items-center justify-between flex-wrap gap-3">
+                              <span className="bg-gradient-to-r from-[#4361ee] to-[#7c3aed] px-3 py-1 rounded-full text-sm font-medium">
+                                Question {qIndex + 1}
+                              </span>
+                              <div className="flex gap-1">
                                 <button
-                                  key={oIndex}
-                                  onClick={() => !showResult && handleAnswerSelect(qIndex, oIndex)}
-                                  disabled={showResult}
-                                  className={`w-full text-left px-4 py-3 rounded-lg border transition-colors flex items-center gap-3 ${optionClass}`}
+                                  onClick={() => setQuestionTab(qIndex, 'question')}
+                                  className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                                    currentTab === 'question'
+                                      ? 'bg-[#4361ee] text-white'
+                                      : 'bg-white/10 text-white/70 hover:bg-white/20'
+                                  }`}
                                 >
-                                  <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-sm">
-                                    {String.fromCharCode(65 + oIndex)}
-                                  </span>
-                                  <span className="flex-1">{option}</span>
-                                  {showResult && isCorrectOption && (
-                                    <Check className="w-5 h-5 text-green-400" />
-                                  )}
-                                  {showResult && isSelected && !isCorrectOption && (
-                                    <X className="w-5 h-5 text-red-400" />
-                                  )}
+                                  Question
                                 </button>
-                              );
-                            })}
-                          </div>
-                          
-                          {!showResult && isAnswered && (
-                            <button
-                              onClick={() => handleCheckAnswer(qIndex)}
-                              className="bg-gradient-to-r from-[#4361ee] to-[#7c3aed] px-6 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity"
-                            >
-                              Check Answer
-                            </button>
-                          )}
-                          
-                          {showResult && (
-                            <div className={`mt-4 p-4 rounded-lg ${isCorrect ? 'bg-green-500/10 border border-green-500/30' : 'bg-red-500/10 border border-red-500/30'}`}>
-                              <div className="flex items-center gap-2 mb-2">
-                                {isCorrect ? (
-                                  <>
-                                    <CheckCircle className="w-5 h-5 text-green-400" />
-                                    <span className="font-medium text-green-400">Correct!</span>
-                                  </>
-                                ) : (
-                                  <>
-                                    <X className="w-5 h-5 text-red-400" />
-                                    <span className="font-medium text-red-400">Incorrect</span>
-                                  </>
-                                )}
-                              </div>
-                              <div className="text-sm text-white/70">
-                                <strong>Explanation:</strong> {q.explanation}
+                                <button
+                                  onClick={() => setQuestionTab(qIndex, 'answer')}
+                                  className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                                    currentTab === 'answer'
+                                      ? 'bg-green-500 text-white'
+                                      : 'bg-white/10 text-white/70 hover:bg-white/20'
+                                  }`}
+                                >
+                                  Answer
+                                </button>
+                                <button
+                                  onClick={() => setQuestionTab(qIndex, 'explanation')}
+                                  className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-colors ${
+                                    currentTab === 'explanation'
+                                      ? 'bg-[#f72585] text-white'
+                                      : 'bg-white/10 text-white/70 hover:bg-white/20'
+                                  }`}
+                                >
+                                  Explanation
+                                </button>
                               </div>
                             </div>
-                          )}
+                          </div>
+                          
+                          {/* Tab Content */}
+                          <div className="p-6">
+                            {/* Question Tab */}
+                            {currentTab === 'question' && (
+                              <div>
+                                <div className="text-lg mb-6">{q.question}</div>
+                                <div className="space-y-2">
+                                  {q.options.map((option, oIndex) => (
+                                    <div
+                                      key={oIndex}
+                                      className="w-full text-left px-4 py-3 rounded-lg border bg-white/5 border-white/10 flex items-center gap-3"
+                                    >
+                                      <span className="w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-sm font-medium">
+                                        {String.fromCharCode(65 + oIndex)}
+                                      </span>
+                                      <span className="flex-1">{option}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
+                            
+                            {/* Answer Tab */}
+                            {currentTab === 'answer' && (
+                              <div>
+                                <div className="text-lg mb-6 text-white/70">{q.question}</div>
+                                <div className="bg-green-500/10 border border-green-500/30 rounded-xl p-6">
+                                  <div className="flex items-center gap-3 mb-4">
+                                    <Check className="w-6 h-6 text-green-400" />
+                                    <span className="text-lg font-semibold text-green-400">Correct Answer</span>
+                                  </div>
+                                  <div className="flex items-center gap-3 text-lg">
+                                    <span className="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center font-bold">
+                                      {String.fromCharCode(65 + q.correctIndex)}
+                                    </span>
+                                    <span className="font-medium">{q.options[q.correctIndex]}</span>
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                            
+                            {/* Explanation Tab */}
+                            {currentTab === 'explanation' && (
+                              <div>
+                                <div className="text-lg mb-4 text-white/70">{q.question}</div>
+                                <div className="bg-[#f72585]/10 border border-[#f72585]/30 rounded-xl p-6">
+                                  <div className="flex items-center gap-3 mb-4">
+                                    <Lightbulb className="w-6 h-6 text-[#f72585]" />
+                                    <span className="text-lg font-semibold text-[#f72585]">Step-by-Step Explanation</span>
+                                  </div>
+                                  <div className="mb-4 p-3 bg-green-500/10 rounded-lg border border-green-500/20">
+                                    <span className="text-sm text-white/50">Correct Answer: </span>
+                                    <span className="font-medium text-green-400">
+                                      {String.fromCharCode(65 + q.correctIndex)}) {q.options[q.correctIndex]}
+                                    </span>
+                                  </div>
+                                  <div className="text-white/80 leading-relaxed whitespace-pre-line">
+                                    {q.explanation}
+                                  </div>
+                                </div>
+                              </div>
+                            )}
+                          </div>
                         </div>
                       );
                     })}
