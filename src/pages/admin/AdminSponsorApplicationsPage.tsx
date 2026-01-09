@@ -43,8 +43,15 @@ export default function AdminSponsorApplicationsPage() {
   const [statusCounts, setStatusCounts] = useState({ PENDING: 0, UNDER_REVIEW: 0, APPROVED: 0, REJECTED: 0 });
 
   const fetchApplications = async () => {
+    // Don't fetch if no access token (user not logged in yet)
+    if (!accessToken) {
+      setLoading(false);
+      return;
+    }
+    
     try {
       setLoading(true);
+      setError(null); // Clear any previous errors
       const params = new URLSearchParams();
       if (statusFilter) params.append('status_filter', statusFilter);
       
@@ -55,12 +62,14 @@ export default function AdminSponsorApplicationsPage() {
       });
       
       if (!response.ok) {
-        throw new Error('Failed to fetch applications');
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.detail || 'Failed to fetch applications');
       }
       
       const data: ApplicationsResponse = await response.json();
       setApplications(data.applications);
       setStatusCounts(data.status_counts);
+      setError(null); // Clear error on success
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred');
     } finally {
