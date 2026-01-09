@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-
-const API_URL = import.meta.env.VITE_API_URL || 'https://world-stem-cup-backend-production.up.railway.app';
+import { API_URL } from '../lib/api';
 
 interface ContributionPublic {
   id: number;

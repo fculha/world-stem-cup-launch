@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Trophy, LogOut, ArrowLeft, Users, UserCheck, UserX, Search, Filter } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+import { API_URL } from '../../lib/api';
 
 interface UserData {
   id: number;

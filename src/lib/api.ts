@@ -1,5 +1,6 @@
-// API Configuration
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+// API Configuration - Centralized API base URL
+// Set VITE_API_URL in environment for custom backend, defaults to Render production
+export const API_URL = import.meta.env.VITE_API_URL || 'https://world-stem-cup-backend.onrender.com';
 
 // Helper function to get auth headers
 export function getAuthHeaders(): HeadersInit {

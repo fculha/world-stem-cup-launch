@@ -2,8 +2,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { Trophy, LogOut, Clock, CheckCircle, XCircle, Zap, AlertTriangle, Loader2, Users, Eye, ChevronRight, Globe, Lock } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
-
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+import { API_URL } from '../../lib/api';
 
 interface MatchTimeStatus {
   match_id: number;

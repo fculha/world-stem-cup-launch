@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Trophy, LogOut, ArrowLeft, DollarSign, CheckCircle, XCircle, Eye, Filter } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
-
-const API_URL = import.meta.env.VITE_API_URL || 'https://world-stem-cup-backend-production.up.railway.app';
+import { API_URL } from '../../lib/api';
 
 interface ContributionData {
   id: number;
