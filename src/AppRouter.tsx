@@ -15,6 +15,7 @@ import AdminStatsPage from './pages/admin/AdminStatsPage';
 import AdminQuestionsPage from './pages/admin/AdminQuestionsPage';
 import AdminTestArenaPage from './pages/admin/AdminTestArenaPage';
 import AdminSponsorsPage from './pages/admin/AdminSponsorsPage';
+import AdminSponsorApplicationsPage from './pages/admin/AdminSponsorApplicationsPage';
 import LeaderboardPage from './pages/LeaderboardPage';
 // Teacher Pages
 import TeacherStudentsPage from './pages/teacher/TeacherStudentsPage';
@@ -205,14 +206,22 @@ export default function AppRouter() {
                                             </ProtectedRoute>
                                           } 
                                         />
-                                        <Route 
-                                          path="/admin/sponsors" 
-                                          element={
-                                            <ProtectedRoute allowedRoles={['ADMIN']}>
-                                              <AdminSponsorsPage />
-                                            </ProtectedRoute>
-                                          } 
-                                        />
+                                                                                <Route 
+                                                                                  path="/admin/sponsors" 
+                                                                                  element={
+                                                                                    <ProtectedRoute allowedRoles={['ADMIN']}>
+                                                                                      <AdminSponsorsPage />
+                                                                                    </ProtectedRoute>
+                                                                                  } 
+                                                                                />
+                                                                                <Route 
+                                                                                  path="/admin/sponsor-applications" 
+                                                                                  element={
+                                                                                    <ProtectedRoute allowedRoles={['ADMIN']}>
+                                                                                      <AdminSponsorApplicationsPage />
+                                                                                    </ProtectedRoute>
+                                                                                  } 
+                                                                                />
           
                                         {/* Teacher Routes */}
           <Route 
