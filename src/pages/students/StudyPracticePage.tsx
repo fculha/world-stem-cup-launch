@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   BookOpen, Calculator, Atom, Code, Dna, Brain, BarChart3, 
@@ -256,10 +256,20 @@ export default function StudyPracticePage() {
   const [showGovernanceDropdown, setShowGovernanceDropdown] = useState(false);
   const [showStudentsDropdown, setShowStudentsDropdown] = useState(false);
   
-  const [selectedGrade, setSelectedGrade] = useState<string>('9');
+  const [selectedGrade, setSelectedGrade] = useState<string>(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('wsc-selected-grade') || '9';
+    }
+    return '9';
+  });
   const [selectedSubject, setSelectedSubject] = useState<string>('');
   const [selectedLanguage, setSelectedLanguage] = useState<string>('en');
   const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+
+  // Persist grade selection to localStorage
+  useEffect(() => {
+    localStorage.setItem('wsc-selected-grade', selectedGrade);
+  }, [selectedGrade]);
 
   const currentLanguage = languages.find(l => l.code === selectedLanguage) || languages[0];
   const topics = selectedSubject && selectedGrade ? topicsBySubject[selectedSubject]?.[selectedGrade] || [] : [];
