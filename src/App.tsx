@@ -5,9 +5,7 @@ import {
   Star, Award, Target, Zap, CheckCircle, ArrowRight, Play,
   Medal, TrendingUp, Lock, Eye, MapPin, Loader2, AlertCircle, LogIn, X, Radio
 } from 'lucide-react';
-
-// API Configuration - Set VITE_API_URL in .env file for production
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+import { API_URL } from './lib/api';
 
 // Registration Form Component
 function RegistrationForm() {

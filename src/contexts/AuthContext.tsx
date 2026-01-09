@@ -1,7 +1,5 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-
-// API Configuration
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+import { API_URL } from '../lib/api';
 
 // Types
 export type UserRole = 'ADMIN' | 'TEACHER' | 'STUDENT';

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
+import { API_URL } from '../../lib/api';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'https://world-stem-cup-backend.onrender.com';
+const API_BASE = API_URL;
 
 interface Question {
   id: number;
