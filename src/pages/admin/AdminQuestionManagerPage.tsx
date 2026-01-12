@@ -394,6 +394,10 @@ export default function AdminQuestionManagerPage() {
       });
       
       if (!response.ok) {
+        if (response.status === 401) {
+          setError('Session expired. Please logout and login again to continue.');
+          return;
+        }
         const errorData = await response.json();
         throw new Error(errorData.detail || 'Failed to import questions');
       }
