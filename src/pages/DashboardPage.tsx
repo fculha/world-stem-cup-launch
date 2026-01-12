@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { Trophy, LogOut, User, School, Users, Settings, BarChart3, Calendar, Award, Play, Eye, FileQuestion, FlaskConical, FileText } from 'lucide-react';
+import { Trophy, LogOut, User, School, Users, Settings, BarChart3, Calendar, Award, Play, Eye, FileQuestion, FlaskConical, FileText, BookOpen } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 export default function DashboardPage() {
@@ -33,6 +33,7 @@ export default function DashboardPage() {
                             { icon: School, label: 'Manage Schools', description: 'Review and approve school registrations', href: '/admin/schools' },
                             { icon: Users, label: 'Manage Users', description: 'View and manage all users', href: '/admin/users' },
                             { icon: FileQuestion, label: 'Question Bank', description: 'Manage and review STEM questions', href: '/admin/questions' },
+                            { icon: BookOpen, label: 'Question Manager', description: 'Manage Study & Practice questions', href: '/admin/question-manager' },
                             { icon: FileText, label: 'Sponsor Applications', description: 'Review sponsor form submissions', href: '/admin/sponsor-applications' },
                             { icon: BarChart3, label: 'Statistics', description: 'View system statistics', href: '/admin/stats' },
                             { icon: Settings, label: 'Settings', description: 'System configuration', href: '/admin/settings' },
